@@ -1,0 +1,57 @@
+#pdf-main {
+            width: 892.92px;
+            /*height: 1262.835px;*/
+            height: auto;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+
+        }
+
+        .pdf-row {
+            height: 315.70875px;
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+        }
+
+        .pdf-content {
+            height: 100%;
+            width: 297.64px;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .pdf-margin {
+            height: 100%;
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+            border-style: solid;
+            border-width: 2px;
+            border-radius: 20px;
+            border-color: rgb(104, 104, 104);
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            /*padding-top: 30px;*/
+        }
+
+        .pdf-qrcode {
+            height: 150px;
+            width: 150px;
+            background-color: greenyellow;
+            align-self: center;
+        }
+
+        .pdf-title {
+            /*align-self: center;*/
+            text-align: center;
+            padding: 0px;
+            margin-right: -25px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+
+        }

@@ -1,0 +1,164 @@
+﻿@{
+    ViewBag.Title = "BEMMS";
+    ViewBag.dashboard = "Master";
+    ViewBag.dashboardSmall = "Master Driver";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+    ViewBag.pathParent = Url.Content("~").Substring(0, Url.Content("~").Length - 1);
+}
+
+<input type="hidden" id="urlPath" name="urlPath" value="@ViewBag.pathParent" />
+<input type="hidden" id="pid" />
+<input type="hidden" id="gp" value="@ViewBag.GP" />
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="grid"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog" style="width:400px;">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                <h4 class="modal-title">Add New Record</h4>
+            </div>
+            <div id="regis_modal" class="modal-body">
+                <form id="form_regis" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" style="text-align:left" for="nrp_driver">NRP Driver :</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" style="width:160%" id="nrp_driver" name="nrp_driver">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" style="text-align:left" for="nama_driver">Name Driver :</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" style="width:160%" id="nama_driver" name="nama_driver">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" style="text-align:left;" for="dstrct_code">District :</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" style="width:160%" id="dstrct_code" name="dstrct_code">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" style="text-align:left" for="company">Company :</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" style="width:160%" id="company" name="company">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" style="text-align:left" for="phone">Phone :</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" style="width:160%" id="phone" name="phone">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" style="text-align:left" for="phone">Email :</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" style="width:160%" id="email" name="email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" style="text-align:left" for="start_simper">Start Simper :</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" style="width:160%" id="start_simper" name="start_simper">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" style="text-align:left" for="end_simper">End Simper :</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" style="width:160%" id="end_simper" name="end_simper">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-8">
+                            <label class="custom-control custom-checkbox"><input type="checkbox" id="status" class="custom-control-input" /><span class="custom-control-indicator"></span>Is Active</label>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="btn_simpan" style="width:200%" class="btn btn-outline-success">SIMPAN</button>
+                <button type="button" style="width:200%;" class="btn btn-outline-warning" data-dismiss="modal">BATAL</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        loadGrid();
+
+        dd_district();
+        dd_Spare();
+
+    });
+    function dd_Spare() {
+        var data = [
+      { text: "Opex", value: "Opex" },
+     { text: "Tidak Ada Spare", value: false },
+
+        ];
+
+        var dropdown = $("#ada_spare").kendoDropDownList({
+            dataTextField: "text",
+            dataValueField: "value",
+            dataSource: data,
+            placeholder: "Select...",
+            select: function (e) {
+                e.preventDefault();
+            }
+        }).data("kendoDropDownList");
+
+
+    }
+    function dd_district() {
+        var ds_district = new kendo.data.DataSource({
+            type: "json",
+            transport: {
+                read: {
+                    url: $("#urlPath").val() + "/MasterDriver/Read_Alldistrik",
+                    contentType: "application/json",
+                    type: "POST",
+                    cache: false
+                }
+            },
+            schema: {
+                data: "Data",
+                total: "Total"
+            }
+        });
+
+        $("#dstrct_code").kendoDropDownList({
+            autoBind: true,
+            dataSource: ds_district,
+            dataTextField: "dstrct_code",
+            dataValueField: "dstrct_code",
+            optionLabel: "Pilih...",
+            filter: "contains",
+            change: function (e) {
+                var dataItem = this.dataItem(e.sender._oldIndex);
+            }
+        }).data("kendoDropDownList");
+    }
+
+
+
+</script>

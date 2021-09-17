@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @{
+        ViewBag.Title = "Select Profile";
+        ViewBag.pathParent = Url.Content("~").Substring(0, Url.Content("~").Length - 1);
+        Layout = null;
+    }
+    <title>Budget Monitoring | @ViewBag.Title</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="CodedThemes">
+    <meta name="keywords" content="Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
+    <meta name="author" content="CodedThemes">
+    <!-- Favicon icon -->
+    <link rel="icon" href="@ViewBag.pathParent/ContentLayout/images/favicon.ico" type="image/x-icon">
+    <!-- Google font-->
+
+    <link href="@ViewBag.pathParent/ContentLayout/css/google_fonts/custom_google_fonts.css" rel="stylesheet">
+    <!-- Required Fremwork -->
+    <link rel="stylesheet" type="text/css" href="@ViewBag.pathParent/ContentLayout/css/bootstrap/css/bootstrap.min.css">
+    <!-- themify-icons line icon -->
+    <link rel="stylesheet" type="text/css" href="@ViewBag.pathParent/ContentLayout/icon/themify-icons/themify-icons.css">
+    <!-- ico font -->
+    <link rel="stylesheet" type="text/css" href="@ViewBag.pathParent/ContentLayout/icon/icofont/css/icofont.css">
+    <!-- Style.css -->
+    <link rel="stylesheet" type="text/css" href="@ViewBag.pathParent/ContentLayout/css/style.css">
+
+    <!-- Required Jquery -->
+    <script type="text/javascript" src="@ViewBag.pathParent/ContentLayout/js/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="@ViewBag.pathParent/ContentLayout/js/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="@ViewBag.pathParent/ContentLayout/js/popper.js/popper.min.js"></script>
+    <script type="text/javascript" src="@ViewBag.pathParent/ContentLayout/js/bootstrap/js/bootstrap.min.js"></script>
+    <!-- jquery slimscroll js -->
+    <script type="text/javascript" src="@ViewBag.pathParent/ContentLayout/js/jquery-slimscroll/jquery.slimscroll.js"></script>
+    <!-- modernizr js -->
+    <script type="text/javascript" src="@ViewBag.pathParent/ContentLayout/js/modernizr/modernizr.js"></script>
+    <script type="text/javascript" src="@ViewBag.pathParent/ContentLayout/js/modernizr/css-scrollbars.js"></script>
+    <script type="text/javascript" src="@ViewBag.pathParent/ContentLayout/js/common-pages.js"></script>
+</head>
+
+<body class="fix-menu">
+    <!-- Pre-loader start -->
+    <div class="theme-loader">
+        <div class="ball-scale">
+            <div class='contain'>
+                <div class="ring"><div class="frame"></div></div>
+                <div class="ring"><div class="frame"></div></div>
+                <div class="ring"><div class="frame"></div></div>
+                <div class="ring"><div class="frame"></div></div>
+                <div class="ring"><div class="frame"></div></div>
+                <div class="ring"><div class="frame"></div></div>
+                <div class="ring"><div class="frame"></div></div>
+                <div class="ring"><div class="frame"></div></div>
+                <div class="ring"><div class="frame"></div></div>
+                <div class="ring"><div class="frame"></div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <!-- Authentication card start -->
+                <div class="login-card card-block auth-body mr-auto ml-auto" style="padding-top:10px!important">
+                    <form class="md-float-material" action="@ViewBag.pathParent/login/profileSelect" method="POST" name="fom_login" id="fom_login">
+                        <div class="text-center">
+                            <p></p>
+                        </div>
+                        <div class="auth-box">
+
+                            <div class="row m-b-20">
+                                <div class="col-md-12">
+                                    <h3 class="text-left txt-primary">Select Profile</h3>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="row m-b-20">
+                                <div class="col-md-12">
+                                    @if (TempData["notice"] != null)
+                                    {
+                                        <div class="alert alert-danger">
+                                            <a class="close" data-dismiss="alert">×</a>
+                                            <strong>Perhatian! </strong> @Html.Raw(TempData["notice"])
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" class="form-control" value="@Session["empId"]" name="pnrp" id="pnrp" disabled>
+                                <span class="md-line"></span>
+                            </div>
+
+                            <div class="input-group">
+                                @Html.DropDownList("idProfile", (IEnumerable<SelectListItem>)ViewBag.Profile, "[Select]", new { onchange = "profileChange(this)", @class = "form-control" })
+                                <span class="md-line"></span>
+                            </div>
+
+                            <div class="input-group">
+                                <select id="idDistrik" name="idDistrik" class="form-control" onchange="distrkChange(this)"></select>
+                                <span class="md-line"></span>
+                            </div>
+
+                            <div class="row m-t-30">
+                                <div class="col-md-12">
+                                    <button type="submit" id="btnSubmit" class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20" disabled>Select Profile</button>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <p class="text-inverse text-left m-b-0"><b>PT. Pamapersada Nusantara</b> &copy; 2020</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                    <!-- end of form -->
+                </div>
+                <!-- Authentication card end -->
+            </div>
+            <!-- end of col-sm-12 -->
+        </div>
+        <!-- end of row -->
+    </div>
+</body>
+</html>
+
+<script>
+
+
+    function distrkChange(e) {
+        $("#btnSubmit").attr("disabled", ($(e).val() == ""));
+    }
+
+
+    function profileChange(e) {
+        var idProfil = $(e).val();
+        var param = "";
+        param += "sProfile=" + idProfil;
+
+
+        $.ajax({
+            type: "GET",
+            url: "../Login/getDistrikDesc?" + param,
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (data) {
+                $("#idDistrik").empty();
+                $("#idPICasset").empty();
+                $('#idDistrik').append('<option value="">[Select]</option>');
+                $.each(data.data, function (key, r) {
+                    $('#idDistrik').append('<option value="' + r.value + '">' + r.text + '</option>');
+                });
+                $("#btnSubmit").attr("disabled", true);
+            }
+        });
+    }
+    function picChange(e) {
+        var idPIC = $(e).val();
+        $("#btnSubmit").attr("disabled", true);
+        if (idPIC != "") {
+            $("#btnSubmit").attr("disabled", false);
+        }
+    }
+
+
+    function gotoLogin() {
+        window.location = "@ViewBag.pathParent/Login";
+    }
+</script>

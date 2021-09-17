@@ -1,0 +1,907 @@
+﻿@{
+    ViewBag.Title = "Monitoring Budget";
+    ViewBag.dashboard = "Input Pengajuan";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+    ViewBag.pathParent = Url.Content("~").Substring(0, Url.Content("~").Length - 1);
+}
+
+<!-- /.content-header -->
+<!-- Main content -->
+<input type="hidden" id="urlPath" value="@ViewBag.pathParent" />
+<input type="hidden" id="pid" />
+<input type="hidden" id="gp" value="@ViewBag.GP" />
+
+<head>
+    <style>
+        .input_nrp {
+            margin-bottom: 8px;
+        }
+
+        .input_nama {
+            margin-bottom: 8px;
+        }
+
+        .input_dept_pemesan {
+            margin-bottom: 8px;
+        }
+
+        .input_email_pemesan {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<script type="text/x-kendo-tmpl" id="lblCheck">
+    <span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;Edit
+</script>
+
+<div id="wnd_detail_qty">
+    <div class="row">
+        <div class="col-12">ID Pengaju <label id="lblIDPengaju"></label></div>
+        <div class="col-12">Nama Pengaju <label id="lblNamaPengaju"></label></div>
+        <div class="col-12">Nrp<label id="lblNrpPengaju"></label></div>
+        <div class="col-12">Item Pengajuan<label id="lblitempengajuan"></label></div>
+        <br /><br />
+        <div class="col-12">
+            <div id="gridDetailQty"></div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="grid"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog" style="width:400px;">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                <h4 class="modal-title">Add New Record</h4>
+            </div>
+            <div id="regis_modal" class="modal-body">
+                <form id="form_regis" class="form-horizontal">
+
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" style="text-align:left;" for="dstrct_code">PIC :</label>
+                        <div class="col-sm-8">
+                            <input readonly type="text" class="form-control" value="@Html.Raw(ViewBag.nrp)" style="width:160%" id="pic">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" style="text-align:left;" for="dstrct_code">Nama:</label>
+                        <div class="col-sm-8">
+                            <input readonly type="text" class="form-control" value="@Html.Raw(ViewBag.nama_in)" style="width:160%" id="nama">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" style="text-align:left;" for="dstrct_code">Divisi :</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" style="width:160%" id="divisi" required="required" >
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" style="text-align:left;" for="dstrct_code">Department :</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" style="width:160%" id="Dept" required="required" >
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" style="text-align:left;" for="dstrct_code">Tanggal Pengajuan</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" style="width:160%" id="tglpengaju">
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" style="text-align:left;" for="dstrct_code">Kategori :</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" style="width:160%" id="DesKategori">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" style="text-align:left;" for="dstrct_code">Item :</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" style="width:160%" id="descItem">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" style="text-align:left;" for="dstrct_code">QTY :</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" style="width:160%" id="qty">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" onclick="doProcessQty()" id="btn_proses_qty" style="width:200%" class="btn btn-outline-success">Proses</button>
+                <button type="button" id="btn_simpan" hidden="hidden" style="width:200%" class="btn btn-outline-success">SIMPAN</button>
+                <button type="button" style="width:200%;" class="btn btn-outline-warning" id="btn_batal" data-dismiss="modal">BATAL</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="wnd_process_qty" role="dialog">
+    <div class="modal-dialog" style="width:800px;">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                <div class="row">
+                    <h4 class="modal-title">Input pemesan sesuai Qty</h4>
+                    <div class="row">
+                        <h6 hidden class="modal-title" style="margin-left:5px;"><label id="pIdHeader"></label></h6>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="qty_modal" class="modal-body">
+                <div id="form1"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" onclick="doShowformEmployee()" id="btn_proses_qty" style="width:200%" class="btn btn-outline-info">Pencarian Karyawan</button>
+                <button type="button" onclick="doSaveformEmployee()" id="btn_proses_qty_nrp" style="width:200%" class="btn btn-outline-success">Simpan Data Pemesan</button>
+                <button type="button" style="width:200%;" class="btn btn-outline-warning" id="modalqty" data-dismiss="modal">Batal</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div id="wnd_addUser">
+    <div id="gridPemilihanKaryawan"></div>
+</div>
+
+
+
+
+<script>
+
+            var wnd_addUser;
+            var wnd_detail_qty;
+            var iTotalQty;
+            wnd_addUser = $("#wnd_addUser").kendoWindow({
+                title: "Data Karyawan",
+                width: "900px",
+                modal: true,
+                visible: false,
+                draggable: true,
+                actions: [
+                    "Minimize",
+                    "Close"
+                ],
+                pinned: true
+            }).data("kendoWindow");
+
+            wnd_detail_qty = $("#wnd_detail_qty").kendoWindow({
+      
+           
+                iframe: true,
+                resizable: true,
+                visible: false,
+
+                title: "Qty Detail",
+                width: "1200px",
+                modal: true,
+                draggable: true,
+                actions: [
+                    "Minimize",
+                    "Close"
+                ],
+                pinned: true
+            }).data("kendoWindow");
+
+            $(document).ready(function () {
+                loadgrid();
+                dd_Katalog();
+                dd_div();
+                dd_dept();
+                dd_Kategori();
+            });
+
+            function loadgrid() {
+                $("#grid").empty();
+                var grid = $("#grid").kendoGrid({
+                    dataSource: {
+                        type: "json",
+                        transport: {
+                            read: {
+                                url: $("#urlPath").val() + "/Pengajuan/Read",
+                                contentType: "application/json",
+                                type: "POST",
+                                cache: false,
+                            },
+                            create: {
+                                url: $("#urlPath").val() + "/Pengajuan/Insert",
+                                contentType: "application/json",
+                                type: "POST",
+                                complete: function (data) {
+                                    alert(data.responseJSON.remarks);
+                                }
+                            },
+                            update: {
+                                url: $("#urlPath").val() + "/Pengajuan/Update",
+                                contentType: "application/json",
+                                type: "POST",
+                                cache: false,
+                                complete: function (data) {
+
+                                    if (data.status) {
+                                        alert(data.responseJSON.remarks);
+                                        //alert(data.remarks)
+                                        $("#grid").data("kendoGrid").dataSource.read()
+                                    } else {
+                                        alert(data.error);
+                                        $("#grid").data("kendoGrid").dataSource.read()
+                                    }
+                                }
+                            },
+                            destroy: {
+                                url: $("#urlPath").val() + "/Pengajuan/Delete",
+                                contentType: "application/json",
+                                type: "POST",
+                                cache: false,
+                                complete: function (data) {
+                                    alert(data.responseJSON.remarks);
+                                    if (data.status) {
+                                        //alert(data.remarks)
+                                        $("#grid").data("kendoGrid").dataSource.read()
+                                    } else {
+                                        alert(data.error);
+                                        $("#grid").data("kendoGrid").dataSource.read()
+                                    }
+                                }
+                            },
+
+                            parameterMap: function (data, operation) {
+
+                                return kendo.stringify(data)
+                            }
+                        },
+                        pageSize: 1000,
+                        serverPaging: true,
+                        serverFiltering: true,
+                        serverSorting: true,
+                        schema: {
+                            data: "Data",
+                            total: "Total",
+                            model: {
+                                id: "pic",
+                                fields: {
+                                    ID_PENGAJUAN: { type: "string", filterable: true, sortable: true, editable: true },
+                                    PIC: { type: "string", filterable: true, sortable: true, editable: true },
+                                    Nama: { type: "string", filterable: true, sortable: true, editable: true },
+                                    DivisiID: { type: "string", filterable: true, sortable: true, editable: true, validation: { required: true } },
+                                    DepartmentID: { type: "string", filterable: true, sortable: true, editable: true, validation: { required: true } },
+                                    RequestDate: { type: "date", filterable: true, sortable: true, editable: true, validation: { required: true } },
+                                    Kategori: { type: "string", filterable: true, sortable: true, editable: true, validation: { required: true } },
+                                    Item: { type: "string", filterable: true, sortable: true, editable: true, validation: { required: true } },
+                                    QTY: { type: "int", filterable: true, sortable: true, editable: true, validation: { required: true } }
+                                }
+                            }
+                        }
+                    },
+                    height: 500,
+                    filterable: true,
+                    sortable: true,
+                    pageable: true,
+                    resizable: true,
+                    editable: {
+                        mode: "popup"
+                    },
+                    toolbar: [
+                     {
+                         template: '<button type="button" id="btn_add" class="k-button k-button-icontext" onclick="open_wnd_add()"><span class="glyphicon glyphicon-plus"></span> Add New Record</button>'
+                     },
+                     {
+                         name: "excel",
+                         imageClass: '<button type="button" button id="btn_export" class="btn btn-info"><span class="glyphicon glyphicon-export"></span> Export To Excel</button>'
+                     }, ],
+
+                    excel: {
+                        fileName: "UploadSuccess.xlsx",
+                        AllPages: true,
+                        filterable: true
+                    },
+                    columns: [
+                        {
+                            command: [{ name: "update-data", text: "Show Detail", click: showDetail, iconClass: "glyphicon glyphicon-edit spasi-kanan" }, { name: "delete-data", text: "Delete", click: deleterow, iconClass: "glyphicon glyphicon-edit spasi-kanan" }], title: "ACTION", width: 120
+                        },
+                        { field: "ID_PENGAJUAN", editable: false, title: "ID PENGAJUAN", width: 110 },
+                        { field: "PIC", editable: false, title: "PIC", width: 110 },
+                        { field: "Nama", title: "Nama", width: 130 },
+                        { field: "DivisiID", title: "Divisi", width: 100},
+                        { field: "DepartmentID", title: "Department", width: 100 },
+                        { field: "RequestDate", title: "Tanggal Pengajuan", width: 100,format: "{0:MM/dd/yyyy}" },
+                        { field: "Kategori", title: "Kategori", width: 100},
+                        { field: "Item", title: "Item", width: 100 },
+                        { field: "QTY", title: "QTY", width: 100 }
+
+                    ],
+                    dataBinding: function () {
+                        window.rowNo = (this.dataSource.page() - 1) * this.dataSource.pageSize();
+                    }
+                });
+                $(document).ready(function () {
+                    // create DatePicker from input HTML element
+                    $("#tglpengaju").kendoDatePicker();
+                });
+            }
+
+            function dd_Katalog() {
+                var ds_district = new kendo.data.DataSource({
+                    type: "json",
+                    transport: {
+                        read: {
+                            url: $("#urlPath").val() + "/Pengajuan/ReadKatalog",
+                            contentType: "application/json",
+                            type: "POST",
+                            cache: false
+                        }
+                    },
+                    schema: {
+                        data: "Data",
+                        total: "Total"
+                    }
+                });
+
+                $("#descItem").kendoDropDownList({
+                    autoBind: true,
+                    dataSource: ds_district,
+                    dataTextField: "Deskripsi",
+                    dataValueField: "Deskripsi",
+                    optionLabel: "Pilih...",
+                    filter: "contains",
+                    change: function (e) {
+                        var dataItem = this.dataItem(e.sender._oldIndex);
+                    }
+                }).data("kendoDropDownList");
+            }
+
+            function dd_Kategori() {
+                var ds_district = new kendo.data.DataSource({
+                    type: "json",
+                    transport: {
+                        read: {
+                            url: $("#urlPath").val() + "/Pengajuan/ReadKategori",
+                            contentType: "application/json",
+                            type: "POST",
+                            cache: false
+                        }
+                    },
+                    schema: {
+                        data: "Data",
+                        total: "Total"
+                    }
+                });
+
+                $("#DesKategori").kendoDropDownList({
+                    autoBind: true,
+                    dataSource: ds_district,
+                    dataTextField: "Kategori",
+                    dataValueField: "Kategori",
+                    optionLabel: "Pilih...",
+                    filter: "contains",
+                    change: function (e) {
+                        var dataItem = this.dataItem(e.sender._oldIndex);
+                    }
+                }).data("kendoDropDownList");
+            }
+            function dd_div() {
+                var ds_district = new kendo.data.DataSource({
+                    type: "json",
+                    transport: {
+                        read: {
+                            url: $("#urlPath").val() + "/Pengajuan/ReadDiv",
+                            contentType: "application/json",
+                            type: "POST",
+                            cache: false
+                        }
+                    },
+                    schema: {
+                        data: "Data",
+                        total: "Total"
+                    }
+                });
+
+                $("#divisi").kendoDropDownList({
+                    autoBind: true,
+                    dataSource: ds_district,
+                    dataTextField: "DIV_CODE",
+                    dataValueField: "DIV_CODE",
+                    optionLabel: "Pilih...",
+                    filter: "contains",
+                    change: function (e) {
+                        var dataItem = this.dataItem(e.sender._oldIndex);
+                    }
+                }).data("kendoDropDownList");
+            }
+            function dd_dept() {
+                var ds_district = new kendo.data.DataSource({
+                    type: "json",
+                    transport: {
+                        read: {
+                            url: $("#urlPath").val() + "/Pengajuan/ReadDept",
+                            contentType: "application/json",
+                            type: "POST",
+                            cache: false
+                        }
+                    },
+                    schema: {
+                        data: "Data",
+                        total: "Total"
+                    }
+                });
+
+                $("#Dept").kendoDropDownList({
+                    autoBind: true,
+                    dataSource: ds_district,
+                    dataTextField: "DEPT_CODE",
+                    dataValueField: "DEPT_CODE",
+                    optionLabel: "Pilih...",
+                    filter: "contains",
+                    change: function (e) {
+                        var dataItem = this.dataItem(e.sender._oldIndex);
+                    }
+                }).data("kendoDropDownList");
+            }
+            function open_wnd_add() {
+                $("#pic").prop('disabled', false);
+                $("#divisi").data("kendoDropDownList").value(-1);
+                $("#Dept").data("kendoDropDownList").value(-1);
+                $("#tglpengaju").val("");
+                $("#DesKategori").data("kendoDropDownList").value(-1);
+                $("#descItem").data("kendoDropDownList").value(-1);
+                $("#qty").val("");
+
+                save_method = 'add';
+                $('#myModal').modal({
+                    show: true,
+                    keyboard: false,
+                    backdrop: 'static'
+                });
+                
+                var start = $("#tglpengaju").kendoDatePicker({
+                    format: "yyyy-MM-dd",
+                    dateInput: false,
+                    change: function () {
+                        var start = $("#tglpengaju").val();
+                        
+
+                    }
+                }).data("kendoDatePicker");
+
+            }
+            function Edit(e) {
+                e.preventDefault();
+                var dataItem = this.dataItem($(e.currentTarget).closest("tr"));
+                $("#pic").prop('disabled', true);
+
+                $("#Div").data("kendoDropDownList").value(-1);
+                $("#Dept").data("kendoDropDownList").value(-1);
+                $("#tglpengaju").val("");
+                $("#DesKategori").data("kendoDropDownList").value(-1);
+                $("#descItem").data("kendoDropDownList").value(-1);
+                $("#qty").val("");
+
+                $("#pic").val(dataItem.PIC);
+                $("#Div").data("kendoDropDownList").value(dataItem.DivisiID);
+                $("#Dept").data("kendoDropDownList").value(dataItem.DepartmentID);
+                $("#tglpengaju").val(dataItem.RequestDate);
+                $("#DesKategori").data("kendoDropDownList").value(dataItem.Kategori);
+                $("#descItem").data("kendoDropDownList").value(dataItem.Item);
+                $("#qty").val(dataItem.QTY);
+
+
+                save_method = "update";
+                $('#myModal').modal({
+                    show: true,
+                    keyboard: false,
+                    backdrop: 'static'
+                });
+            }
+
+            $("#btn_simpan").click(function () {
+                var url = "";
+                if (save_method == "update") {
+                    url_ = $("#urlPath").val() + "/Pengajuan/Update";
+                } else {
+                    url_ = $("#urlPath").val() + "/Pengajuan/Insert";
+                }
+
+                console.log($("#Div").data("kendoDropDownList").value());
+                console.log($("#Dept").data("kendoDropDownList").value());
+                console.log($("#DesKategori").data("kendoDropDownList").value());
+                console.log($("#descItem").data("kendoDropDownList").value());
+
+                var stbl_m_driver = {
+                    PIC: $("#pic").val(),
+                    Nama: $("#nama").val(),
+                    DivisiID: $("#Div").data("kendoDropDownList").value(),
+                    DepartmentID: $("#Dept").data("kendoDropDownList").value(),
+                    Kategori: $("#DesKategori").data("kendoDropDownList").value(),
+                    Item: $("#descItem").data("kendoDropDownList").value(),
+                    QTY: $("#qty").val(),
+
+                }
+                $.ajax({
+                    type: "POST",
+                    dataType: "json",
+                    contentType: "application/json",
+                    url: url_,
+                    data: JSON.stringify(stbl_m_driver),
+                    success: function (response) {
+                        // swag(response.status, response.remarks);
+                        //$.alert({
+                        //    title: 'Good job!',
+                        //    content: response.remarks,
+                        //});
+                        alert(response.remarks)
+
+                        $('#myModal').modal('toggle');
+                        $("#grid").data("kendoGrid").dataSource.read();
+                        $("#grid").data("kendoGrid").refresh();
+
+                    }
+                });
+            });
+
+            var totalNotInput = 0;
+            function doProcessQty()
+            {
+                iTotalQty = $("#qty").val();
+                var iItemSelected = $("#descItem").data("kendoDropDownList").value();
+                var iDivSelect = $("#divisi").data("kendoDropDownList").value();
+                var iDeptSelect = $("#Dept").data("kendoDropDownList").value();
+                
+                
+                $("div#form1").empty();
+                $("div#form1").append(
+                // Creating Form Div and Adding <h2> and <p> Paragraph Tag in it.
+                $("<form/>", {
+                    action: '#',
+                    method: '#',
+                }).append(
+                    // Create <form> Tag and Appending in HTML Div form1.
+                       $("<label/>", {
+                           id: 'count_pemesan',
+                       }).text(totalNotInput + 1 + " dari " + iTotalQty),
+                $("<input/>", {
+                    type: 'text',
+                    id:'nrp_pemesan',
+                    name: 'nrp_pemesan',
+                    readonly:'true',
+                    class: 'form-control input_nrp',
+                    placeholder: 'Nrp Pemesan'
+                }), // Creating Input Element With Attribute.
+                $("<input/>", {
+                    type: 'text',
+                    id: 'nama_pemesan',
+                    readonly: 'true',
+                    class: 'form-control input_nama',
+                    name: 'nama_pemesan',
+                    placeholder: 'Nama Pemesan'
+                }),
+                     $("<input/>", {
+                         type: 'text',
+                         id: 'email_pemesan',
+                         readonly: 'true',
+                         class: 'form-control input_email_pemesan',
+                         name: 'email_pemesan',
+                         placeholder: 'Email Pemesan'
+                     }),
+                $("<input/>", {
+                    type: 'text',
+                    readonly: 'true',
+                    id:'dept_pemesan',
+                    name: 'dept_pemesan',
+                    class: 'form-control input_dept_pemesan',
+                    placeholder: 'Dept pemesan'
+                })))
+
+
+                var skat = $("#DesKategori").data("kendoDropDownList").value();
+                var sitem = $("#descItem").data("kendoDropDownList").value();
+                var qty_total = $("#qty").val();
+
+                var datepicker = $("#tglpengaju").data("kendoDatePicker");
+                var value = datepicker.value();
+                var req_date = kendo.toString(value, "yyyy-MM-dd");
+
+
+                $.ajax({
+                    type: "GET",
+                    url: $("#urlPath").val() + "/Pengajuan/getIDTransaction?sKategori=" + skat + "&sitem=" + sitem + "&req_date=" + req_date + "&sqty=" + qty_total + "&sdiv=" + iDivSelect+"&sdept="+iDeptSelect,
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (data) {
+                       
+                        $('#wnd_process_qty').modal({
+                            show: true,
+                            keyboard: false,
+                            backdrop: 'static'
+                        });
+
+                        $("#pIdHeader").empty();
+                        $("#pIdHeader").append(data.dataid);
+                       
+                    }
+                });
+
+                $("#grid").data("kendoGrid").dataSource.read();
+
+            }
+
+            function doShowformEmployee()
+            {
+                wnd_addUser.center().open();
+                var grid = $("#gridPemilihanKaryawan").kendoGrid({
+                    dataSource: {
+                        type: "json",
+                        transport: {
+                            read: {
+                                url: $("#urlPath").val() + "/AddUser/AjaxReadEmployeeQty",
+                                contentType: "application/json",
+                                type: "POST",
+                                cache: false,
+                            },
+                            parameterMap: function (data, operation) {
+                                return kendo.stringify(data)
+                            }
+                        },
+                        pageSize: 15,
+                        serverPaging: true,
+                        serverFiltering: true,
+                        serverSorting: true,
+                        schema: {
+                            data: "Data",
+                            total: "Total"
+                        }
+                    },
+                    height: "480px",
+                    filterable: {
+                        extra: false
+                    },
+                    sortable: true,
+                    pageable: true,
+                    editable: "popup",
+                    pageable: {
+                        refresh: true,
+                        buttonCount: 10,
+                        input: true,
+                        pageSizes: [10, 20, 50, 100, 1000, 100000],
+                        info: true,
+                        messages: {
+                        }
+                    },
+                    columns: [
+
+                        { command: [{ text: "Pilih", click: selects }], title: "Pilih User", width: "100px" },
+                        {
+                            field: "NRP", title: "NRP", width: "100px"
+                        }, {
+                            field: "NAME", title: "Nama", width: "200px"
+                        }, {
+                            field: "POS_TITLE", title: "Posisi", width: "200px"
+                        }, {
+                            field: "Email_Internet", title: "Email", width: "200px"
+                        }, {
+                            field: "DSTRCT_CODE", title: "Distrik", width: "100px"
+                        }
+                    ],
+                    dataBinding: function () {
+                        window.rowNo = (this.dataSource.page() - 1) * this.dataSource.pageSize();
+                    }
+                });
+            }
+
+            function selects(e) {
+
+                e.preventDefault();
+                console.log(this.dataItem($(e.currentTarget).closest("tr")));
+                var dataItem = this.dataItem($(e.currentTarget).closest("tr"));
+                $("#nrp_pemesan").val(dataItem.NRP);
+                $("#nama_pemesan").val(dataItem.NAME);
+                $("#dept_pemesan").val(dataItem.DEPT_DESC);
+                $("#email_pemesan").val(dataItem.Email_Internet);
+                $("#btn_proses_qty_nrp").attr('value' ,'Simpan untu user '+ dataItem.NRP);
+                wnd_addUser.center().close();
+
+            }
+
+            function doSaveformEmployee()
+            {
+                var nrpOrder = $("#nrp_pemesan").val();
+                var nameOrder = $("#nama_pemesan").val();
+                var deptOrder = $("#dept_pemesan").val();
+                var emailOrder = $("#email_pemesan").val();
+
+                $.ajax({
+                    type: "POST",
+                    url: $("#urlPath").val() + "/Pengajuan/doSaveQtyDetail?snrp_order=" + nrpOrder + "&sname_order=" + nameOrder + "&sdept_order=" + deptOrder + "&semail_order=" + emailOrder,
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (data) {
+                        $("#count_pemesan").empty();
+                        var totalNotInput = data.total_data_terisi + 1;
+                    
+                        if (data.return_dismis == true) {
+                            alert("tutup");
+                            $("#modalqty").click();
+
+                        } else {
+                            $("#count_pemesan").append(totalNotInput + " dari " + iTotalQty);
+                            if (data.return_code == 202) {
+                                alert(data.remarks);
+
+                            } else if (data.return_code == 101) {
+                                alert(data.remarks);
+
+                                location.reload();
+                            } else if (data.return_code == 404) {
+                                alert(data.remarks);
+                            }
+                            $('#myModal').modal('toggle');
+                            $("#grid").data("kendoGrid").dataSource.read();
+                            $("#grid").data("kendoGrid").refresh();
+                        }
+
+                        
+                    }
+                });
+            }
+
+            function deleterow(e)
+            {
+                e.preventDefault();
+                var dataItemdeleterow = this.dataItem($(e.currentTarget).closest("tr"));
+                $.ajax({
+                    type: "POST",
+                    url: $("#urlPath").val() + "/Pengajuan/DeletePengajuan?sidPengajuan=" + dataItemdeleterow.ID_PENGAJUAN,
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (data) {
+                        if (data.status_return) {
+                            alert("Berhasil Menghapus Data");
+                            $("#grid").data("kendoGrid").dataSource.read();
+                        } else {
+                            alert("Terjadi masalah saat menghapus");
+                            $("#grid").data("kendoGrid").dataSource.read();
+                        }
+                    }
+                });
+            }
+
+
+            function showDetail(e)
+            {
+                e.preventDefault();
+                var dataItem = this.dataItem($(e.currentTarget).closest("tr"));
+                wnd_detail_qty.center().open();
+
+                $("#lblIDPengaju").append(dataItem.ID_PENGAJUAN);
+                $("#lblNamaPengaju").append(dataItem.Nama);
+                $("#lblNrpPengaju").append(dataItem.PIC);
+                $("#lblitempengajuan").append(dataItem.Item);
+
+
+                $("#gridDetailQty").empty();
+                var grid = $("#gridDetailQty").kendoGrid({
+                    dataSource: {
+                        type: "json",
+                        transport: {
+                            read: {
+                                url: $("#urlPath").val() + "/Pengajuan/ReadQtyDetail?sidpengaju=" + dataItem.ID_PENGAJUAN,
+                                contentType: "application/json",
+                                type: "POST",
+                                cache: false
+
+                            },
+
+
+
+                            parameterMap: function (data, operation) {
+
+                                return kendo.stringify(data)
+                            }
+                        },
+                        pageSize: 1000,
+                        serverPaging: true,
+                        serverFiltering: true,
+                        serverSorting: true,
+                        schema: {
+                            data: "Data",
+                            total: "Total",
+                            model: {
+                                id: "PID_PENGAJUAN_QTY",
+                                fields: {
+                                    PID_PENGAJUAN_QTY: { type: "string", filterable: true, sortable: true, editable: true },
+                                    IDPENGAJUAN: { type: "string", filterable: true, sortable: true, editable: true },
+                                    NRP: { type: "string", filterable: true, sortable: true, editable: true },
+                                    NAMA: { type: "string", filterable: true, sortable: true, editable: true },
+                                    POS_TITLE: { type: "string", filterable: true, sortable: true, editable: true },
+                                    EMAIL_INTERNET: { type: "string", filterable: true, sortable: true, editable: true },
+                                    ITEM_PENGAJUAN: { type: "int", filterable: true, sortable: true, editable: true },
+                                    APPROVAL_UNIT_FINAL: { type: "bool", filterable: true, sortable: true, editable: true },
+                                    PROGRESS_STATUS_APPROVAL: { type: "int", filterable: true, sortable: true, editable: true }
+                                }
+                            }
+                        }
+                    },
+                    height: 500,
+                    filterable: true,
+                    sortable: true,
+                    pageable: true,
+                    resizable: true,
+                    editable: {
+                        mode: "popup"
+                    },
+                    toolbar: [
+
+                     {
+                         name: "excel",
+                         imageClass: '<button type="button" button id="btn_export" class="btn btn-info"><span class="glyphicon glyphicon-export"></span> Export To Excel</button>'
+                     }, ],
+
+                    excel: {
+                        fileName: "UploadSuccess.xlsx",
+                        AllPages: true,
+                        filterable: true
+                    },
+                    columns: [
+                        { field: "PID_PENGAJUAN_QTY", editable: false, title: "PID_PENGAJUAN_QTY", width: 20,hidden:true },
+                        { field: "IDPENGAJUAN", title: "IDPENGAJUAN", width: 40, hidden: true },
+                        { field: "NRP", title: "NRP", width: 20 },
+                        { field: "NAMA", title: "NAMA", width: 30 },
+                        { field: "POS_TITLE", title: "POS_TITLE", width: 32 },
+                        { field: "EMAIL_INTERNET", title: "EMAIL_INTERNET", width: 40 },
+                        { field: "ITEM_PENGAJUAN", title: "ITEM_PENGAJUAN", width: 40 },
+                        { field: "APPROVAL_UNIT_FINAL", title: "APPROVAL_UNIT_FINAL", width: 40, hidden: true }
+
+                    ],
+                    dataBinding: function () {
+                        window.rowNo = (this.dataSource.page() - 1) * this.dataSource.pageSize();
+                    },
+                    dataBound: function (e) {
+                        for (var i = 0; i < e.sender._data.length; i++) {
+
+                            if (e.sender._data[i].PROGRESS_STATUS_APPROVAL == 2 && e.sender._data[i].APROVAL_UNIT_BUDGET == 1) {
+                                $('tr[data-uid="' + e.sender._data[i].uid + '"] ').css("background-color", "#08f0b0");
+                            } else if (e.sender._data[i].PROGRESS_STATUS_APPROVAL == 1 && e.sender._data[i].STATUS_APROVAL == 1 && e.sender._data[i].APROVAL_UNIT_BUDGET == null) {
+                                $('tr[data-uid="' + e.sender._data[i].uid + '"] ').css("background-color", "#15ace8");
+                            }
+                        }
+                        
+                    }
+                });
+
+            }
+
+          
+
+
+
+</script>
+

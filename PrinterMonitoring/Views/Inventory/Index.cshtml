@@ -1,0 +1,1438 @@
+﻿@{
+    ViewBag.Title = "Monitoring Printer";
+    ViewBag.dashboard = "Inventory";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+    ViewBag.pathParent = Url.Content("~").Substring(0, Url.Content("~").Length - 1);
+}
+
+<!-- /.content-header -->
+<!-- Main content -->
+<input type="hidden" id="urlPath" value="@ViewBag.pathParent" />
+<input type="hidden" id="pid" />
+<input type="hidden" id="gp" value="@ViewBag.GP" />
+
+<!-- /.content-header -->
+<!-- Main content -->
+<input type="hidden" id="urlPath" value="@ViewBag.pathParent" />
+<input type="hidden" id="pid" />
+<input type="hidden" id="gp" value="@ViewBag.GP" />
+
+<section class="content">
+
+    <!------------------------------------------------------------ FIXED LAYOUT --------------------------------------------------------->
+
+    <!--------------------------------------------------------------------------------------------------------------------->
+
+    <!------------------------------------------------------------ NAVBAR --------------------------------------------------------->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Master
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#" onclick="masterInput()">Tambah Barang</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#" onclick="masterGrid()">List Master</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown" >
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Input Barang
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#" onclick="inputMasuk()">Input Masuk</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#" onclick="inputKeluar()">Input Keluar</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#" onclick="inOutgrid()">List Input Barang</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Stock
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#" onclick="stockGrid()">Stock Barang</a>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <!------------------------------------------------------------ NAVBAR --------------------------------------------------------->
+
+    <!------------------------------------------------------------ CONTENT --------------------------------------------------------->
+
+
+    <div class="row">
+        <!-- Left col -->
+        <section class="col-lg-12 connectedSortable">
+            <!-- Custom tabs (Charts with tabs)-->
+            <div class="card">
+                <div class="card-body" id="card-body">
+                    
+                    <!-------------------------------------------------- GRID --------------------------------------------------------------->
+
+                    <div id="grid"></div>
+
+                    <!----------------------------------------------------------------------------------------------------------------->
+
+
+                    <!-------------------------------------------------- BARCODE CAM --------------------------------------------------------------->
+
+                    <div id="content-barcode-cam" class="yy-content yy-nonvisible">
+
+                        <div id="barcode-canvas">
+                            <div id="canvas-wrapper">
+                                <canvas hidden="" id="qr-canvas"></canvas>
+                            </div>
+                            <div id="barcode-wrapper">
+                                <div id="barcode-wrapper2">
+                                    <div id="barcode-indicator"></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <!---------------------------------------------------------------------------------------------------------------->
+
+                    <!-------------------------------------------------- INPUT MASTER --------------------------------------------------------------->
+
+                    <div id="content-master-input" class="yy-content yy-nonvisible">
+                        <form class="form-horizontal">
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" style="text-align:left;">Desc:</label>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control yy-form-required" id="yyform_master_desc" autocomplete="off">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" style="text-align:left;">No Asset:</label>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control yy-form-required" id="yyform_master_no_asset" autocomplete="off">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" style="text-align:left;">Type:</label>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control yy-form-required" id="yyform_master_type" autocomplete="off">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" style="text-align:left;">Jenis:</label>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control yy-form-required" id="yyform_master_jenis" autocomplete="off">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" style="text-align:left;">Unit Each</label>
+                                <div class="col-sm-4">
+                                    <input type="number" class="form-control yy-form-required" id="yyform_master_unit_each" autocomplete="off">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" style="text-align:left;">Unit Koli:</label>
+                                <div class="col-sm-4">
+                                    <input type="number" class="form-control yy-form-required" id="yyform_master_unit_koli" autocomplete="off">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" style="text-align:left;">Unit Default:</label>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control yy-form-required" id="yyform_master_unit_default" autocomplete="off">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" style="text-align:left;">Section:</label>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control yy-form-required" id="yyform_master_section" autocomplete="off">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" style="text-align:left;">Expired:</label>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control yy-form-required" id="yyform_master_expired" autocomplete="off">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-4">
+                                    <button type="button" style="width:200px;margin-top:10px;" class="btn btn-success"  onclick="masterSubmit('yyform_master')">Submit</button>
+                                    <div class="yy-nonvisible yy-form-invalid-alert">Lengkapi semua form !</div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+
+                <!---------------------------------------------------------------------------------------------------------------------->
+
+                <!---------------------------------------------- INPUT MASUK --------------------------------------------------------------->
+
+                    <div id="content-input-masuk" class="yy-content yy-nonvisible">
+                        <form class="form-horizontal">
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" style="text-align:left;"> ID Item:</label>
+                                <div class="yy-p-form yy-loading-form-box">
+                                    <input type="text" class="form-control yy-form-required" id="yyform_invin_id_product" autocomplete="off">
+                                    <div class="yy-qr-icon-form" yyFollow="yyform_invin_id_product" yyRouter="inputMasuk" yyPrefix="yyform_invin">
+                                        <img src="@ViewBag.pathParent/Plugin/qrcodescan_120401.svg">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                               <label class="control-label col-sm-4" style="text-align:left;">Desc:</label>
+                                <div class="yy-p-form">
+                                    <input type="text" class="form-control yy-form-required" id="yyform_invin_desc" autocomplete="off" readonly="readonly">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" style="text-align:left;">Type:</label>
+                                <div class="yy-p-form">
+                                    <input type="text" class="form-control yy-form-required" id="yyform_invin_type" autocomplete="off" readonly="readonly">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" style="text-align:left;">Section:</label>
+                                <div class="yy-p-form">
+                                    <input type="text" class="form-control yy-form-required" id="yyform_invin_section" autocomplete="off" readonly="readonly">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" style="text-align:left;">Each Unit:</label>
+                                <div class="yy-p-form">
+                                    <input type="number" class="form-control yy-form-required" id="yyform_invin_qty_each" autocomplete="off" readonly="readonly">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" style="text-align:left;">Koli Unit:</label>
+                                <div class="yy-p-form">
+                                    <input type="number" class="form-control yy-form-required" id="yyform_invin_qty_koli" autocomplete="off" readonly="readonly">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" style="text-align:left;">Satuan:</label>
+                                <div class="yy-p-form">
+                                    <input type="text" class="form-control yy-form-required" id="yyform_invin_unit" autocomplete="off">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" style="text-align:left;">Quantiy:</label>
+                                <div class="yy-p-form">
+                                    <input type="number" class="form-control yy-form-required" id="yyform_invin_qty" autocomplete="off">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" style="text-align:left;">No PO:</label>
+                                <div class="yy-p-form">
+                                    <input type="text" class="form-control yy-form-required" id="yyform_invin_no_po" autocomplete="off">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" style="text-align:left;">Vendor:</label>
+                                <div class="yy-p-form">
+                                    <input type="text" class="form-control yy-form-required" id="yyform_invin_vendor" autocomplete="off">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" style="text-align:left;">Penerima:</label>
+                                <div class="yy-p-form">
+                                    <input type="text" class="form-control yy-form-required" id="yyform_invin_officer" autocomplete="off">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="yy-p-form">
+                                    <button type="button" style="width:200px;margin-top:10px;" class="btn btn-success" onclick="inSubmit('yyform_invin')">Submit</button>
+                                    <div class="yy-nonvisible yy-form-invalid-alert">Lengkapi semua form !</div>
+                                </div>
+                            </div>
+
+                        </form>
+                        
+                    </div>
+
+                    <!---------------------------------------------- INPUT KELUAR --------------------------------------------------------------->
+
+                    <div id="content-input-keluar" class="yy-content yy-nonvisible">
+                        <form class="form-horizontal">
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" style="text-align:left;"> ID Item:</label>
+                                <div class="yy-p-form yy-loading-form-box">
+                                    <input type="text" class="form-control yy-form-required" id="yyform_invout_id_product" autocomplete="off">
+                                    <div class="yy-qr-icon-form" yyFollow="yyform_invout_id_product" yyRouter="inputKeluar" yyPrefix="yyform_invout">
+                                        <img src="@ViewBag.pathParent/Plugin/qrcodescan_120401.svg">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" style="text-align:left;">Desc:</label>
+                                <div class="yy-p-form">
+                                    <input type="text" class="form-control yy-form-required" id="yyform_invout_desc" autocomplete="off" readonly="readonly">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" style="text-align:left;">Type:</label>
+                                <div class="yy-p-form">
+                                    <input type="text" class="form-control yy-form-required" id="yyform_invout_type" autocomplete="off" readonly="readonly">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" style="text-align:left;">Section:</label>
+                                <div class="yy-p-form">
+                                    <input type="text" class="form-control yy-form-required" id="yyform_invout_section" autocomplete="off" readonly="readonly">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" style="text-align:left;">Each Unit:</label>
+                                <div class="yy-p-form">
+                                    <input type="number" class="form-control yy-form-required" id="yyform_invout_qty_each" autocomplete="off" readonly="readonly">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" style="text-align:left;">Koli Unit:</label>
+                                <div class="yy-p-form">
+                                    <input type="number" class="form-control yy-form-required" id="yyform_invout_qty_koli" autocomplete="off" readonly="readonly">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" style="text-align:left;">Satuan:</label>
+                                <div class="yy-p-form">
+                                    <input type="text" class="form-control yy-form-required" id="yyform_invout_unit" autocomplete="off">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" style="text-align:left;">Quantiy:</label>
+                                <div class="yy-p-form">
+                                    <input type="number" class="form-control yy-form-required" id="yyform_invout_qty" autocomplete="off">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" style="text-align:left;">No PO:</label>
+                                <div class="yy-p-form">
+                                    <input type="text" class="form-control yy-form-required" id="yyform_invout_no_po" autocomplete="off">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" style="text-align:left;">Site:</label>
+                                <div class="yy-p-form">
+                                    <input type="text" class="form-control yy-form-required" id="yyform_invout_site" autocomplete="off">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" style="text-align:left;">Pengirim:</label>
+                                <div class="yy-p-form">
+                                    <input type="text" class="form-control yy-form-required" id="yyform_invout_officer" autocomplete="off">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="yy-p-form">
+                                    <button type="button" style="width:200px;margin-top:10px;" class="btn btn-success" onclick="outSubmit('yyform_invout')">Submit</button>
+                                    <div class="yy-nonvisible yy-form-invalid-alert">Lengkapi semua form !</div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!---------------------------------------------------------------------------------------------------------->
+
+                </div><!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+        </section>
+    </div>
+
+    <!------------------------------------------------------------ CONTENT --------------------------------------------------------->
+
+
+    <!----------------------------------------------------- Modal ---------------------------------------------------------->
+
+    <div class="modal fade modalEdit" id="modalMasterEdit" role="dialog">
+        <div class="modal-dialog" style="width:600px !important;">
+            <!----- Modal content------>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Tambah License</h4>
+                </div>
+                <!----- Modal Body ------>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-4" style="text-align:left;">ID Product:</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control yy-form-required" id="yyform_modal_master_id_product" autocomplete="off" readonly="readonly">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-4" style="text-align:left;">Desc:</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control yy-form-required" id="yyform_modal_master_desc" autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-4" style="text-align:left;">No Asset:</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control yy-form-required" id="yyform_modal_master_no_asset" autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-4" style="text-align:left;">Type:</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control yy-form-required" id="yyform_modal_master_type" autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-4" style="text-align:left;">Jenis:</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control yy-form-required" id="yyform_modal_master_jenis" autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-4" style="text-align:left;">Unit Each</label>
+                            <div class="col-sm-4">
+                                <input type="number" class="form-control yy-form-required" id="yyform_modal_master_unit_each" autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-4" style="text-align:left;">Unit Koli:</label>
+                            <div class="col-sm-4">
+                                <input type="number" class="form-control yy-form-required" id="yyform_modal_master_unit_koli" autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-4" style="text-align:left;">Unit Default:</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control yy-form-required" id="yyform_modal_master_unit_default" autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-4" style="text-align:left;">Section:</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control yy-form-required" id="yyform_modal_master_section" autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-4" style="text-align:left;">Expired:</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control yy-form-required" id="yyform_modal_master_expired" autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-4">
+                                <div class="yy-nonvisible yy-form-invalid-alert">Lengkapi semua form !</div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <!--------------------->
+                <div class="modal-footer">
+                    <div class="yy-modal-footer">
+                        <button type="button" style="width:50%;" class="btn btn-danger" data-dismiss="modal">CANCEL</button>
+                        <button id="save" type="button" style="width:50%" class="btn btn-success" onclick="masterUpdate('yyform_modal_master')">SAVE</button>
+                    </div>
+                </div>
+            </div>
+            <!------------------>
+
+        </div>
+    </div>
+    <!--------------------------------------- Modal ------------------------------------------->
+
+    <!--------------------------------------- Modal ------------------------------------------->
+
+    <div class="modal fade" id="modalDeleted" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Peringatan!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p style="font-size: 18px">Anda yakin ingin menghapus baris ini ?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" onclick="tableDelete()">Ya, hapus</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Tidak</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--------------------------------------- Modal ------------------------------------------->
+
+    <div class="yy-loading yy-nonvisible">
+        <div>
+            <div class="spinner-border text-primary align-self-center" role="status">
+            </div>
+        </div>
+    </div>
+
+    <div class="yy-notif-success bg-primary yy-nonvisible">
+        <div class="yy-notif-close">
+            <span class="tiny material-icons" style="font-size:20px;cursor:pointer;">close</span>
+        </div>
+        <div class="yy-notif-content">
+            <span></span>
+            <span>Success</span>
+        </div>
+    </div>
+
+</section>
+<!-- /.content -->
+
+<script src="@ViewBag.pathParent/Js/Global.js"></script>
+<script src="@ViewBag.pathParent/pdf/qrcode.js"></script>
+<script src="@ViewBag.pathParent/pdf/jspdf.debug.js"></script>
+<script src="@ViewBag.pathParent/pdf/html2canvas.min.js"></script>
+<script src="@ViewBag.pathParent/pdf/jspdf.costum.js"></script>
+<script src="@ViewBag.pathParent/Plugin/qr_packed.js"></script>
+<script src="@ViewBag.pathParent/Plugin/qrCodeScanner.js"></script>
+<!-----<script src="../../Js/Global.js"></script>-->
+<script>
+
+    //getAllForm('yyform_master')
+    
+    $(document).ready(function () {
+        router().then(() => {
+            loadgrid(set_inventory_in_out());
+        })
+        initialLoadingForm();
+        //showLoadingForm('#yyform_invin_id_product-loading-form')
+        let box = document.querySelector('#barcode-canvas');
+        let height = box.style.pixelHeight;
+        /*
+        $(document).on('click', '.yy-checkbox-global', function () {
+            console.log('okee')
+        });
+        */
+        
+    });
+
+    let temp_unit = {
+        each: null,
+        koli: null
+    }
+
+    let first = true;
+
+    let tempDelete = {}
+    
+
+    //----------------------- Master Dropdown
+
+    yyFormDropdown({
+        target: '#yyform_master_unit_default',
+        datas: ['each', 'koli'],
+        defaults: 'each'
+    })
+
+    yyFormDropdown({
+        target: '#yyform_modal_master_unit_default',
+        datas: ['each', 'koli'],
+        defaults: 'each'
+    })
+
+    yyFormDropdown({
+        target: '#yyform_master_jenis',
+        datas: ['Asset', 'Non Asset']
+    })
+
+    yyFormDropdown({
+        target: '#yyform_modal_master_jenis',
+        datas: ['Asset', 'Non Asset']
+    })
+
+    yyFormDropdown({
+        target: '#yyform_master_section',
+        datas: ['ASDM', 'LISCA', 'ITOS', 'SYSADMIN', 'NETWORK']
+    })
+
+    yyFormDropdown({
+        target: '#yyform_modal_master_section',
+        datas: ['ASDM', 'LISCA', 'ITOS', 'SYSADMIN', 'NETWORK']
+    })
+
+    yyFormDropdown({
+        target: '#yyform_master_expired',
+        datas: ['EOS', 'EOL']
+    })
+
+    yyFormDropdown({
+        target: '#yyform_modal_master_expired',
+        datas: ['EOS', 'EOL']
+    })
+
+    //-----------------------
+
+
+    yyFormDropdown({
+        target: '#yyform_invin_unit',
+        datas: ['each', 'koli']
+    })
+
+    yyFormDropdown({
+        target: '#yyform_invout_unit',
+        datas: ['each', 'koli']
+    })
+
+    yyFormDropdown({
+        target: '#yyform_invout_site',
+        datas: ['JIEP', 'KPCS', 'SMMS', 'BAYA']
+    })
+
+
+
+    function edit() {
+
+    }
+
+    function showModalDelete() {
+
+    }
+
+    function tes() {
+        modalShow('#modalMasterEdit')
+    }
+
+    $('.dropdown-item').click(el => {
+        menuEl = $(el.currentTarget).parent().parent()
+        //addClass('active')
+        let menusEl = $('.nav-item')
+        for (item of menusEl) {
+            $(item).removeClass('active')
+        }
+        menuEl.addClass('active')
+    })
+
+    function setCheckboxInputCount() {
+        let count = Object.values(checkObj).reduce((first, item, index, array) => {
+            return first + item.length
+        }, 0)
+        $('[data-field=checkbox_count]').text(count < 1 ? '' : count)
+    }
+
+
+    function checkboxCallBack(el, from) {
+        let grid = $("#grid").data("kendoGrid");
+        setCheckboxInputCount()
+        if (Object.values(checkObj).length > 0) {
+            $('#btn_barcode').css('display', 'inline-block')
+            grid.showColumn("checkbox_count");
+        } else {
+            $('#btn_barcode').css('display', 'none')
+            grid.hideColumn("checkbox_count");
+        }
+
+        if (el.checked) {
+            if (from === 'body') {
+                let getId = $(el).attr('id').split('yy-checkbox-')[1]
+                $('#checkbox-input-' + getId).text('1')
+                $('#checkbox-input-' + getId).attr('contenteditable', 'true')
+            }
+            if (from === 'header') {
+                $('.checkbox-input').text('1')
+                $('.checkbox-input').attr('contenteditable', 'true')
+            }
+        } else {
+            if (from === 'body') {
+                let getId = $(el).attr('id').split('yy-checkbox-')[1]
+                $('#checkbox-input-' + getId).attr('contenteditable', 'false')
+                $('#checkbox-input-' + getId).text(null)
+            }
+            if (from === 'header') {
+                $('.checkbox-input').attr('contenteditable', 'false')
+                $('.checkbox-input').text(null)
+            }
+        }
+
+        //logger(JSON.stringify(checkObj))
+
+    }
+
+    $(document).on('keyup', '.checkbox-input', el => {
+        let id = $(el.currentTarget).attr('id').split('checkbox-input-')[1]
+        let val = $(el.currentTarget).text()
+
+        if (val === '0') {
+            $(el.currentTarget).text(1);
+        }
+
+        if (isNaN(val * 1)) {
+            $(el.currentTarget).text(1);
+        }
+
+        if (val * 1 > 50) {
+            $(el.currentTarget).text(50);
+        }
+
+        
+        let count = $(el.currentTarget).text() * 1;
+        count < 1 ? count = 1 : count = count
+            clearTimeout($.data(this, 'scrollTimer'));
+            $.data(this, 'scrollTimer', setTimeout(function () {
+                let oldVal = checkObj[id][0]
+                checkObj[id] = []
+                for (let i = 1; i <= count; i++) {
+                    checkObj[id].push(oldVal)
+                }
+                setCheckboxInputCount()
+                    
+            }, 300));
+        
+    });
+
+    $(document).on('focusout', '.checkbox-input', el => {
+        let val = $(el.currentTarget).text()
+        if ((val * 1) < 1) {
+            $(el.currentTarget).text(1)
+        }
+    })
+    
+
+
+    function masterEdit(e) {
+        e.preventDefault();
+        let items = JSON.parse(JSON.stringify(this.dataItem($(e.currentTarget).closest("tr"))));
+        setFormObject(items, [], 'yyform_modal_master')
+        modalShow('#modalMasterEdit')
+    }
+
+    
+    function masterDeleted(e) {
+        e.preventDefault();
+        let items = JSON.parse(JSON.stringify(this.dataItem($(e.currentTarget).closest("tr"))));
+        tempDelete.data = {
+            'id_product': items.id_product,
+        }
+        tempDelete.url = '/Inventory/MasterDelete'
+        tempDelete.grid = '_set_inventory_master'
+        modalShow('#modalDeleted')
+    }
+
+
+    function inventoryDeleted(e) {
+        e.preventDefault();
+        let items = JSON.parse(JSON.stringify(this.dataItem($(e.currentTarget).closest("tr"))));
+        tempDelete.data = {
+            'id': items.id,
+        }
+        tempDelete.url = '/Inventory/InventoryDelete'
+        tempDelete.grid = '_set_inventory_in_out'
+        modalShow('#modalDeleted')
+    }
+    
+
+    
+    function tableDelete() {
+        handlerOfDelete(tempDelete)
+    }
+    
+
+    let qrElement
+    let qrPrefix
+    let qrRouter
+    function qrBarcodeHandler(el, prefix, to) {
+        qrElement = null
+        qrPrefix = null
+        qrRouter = null
+        qrElement = el
+        qrPrefix = prefix
+        qrRouter = to
+        barcodeCam()
+    }
+
+    function barcodeCallback(results) {
+        router(qrRouter)
+        $(qrElement).val(results)
+        handlerOfIdProduct(qrElement, qrPrefix)
+    }
+
+    function barcodeIndicator() {
+        if (first) {
+            barcodeIndicators()
+            first = false
+        }
+    }
+
+    function barcodeIndicators() {
+            const position = parseInt($("#barcode-indicator").css('top').split('px')[0])
+            if (position < 50) {
+                $("#barcode-indicator").css({
+                    'top' : 'calc(100% + 40.5px)',
+                    'box-shadow': '0 -15px 20px 20px rgba(0, 255, 200, 0.6)'
+                })
+            } else {
+                $("#barcode-indicator").css({
+                    'top': 'calc(0% - 40.5px)',
+                    'box-shadow': '0 15px 20px 20px rgba(0, 255, 200, 0.6)'
+                })
+            }
+            setTimeout(() => {
+                barcodeIndicators()
+            }, 2100);
+    }
+
+    function unitChanger(prefix) {
+        if (temp_unit.koli > 0 && temp_unit.each > 0) {
+            let val = $('#' + prefix +'_qty').val()
+            let unit = $('#' + prefix + '_unit').val()
+            if (unit === 'each') {
+                $('#' + prefix + '_qty_each').val(val)
+                $('#' + prefix + '_qty_koli').val((val / temp_unit.each) * temp_unit.koli)
+            } else if (unit === 'koli') {
+                $('#' + prefix + '_qty_each').val((val / temp_unit.koli) * temp_unit.each)
+                $('#' + prefix + '_qty_koli').val(val)
+            }
+        }
+    }
+
+
+    function handlerOfIdProduct(el, prefixx) {
+        const id = $(el.currentTarget).attr('id') !== undefined ? "#" + $(el.currentTarget).attr('id') : "#" + el.attr('id')
+        const ids = id + "-loading-form"
+        const prefix = prefixx;
+        textChange(id).then(() => {
+            showLoadingForm(ids)
+            let datas = getFormObject([id], prefix)
+            fetchs("POST", "/Inventory/FormInGetItem", datas)
+            .then(res => {
+                hideLoadingForm(ids)
+                const val = res.data[0]
+                if (res.data.length > 0) {
+                    refreshFormObject(getAllForm(prefix), undefined, '#' + prefix + '_id_product')
+                    temp_unit.each = val.unit_each
+                    temp_unit.koli = val.unit_koli
+                    val.qty_each = val.unit_each
+                    val.qty_koli = val.unit_koli
+                    val.unit = val.unit_default
+                    setFormObject(val, [], prefix)
+                    $('.form-control').removeClass('yy-form-invalid')
+                } else {
+                    refreshFormObject(getAllForm(prefix), undefined, '#' + prefix + '_id_product')
+                    temp_unit.each = null
+                    temp_unit.koli = null
+                }
+            })
+            .catch(err => {
+                hideLoadingForm(ids)
+                refreshFormObject(getAllForm(prefix), undefined, '#' + prefix + '_id_product')
+                temp_unit.each = null
+                temp_unit.koli = null
+                alert(err)
+            })
+        }).catch(() => {
+            hideLoadingForm(ids)
+            refreshFormObject(getAllForm(prefix), undefined, '#' + prefix + '_id_product')
+            temp_unit.each = null
+            temp_unit.koli = null
+        })
+    }
+
+    function handlerOfQty(el, prefixx) {
+        const id = "#" + $(el.currentTarget).attr('id')
+        textChange(id, 0).then(() => {
+            if ($('#' + prefixx + '_qty').val() > 0) {
+                unitChanger(prefixx)
+            } else {
+                $('#' + prefixx + '_qty').val(null)
+            }
+        }).catch(() => {
+            $('#' + prefixx + '_qty_each').val(temp_unit.each)
+            $('#' + prefixx + '_qty_koli').val(temp_unit.koli)
+        })
+    }
+
+
+    function handlerOfSubmit(idPrefix, url) {
+        let datas = getFormObject(getAllForm(idPrefix), idPrefix)
+        formCheck(idPrefix).then(res => {
+            yy_show('.yy-loading')
+            fetchs("POST", url, datas)
+                .then(res => {
+                    setTimeout(function () {
+                        yy_hide('.yy-loading')
+                        setTimeout(function () {
+                            yy_show('.yy-notif-success')
+                            refreshFormObject(getAllForm(idPrefix))
+                        }, 100);
+                    }, 550);
+                })
+                .catch(err => {
+                    yy_hide('.yy-loading')
+                    alert(err);
+                })
+        }).catch(err => {
+            formInvalid(err)
+        })
+    }
+
+    function handlerOfUpdate(idPrefix, url) {
+        let datas = getFormObject(getAllForm(idPrefix), idPrefix)
+        formCheck(idPrefix).then(res => {
+            yy_show('.yy-loading')
+            fetchs("POST", url, datas)
+                .then(res => {
+                    setTimeout(function () {
+                        yy_hide('.yy-loading')
+                        modalHide('.modalEdit')
+                        setTimeout(function () {
+                            gridHandler('_set_inventory_master')
+                            yy_show('.yy-notif-success')
+                            refreshFormObject(getAllForm(idPrefix))
+                        }, 100);
+                    }, 550);
+                })
+                .catch(err => {
+                    yy_hide('.yy-loading')
+                    alert(err);
+                })
+        }).catch(err => {
+            formInvalid(err)
+        })
+    }
+
+    function handlerOfDelete(obj) {
+        yy_show('.yy-loading')
+        fetchs("POST", obj.url, JSON.stringify(obj.data))
+                .then(res => {
+                    setTimeout(function () {
+                        yy_hide('.yy-loading')
+                        modalHide('#modalDeleted')
+                        gridHandler(obj.grid)
+                        setTimeout(function () {
+                            yy_show('.yy-notif-success')
+                            tempDelete = {}
+                        }, 100);
+                    }, 550);
+                })
+                .catch(err => {
+                    yy_hide('.yy-loading')
+                    alert(err);
+                })
+    }
+
+
+
+    //-------------------------------------- INVENTORY IN
+
+    $('#yyform_invin_id_product').keyup((el) => {
+        handlerOfIdProduct(el, 'yyform_invin')
+    })
+    
+    $('#yyform_invin_qty').keyup(el => {
+        handlerOfQty(el, 'yyform_invin')
+    })
+
+    $('#yyform_invin_unit').change(el => {
+        if ($('#yyform_invin_qty').val() > 0) {
+            unitChanger('yyform_invin')
+        }
+    })
+
+    function inSubmit(idPrefix) {
+        handlerOfSubmit(idPrefix, '/Inventory/InventoryIn')
+    }
+
+    //--------------------------------------
+
+
+    //-------------------------------------- INVENTORY OUT
+
+    $('#yyform_invout_id_product').keyup((el) => {
+        handlerOfIdProduct(el, 'yyform_invout')
+    })
+    
+    $('#yyform_invout_qty').keyup(el => {
+        handlerOfQty(el, 'yyform_invout')
+    })
+
+    $('#yyform_invout_unit').change(el => {
+        if ($('#yyform_invout_qty').val() > 0) {
+            unitChanger('yyform_invout')
+        }
+    })
+
+    function outSubmit(idPrefix) {
+        handlerOfSubmit(idPrefix, '/Inventory/InventoryOut')
+    }
+
+    //--------------------------------------
+
+
+    //-------------------------------------- INVENTORY MASTER
+
+
+    function masterSubmit(idPrefix) {
+        handlerOfSubmit(idPrefix, '/Inventory/MasterInsert')
+    }
+
+    function masterUpdate(idPrefix) {
+        handlerOfUpdate(idPrefix, '/Inventory/MasterUpdate')
+    }
+
+    //--------------------------------------
+
+
+
+
+
+
+    // ------------------------------------------ ROUTER
+
+    function router(to) {
+        return new Promise((resolve, reject) => {
+            const urlSearchQuery = new URLSearchParams(window.location.search);
+            const query = Object.fromEntries(urlSearchQuery.entries());
+            switch (to === undefined ? query.path : to) {
+                case 'masterInput':
+                    masterInput()
+                    break;
+                case 'inputMasuk':
+                    inputMasuk()
+                    break;
+                case 'inputKeluar':
+                    inputKeluar()
+                    break;
+                case 'barcodeCam':
+                    barcodeCam()
+                    break;
+                case 'masterGrid':
+                    masterGrid()
+                    break;
+                case 'inOutgrid':
+                    inOutgrid()
+                    break;
+                case 'stockGrid':
+                    stockGrid()
+                    break;
+                default:
+                    resolve()
+            }
+        })
+    }
+
+    function routePush(path) {
+        window.history.pushState({}, '', '/Inventory?path=' + path)
+    }
+
+    function masterInput() {
+        routePush(arguments.callee.name)
+        yy_hide('#grid')
+        yy_hide('.yy-content')
+        yy_show('#content-master-input')
+        yy_hide('.yy-form-invalid-alert')
+        barcodeCamEnd()
+        $($('h1')[0]).text('Inventory / Master Input')
+    }
+
+    function inputMasuk() {
+        routePush(arguments.callee.name)
+        yy_hide('#grid')
+        yy_hide('.yy-content')
+        yy_show('#content-input-masuk')
+        yy_hide('.yy-form-invalid-alert')
+        barcodeCamEnd()
+        $($('h1')[0]).text('Inventory / Input Masuk')
+       
+    }
+
+    function inputKeluar() {
+        routePush(arguments.callee.name)
+        yy_hide('#grid')
+        yy_hide('.yy-content')
+        yy_show('#content-input-keluar')
+        yy_hide('.yy-form-invalid-alert')
+        barcodeCamEnd()
+        $($('h1')[0]).text('Inventory / Input Keluar')
+    }
+
+    function barcodeCam() {
+        routePush(arguments.callee.name)
+        yy_hide('#grid')
+        yy_hide('.yy-content')
+        yy_show('#content-barcode-cam')
+        yy_hide('.yy-form-invalid-alert')
+        openBarcodecam().then(() => {
+            $("#barcode-wrapper").css({ 'background-color': 'rgba(255, 255, 255, 0)' });
+        })
+        barcodeIndicator()
+        $($('h1')[0]).text('Inventory / Barcode Scan')
+    }
+
+    function masterGrid() {
+        routePush(arguments.callee.name)
+        gridHandler('_set_inventory_master')
+        $($('h1')[0]).text('Inventory / Master Barang')
+    }
+
+    function inOutgrid() {
+        routePush(arguments.callee.name)
+        gridHandler('_set_inventory_in_out')
+        $($('h1')[0]).text('Inventory / List Input Barang')
+    }
+
+    function stockGrid() {
+        routePush(arguments.callee.name)
+        gridHandler('_set_inventory_stock')
+        $($('h1')[0]).text('Inventory / Stock Barang')
+    }
+
+    // ------------------------------------------
+    
+
+
+    // ------------------------------------------------------------- Grid
+
+    function gridHandler(target) {
+        yy_hide('.yy-content')
+        yy_show('#grid')
+        if (target === '_set_inventory_master') {
+            loadgrid(set_inventory_master()) 
+        } else if (target === '_set_inventory_in_out') {
+            loadgrid(set_inventory_in_out())
+        } else if (target === '_set_inventory_stock') {
+            loadgrid(set_inventory_stock())
+        }
+        barcodeCamEnd()
+    }
+
+    function set_inventory_master() {
+        return {
+            url: "/Inventory/MasterGrid",
+            fieldObj: [
+                { field: "checkbox_count", title: " ", template: '<div contenteditable="false" id="checkbox-input-#= yy_i - 1 #" class="checkbox-input"></div>', width: 50, hide: true },
+                { field: "xno", title: "No", template: "#= adds() #", width: 50 },
+                { command: [{ name: "edit-data", text: "Edit", click: masterEdit }, { name: "delete-data", text: "Delete", click: masterDeleted }], title: "ACTION", width: 180 },
+                { field: "id_product", title: "id_product" },
+                { field: "desc", title: "desc" },
+                { field: "no_asset", title: "no_asset"  },
+                { field: "type", title: "type" },
+                { field: "jenis", title: "jenis" },
+                { field: "unit_each", title: "unit_each" },
+                { field: "unit_koli", title: "unit_koli" },
+                { field: "unit_default", title: "unit_default" },
+                { field: "section", title: "section" },
+                { field: "expired", title: "expired" },
+                { field: "insert_by", title: "insert_by" },
+                { field: "last_update", title: "last_update", type: "Date", format: "{0:dd/MM/yyyy}", sort: true },//"{0:dd/MM/yyyy HH:mm:ss}"
+
+            ],
+            primaryKey: "id_product",
+            dataBound: function () { },
+            btnRefresh: arguments.callee.name,
+            checkBox: "id_product",
+            prefixToolbars: [
+                 {
+                     name: "back",
+                     template: '<button type="button" button id="btn_barcode" class="btn btn-success" onclick="pdfNewTab()">Cetak Barcode</button>'
+                 }
+            ],
+            suffixToolbars: []
+        }
+    }
+
+    function set_inventory_in_out() {
+        return {
+            url: "/Inventory/InventoryGrid",
+            fieldObj: [
+                { field: "xno", title: "No", template: "#= adds() #", width: 50 },
+                { command: [{ name: "delete-data", text: "Delete", click: inventoryDeleted }], title: "ACTION", width: 90 },
+                { field: "last_update", title: "last_update", type: "Date", format: "{0:dd-MM-yyyy HH:mm:ss}", sort: true, width: 160 },
+                { field: "id", title: "id", hide: true },
+                { field: "id_product", title: "id_product" },
+                { field: "desc", title: "desc" },
+                { field: "no_po", title: "no_po" },
+                { field: "qty_each", title: "qty_each" },
+                { field: "qty_koli", title: "qty_koli" },
+                { field: "unit", title: "unit" },
+                { field: "in_out", title: "in_out" },
+                { field: "site", title: "site" },
+                { field: "vendor", title: "vendor" },
+                { field: "officer", title: "officer" },
+                { field: "insert_by", title: "insert_by" },
+            ],
+            primaryKey: "id",
+            dataBound: function () {},
+            btnRefresh: arguments.callee.name,
+            prefixToolbars: [],
+            suffixToolbars: []
+        }
+    }
+
+    function set_inventory_stock() {
+        return {
+            url: "/Inventory/StockGrid",
+            fieldObj: [
+                { field: "xno", title: "No", template: "#= adds() #", width: 50 },
+                { field: "id_product", title: "id_product" },
+                { field: "desc", title: "desc" },
+                { field: "type", title: "type" },
+                { field: "section", title: "section" },
+                { field: "unit_default", title: "unit_default" },
+                { field: "stock_each", title: "stock_each" },
+                { field: "stock_koli", title: "stock_koli" },
+                { field: "jenis", title: "jenis" },
+                { field: "last_transaction", title: "last_update", type: "Date", format: "{0:dd-MM-yyyy HH:mm:ss}", sort: true, width: 160 },
+                { field: "expired", title: "expired" },
+            ],
+            primaryKey: "id_product",
+            dataBound: function () {},
+            btnRefresh: arguments.callee.name,
+            prefixToolbars: [],
+            suffixToolbars: [],
+            detailInit: function (e) {
+                yyloadingShow()
+                loadgridExpand(e, {
+                    url: '/Inventory/StockGridbyPo',
+                    fieldObj: [
+                { field: "xno", title: "No", template: "#= adds() #", width: 50 },
+                { field: "no_po", title: "no_po" },
+                //{ field: "id_product", title: "id_product" },
+                //{ field: "desc", title: "desc" },
+                //{ field: "type", title: "type" },
+                //{ field: "section", title: "section" },
+                //{ field: "unit_default", title: "unit_default" },
+                { field: "stock_each", title: "stock_each" },
+                { field: "stock_koli", title: "stock_koli" },
+                //{ field: "jenis", title: "jenis" },
+                //{ field: "last_transaction", title: "last_update", type: "Date", format: "{0:dd-MM-yyyy HH:mm:ss}", sort: true, width: 160 },
+                //{ field: "expired", title: "expired" },
+                    ]
+                },
+                e.data.id_product)
+            }
+        }
+    }
+
+    // -------------------------------------------------------------
+
+
+    //-------------------------------------------------- BUTTON
+
+
+</script>
+
+
+<link href="@ViewBag.pathParent/Css/Global.css" rel="stylesheet">
+<link href="@ViewBag.pathParent/pdf/jspdf.costum.css" rel="stylesheet">
+<link href="@ViewBag.pathParent/Plugin/styles.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+    .tes {
+        display: block;
+    }
+
+    .main-header {
+        display: none;
+    }
+
+    .yy-modal-footer {
+        display: flex;
+        width: 100%;
+        height: auto;
+    }
+
+        .yy-modal-footer > button {
+            margin: 5px;
+        }
+
+    .yy-tools {
+        margin: 8px 0px;
+    }
+
+    .yy-content {
+        min-height: 500px;
+        width: inherit;
+        /*background-color: #00ff21;*/
+    }
+
+    .form-control {
+        width: 300px;
+    }
+
+    .yy-p-form {
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        width: 300px;
+    }
+
+    .yy-loading-form-box {
+        padding: 0px;
+        left: 7.5px;
+    }
+
+    .yy-qr-icon-form {
+        position: absolute;
+        top: 50%;
+        right: 0px;
+        transform: translate(0px, -50%);
+        height: 100%;
+        cursor: pointer;
+    }
+
+        .yy-qr-icon-form > img {
+            height: 100%;
+            padding: 3px;
+        }
+
+    #content-barcode-cam {
+        text-align: center;
+    }
+
+    #qr-canvas {
+        border-radius: 15px;
+    }
+
+    #barcode-canvas {
+        margin: auto;
+        width: 100%;
+        max-width: 500px;
+        position: relative;
+    }
+
+     #canvas-wrapper {
+        position: absolute;
+        width: inherit;
+    }
+
+    #barcode-wrapper {
+        position: absolute;
+        height: 375px;
+        width: inherit;
+        overflow: hidden;
+        background-color: rgba(255, 255, 255, 1);
+        border-radius: 15px;
+    }
+
+    #barcode-wrapper2 {
+        position: relative;
+        height: 250px;
+        width: 250px;
+        overflow: hidden;
+        box-shadow: 0 0 0 100vh rgba(0, 0, 0, 0.35);
+        border-radius: 30px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #barcode-indicator {
+        position: absolute;
+        height: 0.5px;
+        width: 100%;
+        top: calc(0% - 40.5px);
+        /*background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0.05), rgba(255, 0, 0, 0.2), rgba(255, 0, 0, 0.2), rgba(255, 0, 0, 0.70), rgba(255, 0, 0, 0), rgba(255, 0, 0, 0), rgba(0, 0, 0, 0));*/
+        background-color: rgba(255, 255, 255, 1);
+        box-shadow: 0 -15px 20px 20px rgba(0, 255, 200, 0.6);
+        transition: box-shadow 0.2s ease, top 3s;
+        -webkit-transition: box-shadow 0.2s ease, top 3s;
+        -webkit-transition: box-shadow 0.2s ease, top 3s;
+        -moz-transition: box-shadow 0.2s ease, top 3s;
+        -o-transition: box-shadow 0.2s ease, top 3s;
+    }
+
+    .changer {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 255, 0.05), rgba(0, 0, 255, 0.2), rgba(0, 0, 255, 0.2), rgba(0, 0, 255, 0.70), rgba(0, 0, 255, 0), rgba(0, 0, 255, 0), rgba(0, 0, 255, 0)) !important;
+                
+    }
+
+    .k-detail-cell > .k-grid {
+        width: 750px !important;
+    }
+
+    .checkbox-input {
+       height: 30px;
+       line-height: 30px;
+       text-align: center;
+       width: 100%;
+       border: 1px solid #ced4da;
+       border-radius: .25rem;
+       box-shadow: inset 0 0 0 transparent;
+       overflow: hidden;
+    }
+
+    .checkbox-input:focus {
+        border: 1px solid #459eff;
+        outline: none;
+    }
+
+    .checkbox_count {
+        padding: 5px !important;
+        margin: 0px !important;
+    }
+
+    [data-field='checkbox_count'] {
+        text-align: center !important;
+    }
+
+    #btn_barcode {
+        height: 26px !important;
+        width: 110px !important;
+        margin-left:5px;
+        margin-right:5px;
+        padding: 2px 7px !important;
+        display: none;
+    }
+
+   
+</style>

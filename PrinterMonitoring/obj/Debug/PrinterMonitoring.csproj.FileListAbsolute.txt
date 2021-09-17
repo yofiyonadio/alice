@@ -1,0 +1,212 @@
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\roslyn\csc.exe
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\roslyn\System.Collections.Immutable.dll
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\roslyn\System.Reflection.Metadata.dll
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\roslyn\vbc.exe
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\roslyn\VBCSCompiler.exe
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\roslyn\VBCSCompiler.exe.config
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\PrinterMonitoring.dll.config
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\PrinterMonitoring.dll
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\PrinterMonitoring.pdb
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\Antlr3.Runtime.dll
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\EntityFramework.dll
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\EntityFramework.SqlServer.dll
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Core.dll
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.dll
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Cookies.dll
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.dll
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Facebook.dll
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Google.dll
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.OAuth.dll
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Twitter.dll
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Web.Infrastructure.dll
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\Newtonsoft.Json.dll
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\Owin.dll
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\System.Web.Helpers.dll
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\System.Web.Mvc.dll
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\System.Web.Optimization.dll
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\System.Web.Razor.dll
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\System.Web.WebPages.Deployment.dll
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\System.Web.WebPages.dll
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\System.Web.WebPages.Razor.dll
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\WebGrease.dll
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\System.Web.Helpers.xml
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\System.Web.Mvc.xml
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\System.Web.Optimization.xml
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\System.Web.Razor.xml
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\System.Web.WebPages.xml
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\System.Web.WebPages.Deployment.xml
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\System.Web.WebPages.Razor.xml
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\Antlr3.Runtime.pdb
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\Newtonsoft.Json.xml
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\EntityFramework.xml
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\EntityFramework.SqlServer.xml
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Core.xml
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.xml
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.xml
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Facebook.xml
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Cookies.xml
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.OAuth.xml
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Google.xml
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Twitter.xml
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\obj\Debug\PrinterMonitoring.csprojResolveAssemblyReference.cache
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\obj\Debug\PrinterMonitoring.dll
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\obj\Debug\PrinterMonitoring.pdb
+D:\DATA\PROJECT\PrinterMonitoring\PrinterMonitoring\bin\Kendo.DynamicLinq.dll
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\roslyn\csc.exe
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\roslyn\System.Collections.Immutable.dll
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\roslyn\System.Reflection.Metadata.dll
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\roslyn\vbc.exe
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\roslyn\VBCSCompiler.exe
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\roslyn\VBCSCompiler.exe.config
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\PrinterMonitoring.dll.config
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\PrinterMonitoring.dll
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\PrinterMonitoring.pdb
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\Antlr3.Runtime.dll
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\EntityFramework.dll
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\EntityFramework.SqlServer.dll
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.dll
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.dll
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Google.dll
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Web.Infrastructure.dll
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\Newtonsoft.Json.dll
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\Owin.dll
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\System.Web.Helpers.dll
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\System.Web.Mvc.dll
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\System.Web.Optimization.dll
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\System.Web.Razor.dll
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\System.Web.WebPages.Deployment.dll
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\System.Web.WebPages.dll
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\System.Web.WebPages.Razor.dll
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\WebGrease.dll
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\System.Web.Helpers.xml
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\System.Web.Mvc.xml
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\System.Web.Optimization.xml
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\System.Web.Razor.xml
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\System.Web.WebPages.xml
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\System.Web.WebPages.Deployment.xml
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\System.Web.WebPages.Razor.xml
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\Antlr3.Runtime.pdb
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\Newtonsoft.Json.xml
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\EntityFramework.xml
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\EntityFramework.SqlServer.xml
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.xml
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.xml
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Google.xml
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\obj\Debug\PrinterMonitoring.dll
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\obj\Debug\PrinterMonitoring.pdb
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\Kendo.DynamicLinq.dll
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\bin\System.Linq.Dynamic.dll
+D:\Jun\Belajar Ngoding\PrinterMonitoring\PrinterMonitoring\obj\Debug\PrinterMonitoring.csprojResolveAssemblyReference.cache
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\roslyn\csc.exe
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\roslyn\System.Collections.Immutable.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\roslyn\System.Reflection.Metadata.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\roslyn\vbc.exe
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\roslyn\VBCSCompiler.exe
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\roslyn\VBCSCompiler.exe.config
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\PrinterMonitoring.dll.config
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\PrinterMonitoring.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\PrinterMonitoring.pdb
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Antlr3.Runtime.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\EntityFramework.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\EntityFramework.SqlServer.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Kendo.DynamicLinq.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Google.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Web.Infrastructure.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Newtonsoft.Json.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Owin.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\System.Linq.Dynamic.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\System.Web.Helpers.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\System.Web.Mvc.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\System.Web.Optimization.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\System.Web.Razor.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\System.Web.WebPages.Deployment.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\System.Web.WebPages.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\System.Web.WebPages.Razor.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\WebGrease.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\System.Web.Helpers.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\System.Web.Mvc.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\System.Web.Optimization.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\System.Web.Razor.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\System.Web.WebPages.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\System.Web.WebPages.Deployment.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\System.Web.WebPages.Razor.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Antlr3.Runtime.pdb
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Newtonsoft.Json.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\EntityFramework.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\EntityFramework.SqlServer.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Google.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\obj\Debug\PrinterMonitoring.csprojResolveAssemblyReference.cache
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\obj\Debug\PrinterMonitoring.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\obj\Debug\PrinterMonitoring.pdb

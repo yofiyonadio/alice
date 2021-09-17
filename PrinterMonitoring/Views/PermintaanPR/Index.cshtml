@@ -1,0 +1,520 @@
+﻿@{
+    ViewBag.Title = "Monitoring Budget";
+    ViewBag.dashboard = "Permintaan PR";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+    ViewBag.pathParent = Url.Content("~").Substring(0, Url.Content("~").Length - 1);
+}
+
+<!-- /.content-header -->
+<!-- Main content -->
+<input type="hidden" id="urlPath" value="@ViewBag.pathParent" />
+<input type="hidden" id="pid" />
+<input type="hidden" id="gp" value="@ViewBag.GP" />
+
+
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog" style="width:400px;">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="general-tab" data-toggle="tab" href="#general" role="tab" aria-controls="general" aria-selected="true">General</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="purchasedetails-tab" data-toggle="tab" href="#purchasedetails" role="tab" aria-controls="purchasedetails" aria-selected="false">Purchase Details</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="question-tab" data-toggle="tab" href="#question" role="tab" aria-controls="question" aria-selected="false">Questions</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="itemdetails-tab" data-toggle="tab" href="#itemdetails" role="tab" aria-controls="itemdetails" aria-selected="false">Item Details</a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane active" id="general" role="tabpanel" aria-labelledby="general-tab">
+                <div id="regis_modal" class="modal-body">
+                    <form id="form_pr" class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" style="text-align:left;" for="PR">No PR</label>
+                            <input type="text" class="col-sm-3" style="width:160%" id="PR">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" style="text-align:left;" for="request">Request By</label>
+                            <input type="text" class="col-sm-3" style="width:160%" id="nrp">
+                            <input type="text" class="col-sm-3" style="width:160%" id="nama">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" style="text-align:left;" for="posisi">Position</label>
+                            <input type="text" class="col-sm-3" style="width:160%" id="posisi">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" style="text-align:left;" for="district">District</label>
+                            <input type="text" class="col-sm-3" style="width:160%" id="district">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" style="text-align:left;" for="date">Date Required</label>
+                            <input type="text" class="col-sm-3" style="width:160%" id="date">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" style="text-align:left;" for="by">Autorized By</label>
+                            <input type="text" class="col-sm-3" style="width:160%" id="nrpby">
+                            <button type="button" id="cari" style="width:5%" class="btn btn-outline-success">..</button>
+                            <input type="text" class="col-sm-3" style="width:160%" id="namaby">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" style="text-align:left;" for="warehouse">Warehouse</label>
+                            <input type="text" class="col-sm-4" style="width:160%" id="warehouse">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" style="text-align:left;" for="COA">Kategori COA</label>
+                            <input type="text" class="col-sm-4" style="width:160%" id="COA">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" style="text-align:left;" for="element">Expense Element</label>
+                            <input type="text" class="col-sm-3" style="width:160%" id="element">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" style="text-align:left;" for="dept">Department</label>
+                            <input type="text" class="col-sm-1" style="width:160%" id="dept">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="tab-pane" id="purchasedetails" role="tabpanel" aria-labelledby="purchasedetails-tab">
+                <div id="regis_modal" class="modal-body">
+                    <form id="form_pr" class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" style="text-align:left;" for="supplier">Suggested Supplier</label>
+                            <input type="text" class="col-sm-3" style="width:160%" id="supplier">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" style="text-align:left;" for="officer">Purchasing Officer*</label>
+                            <input type="text" class="col-sm-3" style="width:160%" id="officer">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" style="text-align:left;" for="code">Inspection Code</label>
+                            <input type="text" class="col-sm-3" style="width:160%" id="code">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" style="text-align:left;" for="priority">Priority</label>
+                            <input type="text" class="col-sm-3" style="width:160%" id="priority">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" style="text-align:left;" for="material">Material Group Code</label>
+                            <input type="text" class="col-sm-3" style="width:160%" id="material">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" style="text-align:left;" for="instruksi">Purchasing Instructions</label>
+                            <input type="text" class="col-sm-1" style="width:160%" id="instruksi">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" style="text-align:left;" for="item">Reapirable Items</label>
+                            <input type="text" class="col-sm-1" style="width:160%" id="item">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="tab-pane" id="question" role="tabpanel" aria-labelledby="question-tab">
+                <div id="regis_modal" class="modal-body">
+                    <form id="form_pr" class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" style="text-align:left;" for="PR">Delivery Point</label>
+                            <input type="text" class="col-sm-3" style="width:160%" id="delivery">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" style="text-align:left;" for="request">Budget Status</label>
+                            <input type="text" class="col-sm-1" style="width:160%" id="status">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" style="text-align:left;" for="posisi">Warranty Hold Payment</label>
+                            <input type="text" class="col-sm-1" style="width:160%" id="warranty">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" style="text-align:left;" for="district">PIC Asset</label>
+                            <input type="text" class="col-sm-2" style="width:160%" id="asset">
+                        </div>
+                        <div class="form-group">
+                            <button type="button" id="btn_simpan" style="width:15%" class="btn btn-outline-success">SIMPAN</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="tab-pane" id="itemdetails" role="tabpanel" aria-labelledby="itemdetails-tab">
+                <div id="regis_modal" class="modal-body">
+                    <form id="form_pr" class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" style="text-align:left;" for="noitem">No Item</label>
+                            <input type="text" class="col-sm-1" style="width:160%" id="noitem">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" style="text-align:left;" for="qty">Quantity*</label>
+                            <input type="text" class="col-sm-2" style="width:160%" id="qty">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" style="text-align:left;" for="uom">UOM*</label>
+                            <input type="text" class="col-sm-3" style="width:160%" id="UOM">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" style="text-align:left;" for="des1">Deskripsi 1*</label>
+                            <input type="text" class="col-sm-3" style="width:160%" id="deskripsi1">
+                            <label class="control-label col-sm-2" style="text-align:left;" for="des2">Deskripsi 2</label>
+                            <input type="text" class="col-sm-3" style="width:160%" id="deskripsi2">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" style="text-align:left;" for="des3">Deskripsi 3</label>
+                            <input type="text" class="col-sm-3" style="width:160%" id="deskripsi3">
+                            <label class="control-label col-sm-2" style="text-align:left;" for="des4">Deskripsi 4</label>
+                            <input type="text" class="col-sm-3" style="width:160%" id="deskripsi4">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" style="text-align:left;" for="budgetsisa">Sisa Budget</label>
+                            <input type="text" class="col-sm-3" style="width:160%" id="usd">
+                            <label class="control-label col-sm-1" style="text-align:left;" for="usd">USD</label>
+                            <input type="text" class="col-sm-3" style="width:160%" id="idr">
+                            <label class="control-label col-sm-1" style="text-align:left;" for="idr">IDR</label>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" style="text-align:left;" for="budgetsisa">Estimate Price*</label>
+                            <input type="text" class="col-sm-3" style="width:160%" id="usd">
+                            <label class="control-label col-sm-1" style="text-align:left;" for="usd">USD</label>
+                            <input type="text" class="col-sm-3" style="width:160%" id="idr">
+                            <label class="control-label col-sm-1" style="text-align:left;" for="idr">IDR</label>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" id="btn_add" style="width:15%" class="btn btn-outline-success">ADD / UPDATE ITEM</button>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" id="btn_simpan" style="width:15%" class="btn btn-outline-success">SIMPAN</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+        <script>
+            $(function () {
+                $('#myTab li:last-child a').tab('show')
+            })
+            $(document).ready(function () {
+                // create DatePicker from input HTML element
+                $("#date").kendoDatePicker();
+
+            });
+
+            $(document).ready(function () {
+                dd_Posisi();
+                dd_Warehouse();
+                dd_COA();
+                dd_Element();
+                dd_Officer();
+                dd_Priority();
+                dd_Material();
+                dd_Delivery();
+                dd_UOM();
+            });
+
+            $("#dept").kendoDropDownList({
+                dataSource: [
+                 { text: "IT", value: "IT" }
+                ],
+                dataTextField: "text",
+                dataValueField: "value",
+                popup: {
+                    appendTo: $("#container")
+                }
+            });
+
+            function dd_Posisi() {
+                var ds_district = new kendo.data.DataSource({
+                    type: "json",
+                    transport: {
+                        read: {
+                            url: $("#urlPath").val() + "/PermintaanPR/ReadPosisi",
+                            contentType: "application/json",
+                            type: "POST",
+                            cache: false
+                        }
+                    },
+                    schema: {
+                        data: "Data",
+                        total: "Total"
+                    }
+                });
+
+                $("#posisi").kendoDropDownList({
+                    autoBind: true,
+                    dataSource: ds_district,
+                    dataTextField: "Deskripsi",
+                    dataValueField: "Deskripsi",
+                    optionLabel: "Pilih...",
+                    filter: "contains",
+                    change: function (e) {
+                        var dataItem = this.dataItem(e.sender._oldIndex);
+                    }
+                }).data("kendoDropDownList");
+            }
+            function dd_Warehouse() {
+                var ds_district = new kendo.data.DataSource({
+                    type: "json",
+                    transport: {
+                        read: {
+                            url: $("#urlPath").val() + "/PermintaanPR/ReadWarehouse",
+                            contentType: "application/json",
+                            type: "POST",
+                            cache: false
+                        }
+                    },
+                    schema: {
+                        data: "Data",
+                        total: "Total"
+                    }
+                });
+
+                $("#warehouse").kendoDropDownList({
+                    autoBind: true,
+                    dataSource: ds_district,
+                    dataTextField: "TABLE_DESC",
+                    dataValueField: "TABLE_DESC",
+                    optionLabel: "Pilih...",
+                    filter: "contains",
+                    change: function (e) {
+                        var dataItem = this.dataItem(e.sender._oldIndex);
+                    }
+                }).data("kendoDropDownList");
+            }
+            function dd_COA() {
+                var ds_district = new kendo.data.DataSource({
+                    type: "json",
+                    transport: {
+                        read: {
+                            url: $("#urlPath").val() + "/PermintaanPR/ReadCOA",
+                            contentType: "application/json",
+                            type: "POST",
+                            cache: false
+                        }
+                    },
+                    schema: {
+                        data: "Data",
+                        total: "Total"
+                    }
+                });
+
+                $("#COA").kendoDropDownList({
+                    autoBind: true,
+                    dataSource: ds_district,
+                    dataTextField: "Kategori",
+                    dataValueField: "Kategori",
+                    optionLabel: "Pilih...",
+                    filter: "contains",
+                    change: function (e) {
+                        var dataItem = this.dataItem(e.sender._oldIndex);
+                    }
+                }).data("kendoDropDownList");
+            }
+            function dd_Element() {
+                var ds_district = new kendo.data.DataSource({
+                    type: "json",
+                    transport: {
+                        read: {
+                            url: $("#urlPath").val() + "/PermintaanPR/ReadElement",
+                            contentType: "application/json",
+                            type: "POST",
+                            cache: false
+                        }
+                    },
+                    schema: {
+                        data: "Data",
+                        total: "Total"
+                    }
+                });
+
+                $("#element").kendoDropDownList({
+                    autoBind: true,
+                    dataSource: ds_district,
+                    dataTextField: "Deskripsi",
+                    dataValueField: "Deskripsi",
+                    optionLabel: "Pilih...",
+                    filter: "contains",
+                    change: function (e) {
+                        var dataItem = this.dataItem(e.sender._oldIndex);
+                    }
+                }).data("kendoDropDownList");
+            }
+            function dd_Officer() {
+                var ds_district = new kendo.data.DataSource({
+                    type: "json",
+                    transport: {
+                        read: {
+                            url: $("#urlPath").val() + "/PermintaanPR/ReadOfficer",
+                            contentType: "application/json",
+                            type: "POST",
+                            cache: false
+                        }
+                    },
+                    schema: {
+                        data: "Data",
+                        total: "Total"
+                    }
+                });
+
+                $("#officer").kendoDropDownList({
+                    autoBind: true,
+                    dataSource: ds_district,
+                    dataTextField: "Deskripsi",
+                    dataValueField: "Deskripsi",
+                    optionLabel: "Pilih...",
+                    filter: "contains",
+                    change: function (e) {
+                        var dataItem = this.dataItem(e.sender._oldIndex);
+                    }
+                }).data("kendoDropDownList");
+            }
+            function dd_Priority() {
+                var ds_district = new kendo.data.DataSource({
+                    type: "json",
+                    transport: {
+                        read: {
+                            url: $("#urlPath").val() + "/PermintaanPR/ReadPriority",
+                            contentType: "application/json",
+                            type: "POST",
+                            cache: false
+                        }
+                    },
+                    schema: {
+                        data: "Data",
+                        total: "Total"
+                    }
+                });
+
+                $("#priority").kendoDropDownList({
+                    autoBind: true,
+                    dataSource: ds_district,
+                    dataTextField: "Deskripsi",
+                    dataValueField: "Deskripsi",
+                    optionLabel: "Pilih...",
+                    filter: "contains",
+                    change: function (e) {
+                        var dataItem = this.dataItem(e.sender._oldIndex);
+                    }
+                }).data("kendoDropDownList");
+            }
+            function dd_Material() {
+                var ds_district = new kendo.data.DataSource({
+                    type: "json",
+                    transport: {
+                        read: {
+                            url: $("#urlPath").val() + "/PermintaanPR/ReadMaterial",
+                            contentType: "application/json",
+                            type: "POST",
+                            cache: false
+                        }
+                    },
+                    schema: {
+                        data: "Data",
+                        total: "Total"
+                    }
+                });
+
+                $("#material").kendoDropDownList({
+                    autoBind: true,
+                    dataSource: ds_district,
+                    dataTextField: "Deskripsi",
+                    dataValueField: "Deskripsi",
+                    optionLabel: "Pilih...",
+                    filter: "contains",
+                    change: function (e) {
+                        var dataItem = this.dataItem(e.sender._oldIndex);
+                    }
+                }).data("kendoDropDownList");
+            }
+            $("#instruksi").kendoDropDownList({
+                dataSource: [
+                 { text: "Y", value: "Y" }, { text: "N", value: "N" }
+                ],
+                dataTextField: "text",
+                dataValueField: "value",
+                popup: {
+                    appendTo: $("#container")
+                }
+            });
+            $("#item").kendoDropDownList({
+                dataSource: [
+                 { text: "Y", value: "Y" }, { text: "N", value: "N" }
+                ],
+                dataTextField: "text",
+                dataValueField: "value",
+                popup: {
+                    appendTo: $("#container")
+                }
+            });
+            function dd_Delivery() {
+                var ds_district = new kendo.data.DataSource({
+                    type: "json",
+                    transport: {
+                        read: {
+                            url: $("#urlPath").val() + "/PermintaanPR/ReadDelivery",
+                            contentType: "application/json",
+                            type: "POST",
+                            cache: false
+                        }
+                    },
+                    schema: {
+                        data: "Data",
+                        total: "Total"
+                    }
+                });
+
+                $("#delivery").kendoDropDownList({
+                    autoBind: true,
+                    dataSource: ds_district,
+                    dataTextField: "Deskripsi",
+                    dataValueField: "Deskripsi",
+                    optionLabel: "Pilih...",
+                    filter: "contains",
+                    change: function (e) {
+                        var dataItem = this.dataItem(e.sender._oldIndex);
+                    }
+                }).data("kendoDropDownList");
+            }
+            $("#warranty").kendoDropDownList({
+                dataSource: [
+                 { text: "Yes", value: "Yes" }, { text: "No", value: "No" }
+                ],
+                dataTextField: "text",
+                dataValueField: "value",
+                popup: {
+                    appendTo: $("#container")
+                }
+            });
+            function dd_UOM() {
+                var ds_district = new kendo.data.DataSource({
+                    type: "json",
+                    transport: {
+                        read: {
+                            url: $("#urlPath").val() + "/PermintaanPR/ReadUOM",
+                            contentType: "application/json",
+                            type: "POST",
+                            cache: false
+                        }
+                    },
+                    schema: {
+                        data: "Data",
+                        total: "Total"
+                    }
+                });
+
+                $("#UOM").kendoDropDownList({
+                    autoBind: true,
+                    dataSource: ds_district,
+                    dataTextField: "Deskripsi",
+                    dataValueField: "Deskripsi",
+                    optionLabel: "Pilih...",
+                    filter: "contains",
+                    change: function (e) {
+                        var dataItem = this.dataItem(e.sender._oldIndex);
+                    }
+                }).data("kendoDropDownList");
+            }
+        </script>

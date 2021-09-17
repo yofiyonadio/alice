@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = "Monitoring Printer";
+    ViewBag.dashboard = " Peminjaman Printer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+     ViewBag.pathParent = Url.Content("~").Substring(0, Url.Content("~").Length - 1);
+}
+
+<!-- /.content-header -->
+<!-- Main content -->
+<input type="hidden" id="urlPath" value="@ViewBag.pathParent" />

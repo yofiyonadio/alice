@@ -1,0 +1,526 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DB_ALICE" Class="DtClassAliceContextDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=JIEPSQDV401;Initial Catalog=DB_ALICE;User ID=forumis_user" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="DB_ALICEConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Tbl_M_Kategori" Member="Tbl_M_Kategoris">
+    <Type Name="Tbl_M_Kategori">
+      <Column Name="ID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Kategori" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_T_Kategori_Dept" Member="Tbl_T_Kategori_Depts">
+    <Type Name="Tbl_T_Kategori_Dept">
+      <Column Name="ID_Kategori" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Department_Access" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Update_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_KATEGORI" Member="VW_KATEGORIs">
+    <Type Name="VW_KATEGORI">
+      <Column Name="ID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Department_Access" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Update_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Kategori" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Pengajuan" Member="Tbl_Pengajuans">
+    <Type Name="Tbl_Pengajuan">
+      <Column Name="PIC" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Nama" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DivisiID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="DepartmentID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Kategori" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Item" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="RequestDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="QTY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_PENGAJUAN" Type="System.String" DbType="VarChar(150) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_DD_DEPT_CODE" Member="VW_DD_DEPT_CODEs">
+    <Type Name="VW_DD_DEPT_CODE">
+      <Column Name="DEPT_CODE" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_APROVAL_PENGAJUAN_ITEM" Member="VW_APROVAL_PENGAJUAN_ITEMs">
+    <Type Name="VW_APROVAL_PENGAJUAN_ITEM">
+      <Column Name="PIC" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Nama" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DivisiID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="DepartmentID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Kategori" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Item" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="RequestDate" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="QTY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_PENGAJUAN" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="UNIT_APROVE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UNIT_NOT_APPROVE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PROGRESS_STATUS_PENGAJUAN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_QTYDetail" Member="Tbl_QTYDetails">
+    <Type Name="Tbl_QTYDetail">
+      <Column Name="PID_PENGAJUAN_QTY" Type="System.String" DbType="VarChar(150) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDPENGAJUAN" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="NRP" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NAMA" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="POS_TITLE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EMAIL_INTERNET" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="ITEM_PENGAJUAN" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="APPROVAL_UNIT_FINAL" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="STATUS_APROVAL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PROGRESS_STATUS_APPROVAL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="APROVED_BY" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UPDATE_BY" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="APROVAL_UNIT_BUDGET" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_M_COA" Member="TBL_M_COAs">
+    <Type Name="TBL_M_COA">
+      <Column Name="ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Kategori" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_M_DELIVERY_POINT" Member="TBL_M_DELIVERY_POINTs">
+    <Type Name="TBL_M_DELIVERY_POINT">
+      <Column Name="ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Deskripsi" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_M_EXPENSE_ELEMENT" Member="TBL_M_EXPENSE_ELEMENTs">
+    <Type Name="TBL_M_EXPENSE_ELEMENT">
+      <Column Name="ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Deskripsi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_M_MATERIAL_GC" Member="TBL_M_MATERIAL_GCs">
+    <Type Name="TBL_M_MATERIAL_GC">
+      <Column Name="ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Deskripsi" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_M_POSITION" Member="TBL_M_POSITIONs">
+    <Type Name="TBL_M_POSITION">
+      <Column Name="ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Deskripsi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_M_PRIORITY" Member="TBL_M_PRIORITies">
+    <Type Name="TBL_M_PRIORITY">
+      <Column Name="ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Deskripsi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_M_PURCHASING_OFFICER" Member="TBL_M_PURCHASING_OFFICERs">
+    <Type Name="TBL_M_PURCHASING_OFFICER">
+      <Column Name="ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Deskripsi" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_M_UOM" Member="TBL_M_UOMs">
+    <Type Name="TBL_M_UOM">
+      <Column Name="ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Deskripsi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_M_WAREHOUSE" Member="TBL_M_WAREHOUSEs">
+    <Type Name="TBL_M_WAREHOUSE">
+      <Column Name="CONTROL_REC_NO" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="TABLE_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_R_MAPPING_BARANG" Member="TBL_R_MAPPING_BARANGs">
+    <Type Name="TBL_R_MAPPING_BARANG">
+      <Column Name="KodeBarang" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PIC_APPROVAL" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Deskripsi" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="Keterangan" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="EstimasiHargaUSD" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="EstimasiHargaIDR" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="EstimasiHargaSetUSD" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="EstimasiHargaSetIDR" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="[C/O]" Member="C_O" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_R_MAPPING_LICENSE_SOFTWARE" Member="TBL_R_MAPPING_LICENSE_SOFTWAREs">
+    <Type Name="TBL_R_MAPPING_LICENSE_SOFTWARE">
+      <Column Name="ProductID" Type="System.String" DbType="VarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PIC_APPROVAL" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="wDisplayName" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="KategoriSoftware" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="License_Type" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="[USD/IDR]" Member="USD_IDR" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Vendor" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="[C/O]" Member="C_O" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Serial_Number_Flag" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_DIV_CODE" Member="VW_DIV_CODEs">
+    <Type Name="VW_DIV_CODE">
+      <Column Name="DIV_CODE" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_T_MAN_WORK_SAFETY" Member="TBL_T_MAN_WORK_SAFETies">
+    <Type Name="TBL_T_MAN_WORK_SAFETY">
+      <Column Name="PID_MAN_HOURS" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MONTHS" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="TOTAL_HOURS_MONTH_ACT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="MAN_WORK_PROG_YTD" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="MONTH_ACT_LOST_TIME" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="INJURIES_PROG_YTD" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="NUMBER_SHIFT_MONTH_ACT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UPDATE_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_ORDER_BY_HM" Member="VW_ORDER_BY_HMs">
+    <Type Name="VW_ORDER_BY_HM">
+      <Column Name="total" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="PERIOD" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_MAN_WORK_SAFETY" Member="VW_MAN_WORK_SAFETies">
+    <Type Name="VW_MAN_WORK_SAFETY">
+      <Column Name="PID_MAN_HOURS" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MONTHS" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="TOTAL_HOURS_MONTH_ACT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="MAN_WORK_PROG_YTD" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="MONTH_ACT_LOST_TIME" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="INJURIES_PROG_YTD" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="NUMBER_SHIFT_MONTH_ACT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="LOST_PROG_YTD" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="LTIFR_MONTH_ACT" Type="System.Decimal" DbType="Decimal(38,12)" CanBeNull="true" />
+      <Column Name="MAN_HOURS_PROG_YTD" Type="System.Decimal" DbType="Decimal(38,12)" CanBeNull="true" />
+      <Column Name="DIFR_MONTH_ACT" Type="System.Decimal" DbType="Decimal(38,13)" CanBeNull="true" />
+      <Column Name="HOURS_PROG_YTD" Type="System.Decimal" DbType="Decimal(38,13)" CanBeNull="true" />
+      <Column Name="SEVERITY_MILLION_MONTH_ACT" Type="System.Decimal" DbType="Decimal(38,12)" CanBeNull="true" />
+      <Column Name="RATE_HOURS_PROG_YTD" Type="System.Decimal" DbType="Decimal(38,12)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_T_LTI_SAFETY" Member="TBL_T_LTI_SAFETies">
+    <Type Name="TBL_T_LTI_SAFETY">
+      <Column Name="PID_LTI" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MONTHS" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="NUMBER_MONTH_ACT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="SITE_PROG_YTD" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TOTAL_SHIFTS_MONTH_ACT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="MAN_WORK_PROG_YTD" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="NUMBER_SHIFTS_MONTH_ACT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="PRODUCTION_PROG_YTD" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="NUMBER_MINOR_MONTH_ACT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="INJURIES_MINOR_PROG_YTD" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="NUMBER_TIME_MONTH_ACT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="INJURIES_TIME_PROG_YTD" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="NUMBER_FATAL_MONTH_ACT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="INJURIES_FATAL_PROG_YTD" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="SHIFTS_LOST_MONTH_ACT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="SHIFTS_LOST_PROG_YTD" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="UPDATE_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_T_MACHINE_SAFETY" Member="TBL_T_MACHINE_SAFETies">
+    <Type Name="TBL_T_MACHINE_SAFETY">
+      <Column Name="PID_MACHINE" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MONTHS" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="MACHINE_ON_SITE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MONTH_ACTUAL_MACHINE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="PROGRESSIVE_YTD_MACHINE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="MONTH_ACTUAL_PROPERTY_INCIDENT_MIN" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="PROGRESSIVE_YTD_PROPERTY_INCIDENT_MIN" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="MONTH_ACTUAL_PROPERTY_INCIDENT_MAX" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="PROGRESSIVE_YTD_PROPERTY_INCIDENT_MAX" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="MONTH_ACTUAL_EST_DAMAGE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="MONTH_ACTUAL_PROPERTY_FREQ" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="UPDATE_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_MACHINE_SAFETY" Member="VW_MACHINE_SAFETies">
+    <Type Name="VW_MACHINE_SAFETY">
+      <Column Name="PID_MACHINE" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MONTHS" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="MACHINE_ON_SITE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MONTH_ACTUAL_MACHINE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="PROGRESSIVE_YTD_MACHINE" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="MONTH_ACTUAL_PROPERTY_INCIDENT_MIN" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="PROGRESSIVE_YTD_PROPERTY_INCIDENT_MIN" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="MONTH_ACTUAL_PROPERTY_INCIDENT_MAX" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="PROGRESSIVE_YTD_PROPERTY_INCIDENT_MAX" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="MONTH_ACTUAL_EST_DAMAGE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="PROGRESSIVE_YTD_TOTAL_VALUE" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="MONTH_ACTUAL_PROPERTY_FREQ" Type="System.Decimal" DbType="Decimal(38,11)" CanBeNull="true" />
+      <Column Name="UPDATE_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_M_HOURS_MACHINE_SAFETY" Member="TBL_M_HOURS_MACHINE_SAFETies">
+    <Type Name="TBL_M_HOURS_MACHINE_SAFETY">
+      <Column Name="PID_HOURS_MACHINE" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PIC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DEPARTMENT" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SITE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JENIS_MESIN" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="JUMLAH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="JAM" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="HARI" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="HOURS_MACHINE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TYPE" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UPDATE_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PERIOD" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_DISTRICT_CODE" Member="VW_DISTRICT_CODEs">
+    <Type Name="VW_DISTRICT_CODE">
+      <Column Name="DSTRCT_CODE" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DSTRCT_NAME" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DSTRCT_STATUS" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PLANT_AREA" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_HM" Member="VW_HMs">
+    <Type Name="VW_HM">
+      <Column Name="PID_HOURS_MACHINE" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PIC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DEPARTMENT" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SITE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JENIS_MESIN" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UPDATE_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JUMLAH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="JAM" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="HARI" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="HOURS_MACHINE" Type="System.Decimal" DbType="Decimal(35,2)" CanBeNull="true" />
+      <Column Name="PERIOD" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_LTI_SAFETY" Member="VW_LTI_SAFETies">
+    <Type Name="VW_LTI_SAFETY">
+      <Column Name="PID_LTI" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MONTHS" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="NUMBER_MONTH_ACT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="SITE_PROG_YTD" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="TOTAL_SHIFTS_MONTH_ACT" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="MAN_WORK_PROG_YTD" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="NUMBER_SHIFTS_MONTH_ACT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PRODUCTION_PROG_YTD" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="NUMBER_MINOR_MONTH_ACT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="INJURIES_MINOR_PROG_YTD" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="NUMBER_TIME_MONTH_ACT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="INJURIES_TIME_PROG_YTD" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="NUMBER_FATAL_MONTH_ACT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="INJURIES_FATAL_PROG_YTD" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="SHIFTS_LOST_MONTH_ACT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="SHIFTS_LOST_PROG_YTD" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="LTI_PRODUCTION_MONTH_ACT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="LTI_MAN_HOURS_MONTH_ACT" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="LTI_MAN_SHIFT_MONTH_ACT" Type="System.Decimal" DbType="Decimal(37,4)" CanBeNull="true" />
+      <Column Name="FATAL_SHIFT_MONTH_ACT" Type="System.Decimal" DbType="Decimal(37,4)" CanBeNull="true" />
+      <Column Name="FATAL_HOURS_MONTH_ACT" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_EMPLOYEE_SAFETY" Member="VW_EMPLOYEE_SAFETies">
+    <Type Name="VW_EMPLOYEE_SAFETY">
+      <Column Name="MONTHS" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="PID_LTI" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LTI_PRODUCTION_MONTH_ACT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="LTI_PRODUCTION_PROG_YTD" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="LTI_MAN_SHIFT_MONTH_ACT" Type="System.Decimal" DbType="Decimal(37,4)" CanBeNull="true" />
+      <Column Name="LTI_MAN_SHIFT_PROG_YTD" Type="System.Decimal" DbType="Decimal(38,4)" CanBeNull="true" />
+      <Column Name="LTI_MAN_HOURS_MONTH_ACT" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="LTI_MAN_HOURS_PROG_YTD" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="FATAL_SHIFT_MONTH_ACT" Type="System.Decimal" DbType="Decimal(37,4)" CanBeNull="true" />
+      <Column Name="FATAL_SHIFT_PROG_YTD" Type="System.Decimal" DbType="Decimal(38,4)" CanBeNull="true" />
+      <Column Name="FATAL_HOURS_MONTH_ACT" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="FATAL_HOURS_PROG_YTD" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_M_HIRA" Member="TBL_M_HIRAs">
+    <Type Name="TBL_M_HIRA">
+      <Column Name="ID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DAFTAR_PROSES" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="AKTIFITAS" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="UPLOAD_FILE" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="UPDATE_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_DAFTAR_PROSES_HIRA" Member="TBL_DAFTAR_PROSES_HIRAs">
+    <Type Name="TBL_DAFTAR_PROSES_HIRA">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DESKRIPSI" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_M_AKTIFITAS_HIRA" Member="TBL_M_AKTIFITAS_HIRAs">
+    <Type Name="TBL_M_AKTIFITAS_HIRA">
+      <Column Name="PID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DESKRIPSI" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_T_SERVICE_PRINTER" Member="TBL_T_SERVICE_PRINTERs">
+    <Type Name="TBL_T_SERVICE_PRINTER">
+      <Column Name="ID_SERVICE" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NO_PRINTER" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NAMA_PRINTER" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JENIS_PRINTER" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="KETERANGAN" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="TGL_RUSAK" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EST_PERBAIKAN" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BIAYA" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="STATUS" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PR" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NO_ITEM_PR" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TANDA_TERIMA_PICKUP" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="TANDA_TERIMA_SELESAI" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="UPDATE_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_UPDATE_SERVICE_PRINTER" Member="VW_UPDATE_SERVICE_PRINTERs">
+    <Type Name="VW_UPDATE_SERVICE_PRINTER">
+      <Column Name="ID_SERVICE" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NO_PRINTER" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NAMA_PRINTER" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JENIS_PRINTER" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="KETERANGAN" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="TGL_RUSAK" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EST_PERBAIKAN" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BIAYA" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="STATUS" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PR" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NO_ITEM_PR" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PO" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="PO_ITEM" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="TANDA_TERIMA_PICKUP" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="TANDA_TERIMA_SELESAI" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_AJUKAN_SERVICE_PRINTER" Member="VW_AJUKAN_SERVICE_PRINTERs">
+    <Type Name="VW_AJUKAN_SERVICE_PRINTER">
+      <Column Name="ID_SERVICE" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NO_PRINTER" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NAMA_PRINTER" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JENIS_PRINTER" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TGL_RUSAK" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="KETERANGAN" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="EST_PERBAIKAN" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BIAYA" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="STATUS" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_M_HIRA_TEMP" Member="TBL_M_HIRA_TEMPs">
+    <Type Name="TBL_M_HIRA_TEMP">
+      <Column Name="ID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DAFTAR_PROSES" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="AKTIFITAS" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="UPLOAD_FILE" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="UPDATE_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_SOFTWARE_USER_INSTALLED" Member="VW_SOFTWARE_USER_INSTALLEDs">
+    <Type Name="VW_SOFTWARE_USER_INSTALLED">
+      <Column Name="Device_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="nama" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="nrp" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="divisi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Software_Name" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="wDisplayName" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="wDisplayVersion" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="Expr1" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="License_Status" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Lastseen" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_R_PRINTER" Member="TBL_R_PRINTERs">
+    <Type Name="TBL_R_PRINTER">
+      <Column Name="ASSET_NO" Type="System.String" DbType="VarChar(150) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DSTRCT_CODE" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="ASSET_CLASSIF" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ASSET_DESC" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ASSET_LOCAT" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="SERIAL_NO" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UPDATE_BY" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_M_DATA_PRINTER" Member="TBL_M_DATA_PRINTERs">
+    <Type Name="TBL_M_DATA_PRINTER">
+      <Column Name="ID_PRINTER" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="KODE_PRINTER" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NAMA_PRINTER" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DETAIL_PRINTER" Type="System.String" DbType="VarChar(600)" CanBeNull="true" />
+      <Column Name="UMUR_PRINTER" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JENIS_PRINTER" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="STATUS_PRINTER" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IP_PRINTER" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LOKASI" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="UPDATE_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_T_PINJAM_PRINTER" Member="TBL_T_PINJAM_PRINTERs">
+    <Type Name="TBL_T_PINJAM_PRINTER">
+      <Column Name="ID_PINJAM" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="KODE_PRINTER_PINJAM" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NAMA_PRINTER_PINJAM" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TGL_PINJAM" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NAMA_USER_PINJAM" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NRP_USER_PINJAM" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DIV_USER_PINJAM" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SELESAI_PINJAM" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JENIS_PRINTER_PINJAM" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UPDATE_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MODIFIED_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MODIFIED_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_M_STATUS_SERVICE_PRINTER" Member="TBL_M_STATUS_SERVICE_PRINTERs">
+    <Type Name="TBL_M_STATUS_SERVICE_PRINTER">
+      <Column Name="ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Deskripsi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.cusp_delete_pengajuan" Method="cusp_delete_pengajuan">
+    <Parameter Name="IDPENGAJU" Parameter="iDPENGAJU" Type="System.String" DbType="VarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cusp_update_aproval" Method="cusp_update_aproval">
+    <Parameter Name="pid_pengajuan_qty" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="validate_appr" Type="System.Int32" DbType="Int" />
+    <Parameter Name="appr_unit_final" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="stts_appr" Type="System.Int32" DbType="Int" />
+    <Parameter Name="aproved_by" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="id_pengajuan" Type="System.String" DbType="VarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

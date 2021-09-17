@@ -1,0 +1,115 @@
+﻿@{
+    ViewBag.Title = "Monitoring License";
+    ViewBag.dashboard = "License Assigned";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+    ViewBag.pathParent = Url.Content("~").Substring(0, Url.Content("~").Length - 1);
+}
+
+<!-- /.content-header -->
+<!-- Main content -->
+<input type="hidden" id="urlPath" value="@ViewBag.pathParent" />
+<input type="hidden" id="pid" />
+<input type="hidden" id="gp" value="@ViewBag.GP" />
+<section class="content">
+        <!-- /.row -->
+        <!-- Main row -->
+        <div class="row">
+            <!-- Left col -->
+            <section class="col-lg-12 connectedSortable">
+                <!-- Custom tabs (Charts with tabs)-->
+                <div class="card">
+                    <div class="card-body">
+                        <div id="grid"></div>
+                    </div><!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </section>
+        </div>
+        <!-- /.row (main row) -->
+</section>
+<!-- /.content -->
+
+
+<script>$(document).ready(function () {
+    loadgrid();
+});
+    function loadgrid() {
+        $("#grid").empty();
+        var grid = $("#grid").kendoGrid({
+            dataSource: {
+                type: "json",
+                transport: {
+                    read: {
+                        url: $("#urlPath").val() + "/LicenseAssigned/Read",
+                        contentType: "application/json",
+                        type: "POST",
+                        cache: false,
+                    },
+                    parameterMap: function (data, operation) {
+                        return kendo.stringify(data)
+                    }
+                },
+                pageSize: 1000,
+                serverPaging: true,
+                serverFiltering: true,
+                serverSorting: true,
+                schema: {
+                    data: "Data",
+                    total: "Total",
+                    model: {
+                        id: "nrp",
+                        fields: {
+                            Device_Name: { type: "string", filterable: true, sortable: true, editable: true },
+                            nama: { type: "string", filterable: true, sortable: true, editable: true },
+                            nrp: { type: "string", filterable: true, sortable: true, editable: true },
+                            divisi: { type: "string", filterable: true, sortable: true, editable: true },
+                            Software_Name: { type: "string", filterable: true, sortable: true, editable: true },
+                            wDisplayName: { type: "string", filterable: true, sortable: true, editable: true },
+                            wDisplayVersion: { type: "string", filterable: true, sortable: true, editable: true },
+                            Expr1: { type: "string", filterable: true, sortable: true, editable: true },
+                            License_Status: { type: "string", filterable: true, sortable: true, editable: true },
+                            Lastseen: { type: "date", filterable: true, sortable: true, editable: true },
+                             }
+                    }
+                }
+            },
+            height: 500,
+            filterable: {
+                extra: false
+            },
+            sortable: true,
+            pageable: true,
+            resizable: true,
+            editable: {
+                mode: "popup"
+            },
+            toolbar: [
+             {
+                 name: "excel",
+                 imageClass: '<button type="button" button id="btn_export" class="btn btn-info"><span class="glyphicon glyphicon-export"></span> Export To Excel</button>'
+             }, ],
+            excel: {
+                fileName: "LicenseAssigned.xlsx",
+                AllPages: true,
+                filterable: true
+            },
+            columns: [
+               { field: "Device_Name", title: "Device Name", width: 150 },
+               { field: "nama", title: "Name", width: 150 },
+               { field: "nrp", title: "NRP", width: 130 },
+               { field: "divisi", title: "Division", width: 150 },
+               { field: "Software_Name", title: "Software Name", width: 170 },
+               { field: "wDisplayName", title: "Display Name", width: 170 },
+                 { field: "wDisplayVersion", title: "Display Version", width: 170 },
+               //{ field: "Expr1", title: "Expr1", width: 170 },
+                { field: "License_Status", title: "License Status", width: 160 },
+               { field: "Lastseen", title: "Last Seen", width: 160, format: "{0:MM/dd/yyyy h:mm:ss}" },
+            ],
+            dataBinding: function () {
+                window.rowNo = (this.dataSource.page() - 1) * this.dataSource.pageSize();
+            }
+        });
+    }
+</script>
+
+

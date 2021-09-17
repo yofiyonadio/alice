@@ -1,0 +1,360 @@
+﻿@{
+    ViewBag.Title = "Monitoring Budget";
+    ViewBag.dashboard = "Hours Machine Safety";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+    ViewBag.pathParent = Url.Content("~").Substring(0, Url.Content("~").Length - 1);
+}
+
+<!-- /.content-header -->
+<!-- Main content -->
+<input type="hidden" id="urlPath" value="@ViewBag.pathParent" />
+<input type="hidden" id="pid" />
+<input type="hidden" id="gp" value="@ViewBag.GP" />
+
+<div class="modal-header">
+    <button type="button" onclick="btn_create()" id="btn_create" style="width:25%"  class="btn btn-info">CREATE HM</button>
+    <button type="button" onclick="btn_view()" id="btn_create" style="width:25%" class="btn btn-info">CREATE HM</button>
+    <button type="button" onclick="btn_viewall()" id="btn_view" style="width:25%" class="btn btn-info">VIEW ALL HM</button>
+</div>
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog" style="width:400px;">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                <h4 class="modal-title">Add New Record</h4>
+            </div>
+            <div id="HM_modal" class="modal-body">
+                <form id="form_HM" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-sm-1" style="text-align:left;" for="id">ID</label>
+                        <input type="text" class="col-sm-3" style="width:50%" id="id">
+                    </div> 
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" style="text-align:left;" for="periode">Periode (yyyy/mm):</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" style="width:160%" id="periode">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" style="text-align:left;" for="pic">PIC:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" style="width:160%" id="pic" >
+                            @*<button type="button" onclick="doShowformEmployee()" id="btn_proses_qty" style="width:200%" class="btn btn-outline-info">...</button>*@
+                            <button type="button" onclick="doShowformEmployee()" id="btn_proses_qty"  class="btn btn-info">Cari</button>
+                         </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" style="text-align:left;" for="dept">Department:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" style="width:160%" id="dept">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" style="text-align:left;" for="site">Site:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" style="width:160%" id="site">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" style="text-align:left;" for="jenismesin">Jenis Mesin :</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" style="width:160%" id="jenismesin">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" style="text-align:left;" for="jumlah">Jumlah :</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" style="width:160%" id="jumlah">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" style="text-align:left;" for="jam">Jam :</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" style="width:160%" id="jam">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" style="text-align:left;" for="hari">Hari :</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" style="width:160%" id="hari">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="btn_simpan" style="width:200%" class="btn btn-outline-success">SIMPAN</button>
+                <button type="button" style="width:200%;" class="btn btn-outline-warning" data-dismiss="modal">BATAL</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div id="wnd_addUser">
+    <div id="gridPemilihanKaryawan"></div>
+</div>
+
+<script>var wnd_addUser;
+    var wnd_detail_qty;
+    var iTotalQty;
+    wnd_addUser = $("#wnd_addUser").kendoWindow({
+        title: "Data Karyawan",
+        width: "900px",
+        modal: true,
+        visible: false,
+        draggable: true,
+        actions: [
+            "Minimize",
+            "Close"
+        ],
+        pinned: true
+    }).data("kendoWindow");
+    $(document).ready(function () {
+       
+        dd_dept();
+        dd_site();
+    });
+    function doShowformEmployee() {
+        wnd_addUser.center().open();
+        var grid = $("#gridPemilihanKaryawan").kendoGrid({
+            dataSource: {
+                type: "json",
+                transport: {
+                    read: {
+                        url: $("#urlPath").val() + "/AddUser/AjaxReadEmployeeQty",
+                        contentType: "application/json",
+                        type: "POST",
+                        cache: false,
+                    },
+                    parameterMap: function (data, operation) {
+                        return kendo.stringify(data)
+                    }
+                },
+                pageSize: 15,
+                serverPaging: true,
+                serverFiltering: true,
+                serverSorting: true,
+                schema: {
+                    data: "Data",
+                    total: "Total"
+                }
+            },
+            height: "480px",
+            filterable: {
+                extra: false
+            },
+            sortable: true,
+            pageable: true,
+            editable: "popup",
+            pageable: {
+                refresh: true,
+                buttonCount: 10,
+                input: true,
+                pageSizes: [10, 20, 50, 100, 1000, 100000],
+                info: true,
+                messages: {
+                }
+            },
+            columns: [
+
+                { command: [{ text: "Pilih", click: selects }], title: "Pilih User", width: "100px" },
+                {
+                    field: "NRP", title: "NRP", width: "100px"
+                }, {
+                    field: "NAME", title: "Nama", width: "200px"
+                }, {
+                    field: "POS_TITLE", title: "Posisi", width: "200px"
+                },  {
+                    field: "DSTRCT_CODE", title: "Distrik", width: "100px"
+                }
+            ],
+            dataBinding: function () {
+                window.rowNo = (this.dataSource.page() - 1) * this.dataSource.pageSize();
+            }
+        });
+
+    }
+
+    function selects(e) {
+
+        e.preventDefault();
+        console.log(this.dataItem($(e.currentTarget).closest("tr")));
+        var dataItem = this.dataItem($(e.currentTarget).closest("tr"));
+     
+        $("#pic").val(dataItem.NAME);
+        wnd_addUser.center().close();
+
+    }
+  
+    function btn_create() {
+        $("#id").prop('disabled', true).val("");
+        $("#periode").val("");
+        $("#pic").val("");
+        $("#dept").data("kendoDropDownList").value(-1);
+        $("#site").data("kendoDropDownList").value(-1);
+        $("#jenismesin").val("");
+        $("#jumlah").val("");
+        $("#jam").val("");
+        $("#hari").val("");
+        save_method = 'add';
+        $('#myModal').modal({
+            show: true,
+            keyboard: false,
+            backdrop: 'static'
+        });
+        var date = new Date();
+        var firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
+        var lastDay = new Date(date.getFullYear(), date.getMonth() + 1,0);
+        var start = $("#periode").kendoDatePicker({
+            //minDate: -20, maxDate: "+1M +10D",
+            //showOtherMonths: false,
+            //selectOtherMonths: false,
+            min: firstDay,
+            max: lastDay,
+            format: "yyyyMM ",
+            dateInput: false,
+            change: function () {
+                var start = $("#periode").val();
+            } 
+            }).data("kendoDatePicker");
+   
+    }
+  
+    $("#btn_simpan").click(function () {
+        var url = "";
+        url_ = $("#urlPath").val() + "/HM/Insert";
+
+        var stbl_m_driver = {
+            PID_HOURS_MACHINE: $("#id").val(),
+            PIC: $("#pic").val(),
+            DEPARTMENT: $("#dept").val(),
+            SITE: $("#site").val(),
+            PERIOD: $("#periode").val(),
+            JENIS_MESIN: $("#jenismesin").val(),
+            JUMLAH: $("#jumlah").val(),
+            JAM: $("#jam").val(),
+            HARI: $("#hari").val(),
+        }
+        var datepicker = $("#periode").data("kendoDatePicker");
+        var value = datepicker.value();
+        var req_date = kendo.toString(value, "yyyyMM");
+
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            contentType: "application/json",
+            url: url_,
+            data: JSON.stringify(stbl_m_driver),
+            success: function (response) {
+                alert(response.remarks)
+                $('#myModal').modal('toggle');
+                    $("#grid").data("kendoGrid").dataSource.read();
+                    $("#grid").data("kendoGrid").refresh();
+
+            }
+        });
+    });
+    function btn_viewall() {
+        //debugger;
+        window.location.href = $("#urlPath").val() + "/ViewHM";
+    }
+    function btn_view() {
+        //debugger;
+        window.location.href = $("#urlPath").val() + "/HMSafety";
+    }
+    function dd_dept() {
+        var ds_district = new kendo.data.DataSource({
+            type: "json",
+            transport: {
+                read: {
+                    url: $("#urlPath").val() + "/HM/ReadDept",
+                    contentType: "application/json",
+                    type: "POST",
+                    cache: false
+                }
+            },
+            schema: {
+                data: "Data",
+                total: "Total"
+            }
+        });
+        $("#dept").kendoDropDownList({
+            autoBind: true,
+            dataSource: ds_district,
+            dataTextField: "DEPT_CODE",
+            dataValueField: "DEPT_CODE",
+            optionLabel: "Pilih...",
+            filter: "contains",
+            change: function (e) {
+                var dataItem = this.dataItem(e.sender._oldIndex);
+            }
+        }).data("kendoDropDownList");
+    }
+    function dd_site() {
+        var ds_district = new kendo.data.DataSource({
+            type: "json",
+            transport: {
+                read: {
+                    url: $("#urlPath").val() + "/HM/ReadSite",
+                    contentType: "application/json",
+                    type: "POST",
+                    cache: false
+                }
+            },
+            schema: {
+                data: "Data",
+                total: "Total"
+            }
+        });
+        $("#site").kendoDropDownList({
+            autoBind: true,
+            dataSource: ds_district,
+            dataTextField: "DSTRCT_CODE",
+            dataValueField: "DSTRCT_CODE",
+            optionLabel: "Pilih...",
+            filter: "contains",
+            change: function (e) {
+                var dataItem = this.dataItem(e.sender._oldIndex);
+            }
+        }).data("kendoDropDownList");
+    }
+</script>
+
+
+<script>    //function Edit() {
+    //    var dataItem = this.dataItem($(e.currentTarget).closest("tr"));
+    //    $("#id").prop('disabled', true);
+    //    $("#periode").val("");
+    //    $("#pic").val("");
+    //    $("#dept").val("");
+    //    $("#site").val("");
+    //    $("#jenismesin").val("");
+    //    $("#jumlah").val("");
+    //    $("#jam").val("");
+    //    $("#hari").val("");
+    //    $("#id").val(dataItem.PID_HOURS_MACHINE);
+    //    $("#periode").val(dataItem.PERIOD);
+    //    $("#pic").val(dataItem.PIC);
+    //    $("#dept").val(dataItem.DEPARTMENT);
+    //    $("#site").val(dataItem.SITE);
+    //    $("#jenismesin").val(dataItem.JENIS_MESIN);
+    //    $("#jumlah").val(dataItem.JUMLAH);
+    //    $("#jam").val(dataItem.JAM);
+    //    $("#hari").val(dataItem.HARI);
+
+    //    save_method = "update";
+    //    $('#myModal').modal({
+    //        show: true,
+    //        keyboard: false,
+    //        backdrop: 'static'
+    //    });
+    //    var start = $("#periode").kendoDatePicker({
+    //        format: "yyyyMM",
+    //        dateInput: false,
+    //        change: function () {
+    //            var start = $("#periode").val();
+    //        }
+    //    }).data("kendoDatePicker");
+    //}</script>

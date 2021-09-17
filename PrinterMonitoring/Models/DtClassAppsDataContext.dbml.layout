@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 14.5" name="DtClassAppsDataContext">
+  <DataContextMoniker Name="/DtClassAppsDataContextDataContext" />
+  <nestedChildShapes>
+    <classShape Id="96d36641-5c38-41d1-a965-4e631f19fd86" absoluteBounds="0.5, 0.5, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/DtClassAppsDataContextDataContext/Menu_Aplikasi" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0a6ec752-03d1-4ad3-9ee0-e8113a618e31" absoluteBounds="0.515, 0.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5eb1a566-d0bb-4dde-ad63-f9c88e51630a" absoluteBounds="0.5, 3, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DtClassAppsDataContextDataContext/Menu_GP" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d5eb852b-7887-4b97-b22f-caac640c87a9" absoluteBounds="0.51500000000000012, 3.46, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0e854797-078e-4b12-b9e8-60bbb3135a10" absoluteBounds="0.5, 5.375, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/DtClassAppsDataContextDataContext/TBL_KARY_L" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cfde8540-28a2-405a-a5d0-8d46c9303fae" absoluteBounds="0.51499999999999968, 5.835, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="11f164f7-72bd-4c14-a7fe-5dc7c170d29f" absoluteBounds="2.625, 0.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DtClassAppsDataContextDataContext/TBL_Profile" />
+      <nestedChildShapes>
+        <elementListCompartment Id="09f041e9-8b82-4b63-aa38-3053e6eab24b" absoluteBounds="2.6399999999999997, 0.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f0650063-e109-4057-89ce-ee596d6dfe94" absoluteBounds="2.625, 2, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DtClassAppsDataContextDataContext/TBL_USER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6d742131-d61b-4b69-b2ae-594af5500498" absoluteBounds="2.6399999999999997, 2.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="98927772-1c3d-4c71-aae6-6ca2efa3ca21" absoluteBounds="2.625, 3.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DtClassAppsDataContextDataContext/TBL_R_DASHBOARD_URL" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2c60a773-6b3e-4a96-99b1-fd00e6167a56" absoluteBounds="2.6400000000000006, 4.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5bf9158d-ba9a-463c-a87e-ce132ef31b42" absoluteBounds="4.75, 0.5, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/DtClassAppsDataContextDataContext/Menu" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e4128b9c-3062-4c78-b961-535b015f90ee" absoluteBounds="4.765, 0.96, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3f1cf856-f61a-4d7c-96aa-151190e2fbdc" absoluteBounds="4.75, 4, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DtClassAppsDataContextDataContext/vw_DEPT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a9cd5129-d48f-4cbc-8baa-bdcafdf0afec" absoluteBounds="4.765, 4.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="714ff6ff-7a8c-4972-9086-bff9049ccfcd" absoluteBounds="4.75, 5.5, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/DtClassAppsDataContextDataContext/VW_DWH_DISTRIK" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e6b405c2-4f85-4807-9b30-02b1748d4259" absoluteBounds="4.765, 5.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1a53c64f-6fbf-4adb-b290-bb6a3bbe6118" absoluteBounds="6.875, 0.5, 2, 13.693585611979165">
+      <DataClassMoniker Name="/DtClassAppsDataContextDataContext/vw_employee" />
+      <nestedChildShapes>
+        <elementListCompartment Id="739ebef6-656c-463a-942c-f4551b14f790" absoluteBounds="6.8900000000000006, 0.96, 1.9700000000000002, 13.133585611979166" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8ced813b-79ec-4650-a8ae-7882645e9cd9" absoluteBounds="2.625, 6.375, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/DtClassAppsDataContextDataContext/vw_menuCrossGPID" />
+      <nestedChildShapes>
+        <elementListCompartment Id="74f51f1e-3db2-4766-8005-09085c3d3ff8" absoluteBounds="2.64, 6.835, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="feeebf34-a474-464f-923f-cb7b6f8c1a30" absoluteBounds="4.75, 6.875, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/DtClassAppsDataContextDataContext/vw_gpId" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a035579b-6679-42b3-86e4-4813ec87ac28" absoluteBounds="4.765, 7.335, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

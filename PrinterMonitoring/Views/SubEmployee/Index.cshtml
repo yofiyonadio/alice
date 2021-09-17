@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "ALICE";
+    ViewBag.dashboard = "Report Sub Employee CIS";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+    ViewBag.pathParent = Url.Content("~").Substring(0, Url.Content("~").Length - 1);
+}
+
+<input type="hidden" id="urlPath" name="urlPath" value="@ViewBag.pathParent" />
+<input type="hidden" id="GpId" name="GpId" value="@ViewBag.GPID" />
+<input type="hidden" id="DistrikLogin" name="DistrikLogin" value="@ViewBag.DistrikLogin" />
+
+<div id="rpt" style="position:absolute">
+    <iframe id="iframeReport" style="display:none; height:550px; width:1024px; border: none"></iframe>
+</div>
+
+<script>
+    $(document).ready(function () {
+        ShowReport();
+    });
+
+    function ShowReport()
+    {
+        //document.getElementById("iframeReport").style.width = ($(".content").width() - 10).toString() + "px";
+        //document.getElementById("iframeReport").style.height = ($(".content").height() + 20).toString() + "px";
+
+        var i_gpid = $("#GpId").val();
+        var i_dstrctLogin = $("#DistrikLogin").val();
+        //RptKpiComplienceLisensiXlsBeta
+        i_str_report_name = "Reportsubemployee"; // nama report yg akan dipanggil, case sensitive
+        i_str_parameter = "GPID;DISTRIK_LOGIN"; // nama2 parameter di report ssrs, case sensitive, pisahkan setiap parameter dengan ';'
+        i_str_param_value = i_gpid + ";" + i_dstrctLogin; // nilai parameter yg akan dikirim, pisahkan setiap nilai dengan ';'
+
+        $("#iframeReport").show();
+        var frame = document.getElementById("iframeReport");
+        frame.src = $("#urlPath").val() + "/Reports/ReportGeneral.aspx?s_str_reportName=" + i_str_report_name
+            + "&s_str_parameter=" + i_str_parameter
+        + "&s_str_param_value=" + i_str_param_value;
+        //frame.src = "http://jiepsqco403/Reports/Pages/Report.aspx?ItemPath=%2fReport+ISFA%2fReportsubemployee";
+    }
+
+</script>

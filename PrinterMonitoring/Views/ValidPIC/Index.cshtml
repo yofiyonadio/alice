@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "Validasi PIC";
+    ViewBag.dashboard = "Validasi PIC";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+    ViewBag.pathParent = Url.Content("~").Substring(0, Url.Content("~").Length - 1);
+}
+
+
+<!-- /.content-header -->
+<!-- Main content -->
+<input type="hidden" id="urlPath" value="@ViewBag.pathParent" />
+<input type="hidden" id="pid" />
+<input type="hidden" id="gp" value="@ViewBag.GP" />
+
+<script id="tmplt_is_check_true" type="text/x-kendo-tmpl">
+    <center><input type="checkbox" class="sel" id="IS_SELECTED_check_validasi_true#=PID_PENGAJUAN_QTY#" name="IS_SELECTED_check_validasi_true#=PID_PENGAJUAN_QTY#" /></center>
+</script>
+<script id="tmplt_is_check_false" type="text/x-kendo-tmpl">
+    <center><input type="checkbox" class="sel" id="IS_SELECTED_check_validasi_false#=PID_PENGAJUAN_QTY#" name="IS_SELECTED_check_validasi_false#=PID_PENGAJUAN_QTY#" /></center>
+</script>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="grid">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="wnd_addUser">
+    <button onclick="doProsesAproval()">Proses Aproval</button>
+    <div id="gridQTY"></div>
+</div>
+
+
+<script>
+	function showPopup(){
+		window.location="@ViewBag.pathParent/Pengajuan";
+	}
+</script>
+<script src="@ViewBag.pathParent/Js/ValidPIC.js"></script>

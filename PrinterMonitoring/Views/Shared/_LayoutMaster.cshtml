@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewBag.Title</title>
+    @*<script type="text/javascript" src="@ViewBag.pathParent/Kendo/js/kendo.all.min.js"></script>*@
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="~/ContentLayout/css/fontgoogleapis.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="Layout/plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="~/ContentLayout/css/ionicons.min.css">
+    <link rel="stylesheet" href="Layout/dist/css/adminlte.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="Layout/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    @*<link rel="stylesheet" href="Layout/plugins/summernote/summernote-bs4.min.css">*@
+    <link rel="stylesheet" href="Layout/plugins/daterangepicker/daterangepicker.css">
+    
+    <link href="@ViewBag.pathParent/kendo/css/kendo.common.min.css" rel="stylesheet" />
+    <link href="@ViewBag.pathParent/kendo/css/kendo.custom.min.css" rel="stylesheet" />
+    <link href="@ViewBag.pathParent/Kendo/css/kendo.default.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="@ViewBag.pathParent/Kendo/js/jquery.min.js"></script>
+    <!-- ./wrapper -->
+    <!-- jQuery -->
+    <script src="Layout/plugins/jquery/jquery.min.js"></script>
+    <script src="~/ContentLayout/js/jquery-migrate-3.0.0.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="Layout/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="Layout/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="Layout/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="Layout/dist/js/adminlte.js"></script>
+    @*<script type="text/javascript" src="@ViewBag.pathParent/Kendo/js/kendo.all.min.js"></script>*@
+    @Scripts.Render("~/bundles/kendo_js")
+    @Scripts.Render("~/bundles/ExportKendo")
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper"> 
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+          
+            <!-- SEARCH FORM -->
+            <form class="form-inline ml-3">
+                <div class="input-group input-group-sm">
+                    <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+                    <div class="input-group-append">
+                        <button class="btn btn-navbar" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <!-- Tasks -->
+
+                <li class="pull-right"><a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="glyphicon glyphicon-align-justify"></i></a></li>
+                <li><a href="@ViewBag.pathParent/Login/Profiles"><i class="glyphicon glyphicon-user"></i></a></li>
+                <li><a href="@ViewBag.pathParent/Login/logout"><i class="glyphicon glyphicon-log-in"></i></a></li>
+                
+             
+
+            </ul>
+            <!-- Right navbar links -->
+            @*<ul class="navbar-nav ml-auto">
+            
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+                        <i class="fas fa-th-large"></i>
+                    </a>
+                </li>
+            </ul>*@
+        </nav>
+        <!-- /.navbar -->
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="/Home" class="brand-link">
+                <img src="Layout/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+                <span class="brand-text font-weight-light">PAMAPERSADA</span>
+                <br />
+               
+            </a>
+            <div class="row" style="margin-top:10px;margin-left:10px;margin-right:10px;">
+                <div class="col-md-6" style="background-color:darkcyan">
+                    <a href="@ViewBag.pathParent/Login/Profiles" class="nav-link" style="text-align:center">
+                        <i class="nav-icon fas fa-user" style="color:#fff"></i>
+                    </a>
+
+                </div>
+                <div class="col-md-6" style="background-color:teal">
+                    <a href="@ViewBag.pathParent/Login/logout" class="nav-link" style="text-align:center">
+                        <i class="nav-icon fas fa-share" style="color:#fff"></i>
+                    </a>
+                 </div>
+       
+    </div>
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar user panel (optional) -->
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="image">
+                        <img src="~/ContentLayout/images/favicon.ico" class="img-circle elevation-2" alt="User Image"/>
+                    </div>
+                    <div class="info">
+                        <a href="#" class="d-block">Nama, jabatan</a>
+                    </div>
+                </div>
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+                     with font-awesome or any other icon font library -->
+                        @Html.Raw(ViewBag.leftMenu)
+
+                        @*<li class="nav-item">
+                        <a href="/Home" class="nav-link">
+                            <i class="nav-icon fas fa-home"></i>
+                            <p>
+                                Home
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="/Katalog" class="nav-link">
+                        <i class="nav-icon fas fa-print"></i>
+                        <p>
+                            Katalog
+                        </p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Pengajuan" class="nav-link">
+                            <i class="nav-icon fas fa-print"></i>
+                            <p>
+                                Pengajuan
+                            </p>
+                        </a>
+                    </li>*@
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0 text-dark">@ViewBag.dashboard</h1>
+                        </div><!-- /.col -->
+             
+                    </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </div>
+            @RenderBody()
+        </div>
+       
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+    </div>
+
+</body>
+</html>
+
+   <!-- Aldo   -->

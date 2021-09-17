@@ -1,0 +1,1144 @@
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\roslyn\csc.exe
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\roslyn\System.Collections.Immutable.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\roslyn\System.Reflection.Metadata.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\roslyn\vbc.exe
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\roslyn\VBCSCompiler.exe
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\roslyn\VBCSCompiler.exe.config
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\PrinterMonitoring.dll.config
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\PrinterMonitoring.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\PrinterMonitoring.pdb
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Antlr3.Runtime.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\EntityFramework.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\EntityFramework.SqlServer.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Kendo.DynamicLinq.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Google.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Web.Infrastructure.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Newtonsoft.Json.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Owin.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\System.Linq.Dynamic.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\System.Web.Helpers.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\System.Web.Mvc.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\System.Web.Optimization.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\System.Web.Razor.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\System.Web.WebPages.Deployment.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\System.Web.WebPages.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\System.Web.WebPages.Razor.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\WebGrease.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\System.Web.Helpers.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\System.Web.Mvc.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\System.Web.Optimization.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\System.Web.Razor.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\System.Web.WebPages.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\System.Web.WebPages.Deployment.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\System.Web.WebPages.Razor.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Antlr3.Runtime.pdb
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Newtonsoft.Json.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\EntityFramework.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\EntityFramework.SqlServer.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Google.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\obj\Debug\BudgetMonitoring.csprojResolveAssemblyReference.cache
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\obj\Debug\PrinterMonitoring.dll
+D:\Users\lJIKJ20857\Documents\PrinterMonitoring\PrinterMonitoring\obj\Debug\PrinterMonitoring.pdb
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\roslyn\csc.exe
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\roslyn\System.Collections.Immutable.dll
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\roslyn\System.Reflection.Metadata.dll
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\roslyn\vbc.exe
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\roslyn\VBCSCompiler.exe
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\roslyn\VBCSCompiler.exe.config
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\PrinterMonitoring.dll.config
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\PrinterMonitoring.dll
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\PrinterMonitoring.pdb
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\Antlr3.Runtime.dll
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\EntityFramework.dll
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\EntityFramework.SqlServer.dll
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\Kendo.DynamicLinq.dll
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.dll
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.dll
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Google.dll
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Web.Infrastructure.dll
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\Newtonsoft.Json.dll
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\Owin.dll
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\System.Linq.Dynamic.dll
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\System.Web.Helpers.dll
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\System.Web.Mvc.dll
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\System.Web.Optimization.dll
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\System.Web.Razor.dll
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\System.Web.WebPages.Deployment.dll
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\System.Web.WebPages.dll
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\System.Web.WebPages.Razor.dll
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\WebGrease.dll
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\System.Web.Helpers.xml
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\System.Web.Mvc.xml
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\System.Web.Optimization.xml
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\System.Web.Razor.xml
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\System.Web.WebPages.xml
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\System.Web.WebPages.Deployment.xml
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\System.Web.WebPages.Razor.xml
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\Antlr3.Runtime.pdb
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\Newtonsoft.Json.xml
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\EntityFramework.xml
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\EntityFramework.SqlServer.xml
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.xml
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.xml
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Google.xml
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\obj\Debug\BudgetMonitoring.csprojResolveAssemblyReference.cache
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\obj\Debug\PrinterMonitoring.dll
+D:\Users\lJIKJ20857\Documents\BudgetMonitoring\PrinterMonitoring\obj\Debug\PrinterMonitoring.pdb
+D:\BudgetMonitoring\PrinterMonitoring\bin\roslyn\csc.exe
+D:\BudgetMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\BudgetMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\BudgetMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\BudgetMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\BudgetMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\BudgetMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\BudgetMonitoring\PrinterMonitoring\bin\roslyn\System.Collections.Immutable.dll
+D:\BudgetMonitoring\PrinterMonitoring\bin\roslyn\System.Reflection.Metadata.dll
+D:\BudgetMonitoring\PrinterMonitoring\bin\roslyn\vbc.exe
+D:\BudgetMonitoring\PrinterMonitoring\bin\roslyn\VBCSCompiler.exe
+D:\BudgetMonitoring\PrinterMonitoring\bin\roslyn\VBCSCompiler.exe.config
+D:\BudgetMonitoring\PrinterMonitoring\bin\PrinterMonitoring.dll.config
+D:\BudgetMonitoring\PrinterMonitoring\bin\PrinterMonitoring.dll
+D:\BudgetMonitoring\PrinterMonitoring\bin\PrinterMonitoring.pdb
+D:\BudgetMonitoring\PrinterMonitoring\bin\Antlr3.Runtime.dll
+D:\BudgetMonitoring\PrinterMonitoring\bin\EntityFramework.dll
+D:\BudgetMonitoring\PrinterMonitoring\bin\EntityFramework.SqlServer.dll
+D:\BudgetMonitoring\PrinterMonitoring\bin\Kendo.DynamicLinq.dll
+D:\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Core.dll
+D:\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.dll
+D:\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Cookies.dll
+D:\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.dll
+D:\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Facebook.dll
+D:\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Google.dll
+D:\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.OAuth.dll
+D:\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Twitter.dll
+D:\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Web.Infrastructure.dll
+D:\BudgetMonitoring\PrinterMonitoring\bin\Newtonsoft.Json.dll
+D:\BudgetMonitoring\PrinterMonitoring\bin\Owin.dll
+D:\BudgetMonitoring\PrinterMonitoring\bin\System.Linq.Dynamic.dll
+D:\BudgetMonitoring\PrinterMonitoring\bin\System.Web.Helpers.dll
+D:\BudgetMonitoring\PrinterMonitoring\bin\System.Web.Mvc.dll
+D:\BudgetMonitoring\PrinterMonitoring\bin\System.Web.Optimization.dll
+D:\BudgetMonitoring\PrinterMonitoring\bin\System.Web.Razor.dll
+D:\BudgetMonitoring\PrinterMonitoring\bin\System.Web.WebPages.Deployment.dll
+D:\BudgetMonitoring\PrinterMonitoring\bin\System.Web.WebPages.dll
+D:\BudgetMonitoring\PrinterMonitoring\bin\System.Web.WebPages.Razor.dll
+D:\BudgetMonitoring\PrinterMonitoring\bin\WebGrease.dll
+D:\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\BudgetMonitoring\PrinterMonitoring\bin\System.Web.Helpers.xml
+D:\BudgetMonitoring\PrinterMonitoring\bin\System.Web.Mvc.xml
+D:\BudgetMonitoring\PrinterMonitoring\bin\System.Web.Optimization.xml
+D:\BudgetMonitoring\PrinterMonitoring\bin\System.Web.Razor.xml
+D:\BudgetMonitoring\PrinterMonitoring\bin\System.Web.WebPages.xml
+D:\BudgetMonitoring\PrinterMonitoring\bin\System.Web.WebPages.Deployment.xml
+D:\BudgetMonitoring\PrinterMonitoring\bin\System.Web.WebPages.Razor.xml
+D:\BudgetMonitoring\PrinterMonitoring\bin\Antlr3.Runtime.pdb
+D:\BudgetMonitoring\PrinterMonitoring\bin\Newtonsoft.Json.xml
+D:\BudgetMonitoring\PrinterMonitoring\bin\EntityFramework.xml
+D:\BudgetMonitoring\PrinterMonitoring\bin\EntityFramework.SqlServer.xml
+D:\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Core.xml
+D:\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.xml
+D:\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.xml
+D:\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Facebook.xml
+D:\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Cookies.xml
+D:\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.OAuth.xml
+D:\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Google.xml
+D:\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Twitter.xml
+D:\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\BudgetMonitoring\PrinterMonitoring\obj\Debug\BudgetMonitoring.csprojResolveAssemblyReference.cache
+D:\BudgetMonitoring\PrinterMonitoring\obj\Debug\PrinterMonitoring.dll
+D:\BudgetMonitoring\PrinterMonitoring\obj\Debug\PrinterMonitoring.pdb
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\obj\Debug\PrinterMonitoring.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\obj\Debug\PrinterMonitoring.pdb
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\roslyn\csc.exe
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\roslyn\System.Collections.Immutable.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\roslyn\System.Reflection.Metadata.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\roslyn\vbc.exe
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\roslyn\VBCSCompiler.exe
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\roslyn\VBCSCompiler.exe.config
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\PrinterMonitoring.dll.config
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\PrinterMonitoring.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\PrinterMonitoring.pdb
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\Antlr3.Runtime.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\EntityFramework.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\EntityFramework.SqlServer.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\Kendo.DynamicLinq.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Google.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Web.Infrastructure.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\Newtonsoft.Json.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\Owin.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\System.Linq.Dynamic.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\System.Web.Helpers.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\System.Web.Mvc.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\System.Web.Optimization.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\System.Web.Razor.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\System.Web.WebPages.Deployment.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\System.Web.WebPages.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\System.Web.WebPages.Razor.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\WebGrease.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\System.Web.Helpers.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\System.Web.Mvc.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\System.Web.Optimization.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\System.Web.Razor.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\System.Web.WebPages.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\System.Web.WebPages.Deployment.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\System.Web.WebPages.Razor.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\Antlr3.Runtime.pdb
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\Newtonsoft.Json.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\EntityFramework.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\EntityFramework.SqlServer.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Google.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\BudgetMonitoring\PrinterMonitoring\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\roslyn\csc.exe
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\roslyn\System.Collections.Immutable.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\roslyn\System.Reflection.Metadata.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\roslyn\vbc.exe
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\roslyn\VBCSCompiler.exe
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\roslyn\VBCSCompiler.exe.config
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\PrinterMonitoring.dll.config
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\PrinterMonitoring.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\PrinterMonitoring.pdb
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\Antlr3.Runtime.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\EntityFramework.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\EntityFramework.SqlServer.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\Kendo.DynamicLinq.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\Microsoft.Owin.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\Microsoft.Owin.Security.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\Microsoft.Owin.Security.Google.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\Microsoft.Web.Infrastructure.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\Newtonsoft.Json.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\Owin.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\System.Linq.Dynamic.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\System.Web.Helpers.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\System.Web.Mvc.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\System.Web.Optimization.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\System.Web.Razor.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\System.Web.WebPages.Deployment.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\System.Web.WebPages.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\System.Web.WebPages.Razor.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\WebGrease.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\System.Web.Helpers.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\System.Web.Mvc.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\System.Web.Optimization.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\System.Web.Razor.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\System.Web.WebPages.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\System.Web.WebPages.Deployment.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\System.Web.WebPages.Razor.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\Antlr3.Runtime.pdb
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\Newtonsoft.Json.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\EntityFramework.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\EntityFramework.SqlServer.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\Microsoft.Owin.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\Microsoft.Owin.Security.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\Microsoft.Owin.Security.Google.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\obj\Debug\PrinterMonitoring.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\obj\Debug\PrinterMonitoring.pdb
+D:\Project IT JIEP\Project\BUDGET_CONTROL\From git\PrinterMonitoring\obj\Debug\BudgetMonitoring.csprojResolveAssemblyReference.cache
+D:\Alice\PrinterMonitoring\bin\roslyn\csc.exe
+D:\Alice\PrinterMonitoring\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Alice\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Alice\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Alice\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Alice\PrinterMonitoring\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Alice\PrinterMonitoring\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Alice\PrinterMonitoring\bin\roslyn\System.Collections.Immutable.dll
+D:\Alice\PrinterMonitoring\bin\roslyn\System.Reflection.Metadata.dll
+D:\Alice\PrinterMonitoring\bin\roslyn\vbc.exe
+D:\Alice\PrinterMonitoring\bin\roslyn\VBCSCompiler.exe
+D:\Alice\PrinterMonitoring\bin\roslyn\VBCSCompiler.exe.config
+D:\Alice\PrinterMonitoring\bin\PrinterMonitoring.dll.config
+D:\Alice\PrinterMonitoring\bin\PrinterMonitoring.dll
+D:\Alice\PrinterMonitoring\bin\PrinterMonitoring.pdb
+D:\Alice\PrinterMonitoring\bin\Antlr3.Runtime.dll
+D:\Alice\PrinterMonitoring\bin\EntityFramework.dll
+D:\Alice\PrinterMonitoring\bin\EntityFramework.SqlServer.dll
+D:\Alice\PrinterMonitoring\bin\Kendo.DynamicLinq.dll
+D:\Alice\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Alice\PrinterMonitoring\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Alice\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Alice\PrinterMonitoring\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Alice\PrinterMonitoring\bin\Microsoft.Owin.dll
+D:\Alice\PrinterMonitoring\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Alice\PrinterMonitoring\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Alice\PrinterMonitoring\bin\Microsoft.Owin.Security.dll
+D:\Alice\PrinterMonitoring\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Alice\PrinterMonitoring\bin\Microsoft.Owin.Security.Google.dll
+D:\Alice\PrinterMonitoring\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Alice\PrinterMonitoring\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Alice\PrinterMonitoring\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Alice\PrinterMonitoring\bin\Microsoft.Web.Infrastructure.dll
+D:\Alice\PrinterMonitoring\bin\Newtonsoft.Json.dll
+D:\Alice\PrinterMonitoring\bin\Owin.dll
+D:\Alice\PrinterMonitoring\bin\System.Linq.Dynamic.dll
+D:\Alice\PrinterMonitoring\bin\System.Web.Helpers.dll
+D:\Alice\PrinterMonitoring\bin\System.Web.Mvc.dll
+D:\Alice\PrinterMonitoring\bin\System.Web.Optimization.dll
+D:\Alice\PrinterMonitoring\bin\System.Web.Razor.dll
+D:\Alice\PrinterMonitoring\bin\System.Web.WebPages.Deployment.dll
+D:\Alice\PrinterMonitoring\bin\System.Web.WebPages.dll
+D:\Alice\PrinterMonitoring\bin\System.Web.WebPages.Razor.dll
+D:\Alice\PrinterMonitoring\bin\WebGrease.dll
+D:\Alice\PrinterMonitoring\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Alice\PrinterMonitoring\bin\System.Web.Helpers.xml
+D:\Alice\PrinterMonitoring\bin\System.Web.Mvc.xml
+D:\Alice\PrinterMonitoring\bin\System.Web.Optimization.xml
+D:\Alice\PrinterMonitoring\bin\System.Web.Razor.xml
+D:\Alice\PrinterMonitoring\bin\System.Web.WebPages.xml
+D:\Alice\PrinterMonitoring\bin\System.Web.WebPages.Deployment.xml
+D:\Alice\PrinterMonitoring\bin\System.Web.WebPages.Razor.xml
+D:\Alice\PrinterMonitoring\bin\Antlr3.Runtime.pdb
+D:\Alice\PrinterMonitoring\bin\Newtonsoft.Json.xml
+D:\Alice\PrinterMonitoring\bin\EntityFramework.xml
+D:\Alice\PrinterMonitoring\bin\EntityFramework.SqlServer.xml
+D:\Alice\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Alice\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Alice\PrinterMonitoring\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Alice\PrinterMonitoring\bin\Microsoft.Owin.xml
+D:\Alice\PrinterMonitoring\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Alice\PrinterMonitoring\bin\Microsoft.Owin.Security.xml
+D:\Alice\PrinterMonitoring\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Alice\PrinterMonitoring\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Alice\PrinterMonitoring\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Alice\PrinterMonitoring\bin\Microsoft.Owin.Security.Google.xml
+D:\Alice\PrinterMonitoring\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Alice\PrinterMonitoring\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Alice\PrinterMonitoring\obj\Debug\BudgetMonitoring.csprojResolveAssemblyReference.cache
+D:\Alice\PrinterMonitoring\obj\Debug\PrinterMonitoring.dll
+D:\Alice\PrinterMonitoring\obj\Debug\PrinterMonitoring.pdb
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\roslyn\csc.exe
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\roslyn\System.Collections.Immutable.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\roslyn\System.Reflection.Metadata.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\roslyn\vbc.exe
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\roslyn\VBCSCompiler.exe
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\roslyn\VBCSCompiler.exe.config
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\PrinterMonitoring.dll.config
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\PrinterMonitoring.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\PrinterMonitoring.pdb
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\Antlr3.Runtime.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\EntityFramework.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\EntityFramework.SqlServer.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\Kendo.DynamicLinq.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\Microsoft.Owin.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\Microsoft.Owin.Security.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\Microsoft.Owin.Security.Google.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\Microsoft.Web.Infrastructure.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\Newtonsoft.Json.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\Owin.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\System.Linq.Dynamic.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\System.Web.Helpers.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\System.Web.Mvc.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\System.Web.Optimization.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\System.Web.Razor.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\System.Web.WebPages.Deployment.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\System.Web.WebPages.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\System.Web.WebPages.Razor.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\WebGrease.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\System.Web.Helpers.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\System.Web.Mvc.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\System.Web.Optimization.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\System.Web.Razor.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\System.Web.WebPages.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\System.Web.WebPages.Deployment.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\System.Web.WebPages.Razor.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\Antlr3.Runtime.pdb
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\Newtonsoft.Json.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\EntityFramework.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\EntityFramework.SqlServer.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\Microsoft.Owin.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\Microsoft.Owin.Security.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\Microsoft.Owin.Security.Google.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\obj\Debug\BudgetMonitoring.csprojResolveAssemblyReference.cache
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\obj\Debug\PrinterMonitoring.dll
+D:\Project IT JIEP\Project\BUDGET_CONTROL\AliceProject\PrinterMonitoring\obj\Debug\PrinterMonitoring.pdb
+D:\alice 2\PrinterMonitoring\obj\Debug\PrinterMonitoring.dll
+D:\alice 2\PrinterMonitoring\obj\Debug\PrinterMonitoring.pdb
+D:\alice 2\PrinterMonitoring\bin\roslyn\csc.exe
+D:\alice 2\PrinterMonitoring\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\alice 2\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\alice 2\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\alice 2\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\alice 2\PrinterMonitoring\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\alice 2\PrinterMonitoring\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\alice 2\PrinterMonitoring\bin\roslyn\System.Collections.Immutable.dll
+D:\alice 2\PrinterMonitoring\bin\roslyn\System.Reflection.Metadata.dll
+D:\alice 2\PrinterMonitoring\bin\roslyn\vbc.exe
+D:\alice 2\PrinterMonitoring\bin\roslyn\VBCSCompiler.exe
+D:\alice 2\PrinterMonitoring\bin\roslyn\VBCSCompiler.exe.config
+D:\alice 2\PrinterMonitoring\bin\PrinterMonitoring.dll.config
+D:\alice 2\PrinterMonitoring\bin\PrinterMonitoring.dll
+D:\alice 2\PrinterMonitoring\bin\PrinterMonitoring.pdb
+D:\alice 2\PrinterMonitoring\bin\Antlr3.Runtime.dll
+D:\alice 2\PrinterMonitoring\bin\EntityFramework.dll
+D:\alice 2\PrinterMonitoring\bin\EntityFramework.SqlServer.dll
+D:\alice 2\PrinterMonitoring\bin\Kendo.DynamicLinq.dll
+D:\alice 2\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Core.dll
+D:\alice 2\PrinterMonitoring\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\alice 2\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\alice 2\PrinterMonitoring\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\alice 2\PrinterMonitoring\bin\Microsoft.Owin.dll
+D:\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.Cookies.dll
+D:\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.dll
+D:\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.Facebook.dll
+D:\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.Google.dll
+D:\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.OAuth.dll
+D:\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.Twitter.dll
+D:\alice 2\PrinterMonitoring\bin\Microsoft.Web.Infrastructure.dll
+D:\alice 2\PrinterMonitoring\bin\Newtonsoft.Json.dll
+D:\alice 2\PrinterMonitoring\bin\Owin.dll
+D:\alice 2\PrinterMonitoring\bin\System.Linq.Dynamic.dll
+D:\alice 2\PrinterMonitoring\bin\System.Web.Helpers.dll
+D:\alice 2\PrinterMonitoring\bin\System.Web.Mvc.dll
+D:\alice 2\PrinterMonitoring\bin\System.Web.Optimization.dll
+D:\alice 2\PrinterMonitoring\bin\System.Web.Razor.dll
+D:\alice 2\PrinterMonitoring\bin\System.Web.WebPages.Deployment.dll
+D:\alice 2\PrinterMonitoring\bin\System.Web.WebPages.dll
+D:\alice 2\PrinterMonitoring\bin\System.Web.WebPages.Razor.dll
+D:\alice 2\PrinterMonitoring\bin\WebGrease.dll
+D:\alice 2\PrinterMonitoring\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\alice 2\PrinterMonitoring\bin\System.Web.Helpers.xml
+D:\alice 2\PrinterMonitoring\bin\System.Web.Mvc.xml
+D:\alice 2\PrinterMonitoring\bin\System.Web.Optimization.xml
+D:\alice 2\PrinterMonitoring\bin\System.Web.Razor.xml
+D:\alice 2\PrinterMonitoring\bin\System.Web.WebPages.xml
+D:\alice 2\PrinterMonitoring\bin\System.Web.WebPages.Deployment.xml
+D:\alice 2\PrinterMonitoring\bin\System.Web.WebPages.Razor.xml
+D:\alice 2\PrinterMonitoring\bin\Antlr3.Runtime.pdb
+D:\alice 2\PrinterMonitoring\bin\Newtonsoft.Json.xml
+D:\alice 2\PrinterMonitoring\bin\EntityFramework.xml
+D:\alice 2\PrinterMonitoring\bin\EntityFramework.SqlServer.xml
+D:\alice 2\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Core.xml
+D:\alice 2\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\alice 2\PrinterMonitoring\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\alice 2\PrinterMonitoring\bin\Microsoft.Owin.xml
+D:\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.xml
+D:\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.Facebook.xml
+D:\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.Cookies.xml
+D:\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.OAuth.xml
+D:\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.Google.xml
+D:\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.Twitter.xml
+D:\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\alice 2\PrinterMonitoring\obj\Debug\BudgetMonitoring.csprojResolveAssemblyReference.cache
+D:\alice 2\PrinterMonitoring\bin\SqlServerTypes\x64\msvcr120.dll
+D:\alice 2\PrinterMonitoring\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\alice 2\PrinterMonitoring\bin\SqlServerTypes\x86\msvcr120.dll
+D:\alice 2\PrinterMonitoring\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\alice 2\PrinterMonitoring\bin\Microsoft.SqlServer.Types.dll
+D:\alice 2\PrinterMonitoring\bin\Microsoft.ReportViewer.Common.dll
+D:\alice 2\PrinterMonitoring\bin\Microsoft.ReportViewer.DataVisualization.dll
+D:\alice 2\PrinterMonitoring\bin\Microsoft.ReportViewer.Design.dll
+D:\alice 2\PrinterMonitoring\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\alice 2\PrinterMonitoring\bin\Microsoft.ReportViewer.WebDesign.dll
+D:\alice 2\PrinterMonitoring\bin\Microsoft.ReportViewer.WebForms.dll
+D:\alice 2\PrinterMonitoring\bin\ReportViewerForMvc.dll
+D:\alice 2\PrinterMonitoring\bin\EnvDTE.dll
+D:\alice 2\PrinterMonitoring\bin\Microsoft.ReportViewer.WinForms.dll
+D:\alice 2\PrinterMonitoring\bin\stdole.dll
+D:\alice 2\PrinterMonitoring\bin\Microsoft.VisualStudio.VSHelp.dll
+D:\alice 2\PrinterMonitoring\bin\Microsoft.VisualStudio.ComponentModelHost.dll
+D:\alice 2\PrinterMonitoring\bin\Microsoft.VisualStudio.TemplateWizardInterface.dll
+D:\alice 2\PrinterMonitoring\bin\EnvDTE80.dll
+D:\alice 2\PrinterMonitoring\bin\Microsoft.Build.Tasks.Core.dll
+D:\alice 2\PrinterMonitoring\bin\VSLangProj.dll
+D:\alice 2\PrinterMonitoring\bin\VSLangProj80.dll
+D:\alice 2\PrinterMonitoring\bin\Microsoft.VisualStudio.GraphModel.dll
+D:\alice 2\PrinterMonitoring\bin\Microsoft.MSXML.dll
+D:\alice 2\PrinterMonitoring\bin\Microsoft.Build.Utilities.Core.dll
+D:\alice 2\PrinterMonitoring\bin\Microsoft.Build.Framework.dll
+D:\alice 2\PrinterMonitoring\bin\VSLangProj2.dll
+D:\alice 2\PrinterMonitoring\bin\Microsoft.VisualStudio.TemplateWizardInterface.xml
+D:\alice 2\PrinterMonitoring\bin\de\Microsoft.ReportViewer.Common.resources.dll
+D:\alice 2\PrinterMonitoring\bin\es\Microsoft.ReportViewer.Common.resources.dll
+D:\alice 2\PrinterMonitoring\bin\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\alice 2\PrinterMonitoring\bin\it\Microsoft.ReportViewer.Common.resources.dll
+D:\alice 2\PrinterMonitoring\bin\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\alice 2\PrinterMonitoring\bin\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\alice 2\PrinterMonitoring\bin\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\alice 2\PrinterMonitoring\bin\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\alice 2\PrinterMonitoring\bin\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\alice 2\PrinterMonitoring\bin\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\alice 2\PrinterMonitoring\bin\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\alice 2\PrinterMonitoring\bin\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\alice 2\PrinterMonitoring\bin\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\alice 2\PrinterMonitoring\bin\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\alice 2\PrinterMonitoring\bin\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\alice 2\PrinterMonitoring\bin\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\alice 2\PrinterMonitoring\bin\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\alice 2\PrinterMonitoring\bin\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\alice 2\PrinterMonitoring\bin\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\alice 2\PrinterMonitoring\bin\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\alice 2\PrinterMonitoring\bin\de\Microsoft.ReportViewer.Design.resources.dll
+D:\alice 2\PrinterMonitoring\bin\es\Microsoft.ReportViewer.Design.resources.dll
+D:\alice 2\PrinterMonitoring\bin\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\alice 2\PrinterMonitoring\bin\it\Microsoft.ReportViewer.Design.resources.dll
+D:\alice 2\PrinterMonitoring\bin\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\alice 2\PrinterMonitoring\bin\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\alice 2\PrinterMonitoring\bin\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\alice 2\PrinterMonitoring\bin\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\alice 2\PrinterMonitoring\bin\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\alice 2\PrinterMonitoring\bin\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\alice 2\PrinterMonitoring\bin\de\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\alice 2\PrinterMonitoring\bin\es\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\alice 2\PrinterMonitoring\bin\fr\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\alice 2\PrinterMonitoring\bin\it\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\alice 2\PrinterMonitoring\bin\ja\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\alice 2\PrinterMonitoring\bin\ko\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\alice 2\PrinterMonitoring\bin\pt\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\alice 2\PrinterMonitoring\bin\ru\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\alice 2\PrinterMonitoring\bin\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\alice 2\PrinterMonitoring\bin\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\alice 2\PrinterMonitoring\bin\de\Microsoft.ReportViewer.WebForms.resources.dll
+D:\alice 2\PrinterMonitoring\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
+D:\alice 2\PrinterMonitoring\bin\fr\Microsoft.ReportViewer.WebForms.resources.dll
+D:\alice 2\PrinterMonitoring\bin\it\Microsoft.ReportViewer.WebForms.resources.dll
+D:\alice 2\PrinterMonitoring\bin\ja\Microsoft.ReportViewer.WebForms.resources.dll
+D:\alice 2\PrinterMonitoring\bin\ko\Microsoft.ReportViewer.WebForms.resources.dll
+D:\alice 2\PrinterMonitoring\bin\pt\Microsoft.ReportViewer.WebForms.resources.dll
+D:\alice 2\PrinterMonitoring\bin\ru\Microsoft.ReportViewer.WebForms.resources.dll
+D:\alice 2\PrinterMonitoring\bin\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+D:\alice 2\PrinterMonitoring\bin\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+D:\alice 2\PrinterMonitoring\bin\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\alice 2\PrinterMonitoring\bin\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\alice 2\PrinterMonitoring\bin\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\alice 2\PrinterMonitoring\bin\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\alice 2\PrinterMonitoring\bin\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\alice 2\PrinterMonitoring\bin\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\alice 2\PrinterMonitoring\bin\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\alice 2\PrinterMonitoring\bin\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\alice 2\PrinterMonitoring\bin\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\alice 2\PrinterMonitoring\bin\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\SqlServerTypes\x64\msvcr120.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\SqlServerTypes\x86\msvcr120.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\roslyn\csc.exe
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\roslyn\System.Collections.Immutable.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\roslyn\System.Reflection.Metadata.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\roslyn\vbc.exe
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\roslyn\VBCSCompiler.exe
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\roslyn\VBCSCompiler.exe.config
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\PrinterMonitoring.dll.config
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\PrinterMonitoring.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\PrinterMonitoring.pdb
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Antlr3.Runtime.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\EntityFramework.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\EntityFramework.SqlServer.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Kendo.DynamicLinq.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Owin.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.Google.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.ReportViewer.Common.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.ReportViewer.DataVisualization.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.ReportViewer.Design.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.ReportViewer.WebDesign.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.ReportViewer.WebForms.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.SqlServer.Types.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Web.Infrastructure.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Newtonsoft.Json.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Owin.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\ReportViewerForMvc.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\System.Linq.Dynamic.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\System.Web.Helpers.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\System.Web.Mvc.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\System.Web.Optimization.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\System.Web.Razor.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\System.Web.WebPages.Deployment.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\System.Web.WebPages.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\System.Web.WebPages.Razor.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\WebGrease.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\EnvDTE.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.ReportViewer.WinForms.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\stdole.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.VisualStudio.VSHelp.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.VisualStudio.ComponentModelHost.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.VisualStudio.TemplateWizardInterface.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\EnvDTE80.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Build.Tasks.Core.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\VSLangProj.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\VSLangProj80.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.VisualStudio.GraphModel.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.MSXML.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Build.Utilities.Core.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Build.Framework.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\VSLangProj2.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\System.Web.Helpers.xml
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\System.Web.Mvc.xml
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\System.Web.Optimization.xml
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\System.Web.Razor.xml
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\System.Web.WebPages.xml
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\System.Web.WebPages.Deployment.xml
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\System.Web.WebPages.Razor.xml
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Antlr3.Runtime.pdb
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Newtonsoft.Json.xml
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\EntityFramework.xml
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\EntityFramework.SqlServer.xml
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Owin.xml
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.xml
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.Google.xml
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\Microsoft.VisualStudio.TemplateWizardInterface.xml
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\de\Microsoft.ReportViewer.Common.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\es\Microsoft.ReportViewer.Common.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\it\Microsoft.ReportViewer.Common.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\de\Microsoft.ReportViewer.Design.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\es\Microsoft.ReportViewer.Design.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\it\Microsoft.ReportViewer.Design.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\de\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\es\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\fr\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\it\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\ja\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\ko\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\pt\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\ru\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\de\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\fr\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\it\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\ja\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\ko\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\pt\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\ru\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\bin\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\obj\Debug\BudgetMonitoring.csprojResolveAssemblyReference.cache
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\obj\Debug\PrinterMonitoring.dll
+D:\Y\Project\Modules\alice 2\PrinterMonitoring\obj\Debug\PrinterMonitoring.pdb
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\SqlServerTypes\x64\msvcr120.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\SqlServerTypes\x86\msvcr120.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\roslyn\csc.exe
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\roslyn\System.Collections.Immutable.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\roslyn\System.Reflection.Metadata.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\roslyn\vbc.exe
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\roslyn\VBCSCompiler.exe
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\roslyn\VBCSCompiler.exe.config
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\PrinterMonitoring.dll.config
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\PrinterMonitoring.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\PrinterMonitoring.pdb
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Antlr3.Runtime.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\EntityFramework.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\EntityFramework.SqlServer.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Kendo.DynamicLinq.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Owin.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.Google.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.ReportViewer.Common.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.ReportViewer.DataVisualization.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.ReportViewer.Design.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.ReportViewer.WebDesign.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.ReportViewer.WebForms.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.SqlServer.Types.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Web.Infrastructure.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Newtonsoft.Json.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Owin.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\ReportViewerForMvc.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\System.Linq.Dynamic.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\System.Web.Helpers.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\System.Web.Mvc.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\System.Web.Optimization.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\System.Web.Razor.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\System.Web.WebPages.Deployment.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\System.Web.WebPages.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\System.Web.WebPages.Razor.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\WebGrease.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\EnvDTE.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.ReportViewer.WinForms.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\stdole.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.VisualStudio.VSHelp.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.VisualStudio.ComponentModelHost.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.VisualStudio.TemplateWizardInterface.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\EnvDTE80.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Build.Tasks.Core.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\VSLangProj.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\VSLangProj80.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.VisualStudio.GraphModel.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.MSXML.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Build.Utilities.Core.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Build.Framework.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\VSLangProj2.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\System.Collections.Immutable.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\System.Web.Helpers.xml
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\System.Web.Mvc.xml
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\System.Web.Optimization.xml
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\System.Web.Razor.xml
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\System.Web.WebPages.xml
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\System.Web.WebPages.Deployment.xml
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\System.Web.WebPages.Razor.xml
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Antlr3.Runtime.pdb
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Newtonsoft.Json.xml
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\EntityFramework.xml
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\EntityFramework.SqlServer.xml
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Owin.xml
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.xml
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.Google.xml
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\EnvDTE.xml
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\Microsoft.VisualStudio.TemplateWizardInterface.xml
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\EnvDTE80.xml
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\VSLangProj.xml
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\VSLangProj80.xml
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\VSLangProj2.xml
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\de\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\es\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\it\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\de\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\es\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\it\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\de\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\es\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\fr\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\it\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\ja\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\ko\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\pt\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\ru\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\de\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\fr\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\it\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\ja\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\ko\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\pt\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\ru\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\bin\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\obj\Debug\BudgetMonitoring.csprojResolveAssemblyReference.cache
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\obj\Debug\PrinterMonitoring.dll
+D:\Project\Pama\Modules\alice 2\PrinterMonitoring\obj\Debug\PrinterMonitoring.pdb
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\SqlServerTypes\x64\msvcr120.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\SqlServerTypes\x86\msvcr120.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\roslyn\csc.exe
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\roslyn\System.Collections.Immutable.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\roslyn\System.Reflection.Metadata.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\roslyn\vbc.exe
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\roslyn\VBCSCompiler.exe
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\roslyn\VBCSCompiler.exe.config
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\PrinterMonitoring.dll.config
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\PrinterMonitoring.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\PrinterMonitoring.pdb
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Antlr3.Runtime.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\EntityFramework.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\EntityFramework.SqlServer.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Kendo.DynamicLinq.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.Owin.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.Owin.Security.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.Owin.Security.Google.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.ReportViewer.Common.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.ReportViewer.DataVisualization.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.ReportViewer.Design.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.ReportViewer.WebDesign.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.ReportViewer.WebForms.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.SqlServer.Types.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.Web.Infrastructure.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Newtonsoft.Json.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Owin.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\ReportViewerForMvc.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\System.Linq.Dynamic.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\System.Web.Helpers.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\System.Web.Mvc.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\System.Web.Optimization.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\System.Web.Razor.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\System.Web.WebPages.Deployment.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\System.Web.WebPages.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\System.Web.WebPages.Razor.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\WebGrease.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\EnvDTE.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.ReportViewer.WinForms.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\stdole.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.VisualStudio.VSHelp.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.VisualStudio.ComponentModelHost.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.VisualStudio.TemplateWizardInterface.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\EnvDTE80.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.Build.Tasks.Core.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\VSLangProj.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\VSLangProj80.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.VisualStudio.GraphModel.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.MSXML.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.Build.Utilities.Core.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.Build.Framework.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\VSLangProj2.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\System.Collections.Immutable.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\System.Web.Helpers.xml
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\System.Web.Mvc.xml
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\System.Web.Optimization.xml
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\System.Web.Razor.xml
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\System.Web.WebPages.xml
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\System.Web.WebPages.Deployment.xml
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\System.Web.WebPages.Razor.xml
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Antlr3.Runtime.pdb
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Newtonsoft.Json.xml
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\EntityFramework.xml
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\EntityFramework.SqlServer.xml
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.Owin.xml
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.Owin.Security.xml
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.Owin.Security.Google.xml
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\EnvDTE.xml
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\Microsoft.VisualStudio.TemplateWizardInterface.xml
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\EnvDTE80.xml
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\VSLangProj.xml
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\VSLangProj80.xml
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\VSLangProj2.xml
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\de\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\es\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\it\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\de\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\es\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\it\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\de\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\es\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\fr\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\it\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\ja\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\ko\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\pt\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\ru\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\de\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\fr\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\it\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\ja\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\ko\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\pt\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\ru\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\bin\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\obj\Debug\BudgetMonitoring.csprojResolveAssemblyReference.cache
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\obj\Debug\PrinterMonitoring.dll
+D:\Project\Pama\Modules\alice new\PrinterMonitoring\obj\Debug\PrinterMonitoring.pdb

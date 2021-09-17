@@ -1,0 +1,338 @@
+﻿@{
+    ViewBag.Title = "Monitoring Safety";
+    ViewBag.dashboard = "KPI LTI Safety";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+    ViewBag.pathParent = Url.Content("~").Substring(0, Url.Content("~").Length - 1);
+}
+
+<!-- /.content-header -->
+<!-- Main content -->
+<input type="hidden" id="urlPath" value="@ViewBag.pathParent" />
+<input type="hidden" id="pid" />
+<input type="hidden" id="gp" value="@ViewBag.GP" />
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="grid"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog" style="width:400px;">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                <h4 class="modal-title">Add New Record</h4>
+            </div>
+            <div id="KPI_modal" class="modal-body">
+                <form id="form_KPI" class="form-horizontal">
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" style="width:160%" id="id">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" style="text-align:left;" for="month">MONTHS:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" style="width:160%" id="month">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" style="text-align:left;" for="numberon">NUMBER ON EMPLOYEES SITE MONTH ACTUAL:</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" style="width:160%" id="numberon">
+                        </div>
+                    </div>
+                    @*<div class="form-group">
+                        <label class="control-label col-sm-4" style="text-align:left;" for="shift">NUMBER OF SHIFTS MAN MONTH ACTUAL :</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" style="width:160%" id="shift">
+                        </div>
+                    </div>*@
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" style="text-align:left;" for="minor">NUMBER MINOR MONTH ACTUAL:</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" style="width:160%" id="minor">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" style="text-align:left;" for="lost">NUMBER LOST TIME MONTH ACTUAL:</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" style="width:160%" id="lost">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" style="text-align:left;" for="fatal">NUMBER FATAL MONTH ACTUAL:</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" style="width:160%" id="fatal">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" style="text-align:left;" for="shiftlost">NUMBER SHIFT LOST MONTH ACTUAL:</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" style="width:160%" id="shiftlost">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="btn_simpan" style="width:200%" class="btn btn-outline-success">SIMPAN</button>
+                <button type="button" style="width:200%;" class="btn btn-outline-warning" data-dismiss="modal">BATAL</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+
+    $(document).ready(function () {
+        loadgrid();
+    });
+
+    function loadgrid() {
+        $("#grid").empty();
+        var grid = $("#grid").kendoGrid({
+            dataSource: {
+                type: "json",
+                transport: {
+                    read: {
+                        url: $("#urlPath").val() + "/KPISafety/Read",
+                        contentType: "application/json",
+                        type: "POST",
+                        cache: false,
+                    },
+                    create: {
+                        url: $("#urlPath").val() + "/KPISafety/Insert",
+                        contentType: "application/json",
+                        type: "POST",
+                        complete: function (data) {
+                            alert(data.responseJSON.remarks);
+                        }
+                    },
+                    destroy: {
+                        url: $("#urlPath").val() + "/KPISafety/Delete",
+                        contentType: "application/json",
+                        type: "POST",
+                        cache: false,
+                        complete: function (data) {
+                            alert(data.responseJSON.remarks);
+                            if (data.responseJSON.status==true) {
+                                //alert(data.remarks)
+                                $("#grid").data("kendoGrid").dataSource.read()
+                            } else {
+                                alert(data.error);
+                                $("#grid").data("kendoGrid").dataSource.read()
+                            }
+                        }
+                    },
+                    parameterMap: function (data, operation) {
+                        return kendo.stringify(data)
+                    }
+                },
+                pageSize: 1000,
+                serverPaging: true,
+                serverFiltering: true,
+                serverSorting: true,
+                schema: {
+                    data: "Data",
+                    total: "Total",
+                    model: {
+                        id: "PID_LTI",
+                        fields: {
+                            MONTHS: { type: "string", filterable: true, sortable: true, editable: true},
+                            NUMBER_MONTH_ACT: { type: "number", filterable: true, sortable: true, editable: true },
+                            SITE_PROG_YTD: { type: "number", filterable: true, sortable: true, editable: true },
+                            TOTAL_SHIFTS_MONTH_ACT: { type: "number", filterable: true, sortable: true, editable: true},
+                            MAN_WORK_PROG_YTD: { type: "number", filterable: true, sortable: true, editable: true},
+                            NUMBER_SHIFTS_MONTH_ACT: { type: "number", filterable: true, sortable: true, editable: true },
+                            PRODUCTION_PROG_YTD: { type: "number", filterable: true, sortable: true, editable: true},
+                            NUMBER_MINOR_MONTH_ACT: { type: "number", filterable: true, sortable: true, editable: true },
+                            INJURIES_MINOR_PROG_YTD: { type: "number", filterable: true, sortable: true, editable: true },
+                            NUMBER_TIME_MONTH_ACT: { type: "number", filterable: true, sortable: true, editable: true },
+                            INJURIES_TIME_PROG_YTD: { type: "number", filterable: true, sortable: true, editable: true },
+                            NUMBER_FATAL_MONTH_ACT: { type: "number", filterable: true, sortable: true, editable: true},
+                            INJURIES_FATAL_PROG_YTD: { type: "number", filterable: true, sortable: true, editable: true },
+                            SHIFTS_LOST_MONTH_ACT: { type: "number", filterable: true, sortable: true, editable: true},
+                            SHIFTS_LOST_PROG_YTD: { type: "number", filterable: true, sortable: true, editable: true },
+                        }
+                    }
+                }
+            },
+            height: 500,
+            filterable: true,
+            sortable: true,
+            pageable: true,
+            resizable: true,
+            editable: {
+                mode: "popup"
+            },
+            toolbar: [
+            {
+                template: '<button type="button" id="btn_add" class="k-button k-button-icontext" onclick="open_wnd_add()"><span class="glyphicon glyphicon-plus"></span> Add New Record</button>'
+            },
+             {
+                 name: "excel",
+                 imageClass: '<button type="button" button id="btn_export" class="btn btn-info"><span class="glyphicon glyphicon-export"></span> Export To Excel</button>'
+             }, ],
+
+            excel: {
+                fileName: "UploadSuccess.xlsx",
+                AllPages: true,
+                filterable: true
+            },
+            columns: [
+                {
+                    command: [{ name: "update-data", text: "Edit", click: Edit, iconClass: "glyphicon glyphicon-edit spasi-kanan" }, "destroy"], title: "ACTION", width: 170
+                },
+                { field: "MONTHS", title: "Months", width: 130 },
+                { title: "NUMBER ON EMPLOYEES SITE",
+                columns: [{ field: "NUMBER_MONTH_ACT", title: "Month Actual", width: 170, format: "{0:n2}" },
+                           { field: "SITE_PROG_YTD", title: "Progressive YTD", width: 170, format: "{0:n2}" }]
+                },
+                {
+                    title: "TOTAL SHIFTS MAN WORKED",
+                    columns: [{ field: "TOTAL_SHIFTS_MONTH_ACT", title: "Month Actual", width: 170, format: "{0:n2}" },
+                        { field: "MAN_WORK_PROG_YTD", title: "Progressive YTD", width: 170, format: "{0:n2}" }]
+                },
+               {
+                   title: "NUMBER OF SHIFTS	PRODUCTION WORKED",
+                   columns: [{ field: "NUMBER_SHIFTS_MONTH_ACT", title: "Month Actual", width: 170, format: "{0:n2}" },
+                { field: "PRODUCTION_PROG_YTD", title: "Progressive YTD", width: 170, format: "{0:n2}" }]
+               },
+                 {
+                     title: "NUMBER MINOR OF INJURIES",
+                     columns: [{ field: "NUMBER_MINOR_MONTH_ACT", title: "Month Actual", width: 170, format: "{0:n2}" },
+                 { field: "INJURIES_MINOR_PROG_YTD", title: "Progressive YTD", width: 170, format: "{0:n2}" }]
+                 },
+                {
+                    title: "NUMBER LOST TIME OF INJURIES",
+                    columns: [{ field: "NUMBER_TIME_MONTH_ACT", title: "Month Actual", width: 170, format: "{0:n2}" },
+                { field: "INJURIES_TIME_PROG_YTD", title: "Progressive YTD", width: 170, format: "{0:n2}" }]
+                },
+                {
+                    title: "NUMBER FATAL OF INJURIES",
+                    columns: [{ field: "NUMBER_FATAL_MONTH_ACT", title: "Month Actual", width: 170, format: "{0:n2}" },
+                { field: "INJURIES_FATAL_PROG_YTD", title: "Progressive YTD", width: 170, format: "{0:n2}" }]
+                },
+                {
+                    title: "NUMBER SHIFTS OF LOST",
+                    columns: [{ field: "SHIFTS_LOST_MONTH_ACT", title: "Month Actual", width: 170, format: "{0:n2}" },
+                { field: "SHIFTS_LOST_PROG_YTD", title: "Progressive YTD", width: 170, format: "{0:n2}" }]
+                },
+               
+            ],
+            dataBinding: function () {
+                window.rowNo = (this.dataSource.page() - 1) * this.dataSource.pageSize();
+            }
+        });
+    }
+    function open_wnd_add() {
+        $("#id").prop('disabled', true).val("");
+        $("#month").val("");
+        $("#numberon").val("");
+        //$("#shift").val("");
+        $("#minor").val("");
+        $("#lost").val("");
+        $("fatal").val("");
+        $("#shiftlost").val("");
+
+        save_method = 'add';
+        $('#myModal').modal({
+            show: true,
+            keyboard: false,
+            backdrop: 'static'
+        });
+
+        var start = $("#month").kendoDatePicker({
+            format: "yyyyMM",
+            dateInput: false,
+            change: function () {
+                var start = $("#month").val();
+            }
+        }).data("kendoDatePicker");
+    }
+    function Edit(e) {
+        e.preventDefault();
+        var dataItem = this.dataItem($(e.currentTarget).closest("tr"));
+        $("#id").prop('disabled', true);
+        $("#month").val("");
+        $("#numberon").val("");
+        //$("#shift").val("");
+        $("#minor").val("");
+        $("#lost").val("");
+        $("fatal").val("");
+        $("#shiftlost").val("");
+        
+        $("#id").val(dataItem.PID_LTI);
+        $("#month").val(dataItem.MONTHS);
+        $("#numberon").val(dataItem.NUMBER_MONTH_ACT);
+        //$("#shift").val(dataItem.NUMBER_SHIFTS_MONTH_ACT);
+        $("#minor").val(dataItem.NUMBER_MINOR_MONTH_ACT);
+        $("#lost").val(dataItem.NUMBER_TIME_MONTH_ACT);
+        $("fatal").val(dataItem.NUMBER_FATAL_MONTH_ACT);
+        $("#shiftlost").val(dataItem.SHIFTS_LOST_MONTH_ACT);
+
+        save_method = "update";
+        $('#myModal').modal({
+            show: true,
+            keyboard: false,
+            backdrop: 'static'
+        });
+        var start = $("#month").kendoDatePicker({
+            format: "yyyyMM",
+            dateInput: false,
+            change: function () {
+                var start = $("#month").val();
+            }
+        }).data("kendoDatePicker");
+    }
+        $("#btn_simpan").click(function () {
+            var url = "";
+            if (save_method == "update") {
+                url_ = $("#urlPath").val() + "/KPISafety/Update";
+            } else {
+                url_ = $("#urlPath").val() + "/KPISafety/Insert";
+            }
+            var stbl_m_driver = {
+                PID_LTI: $("#id").val(),
+                MONTHS: $("#month").val(),
+                NUMBER_MONTH_ACT: $("#numberon").val(),
+                //NUMBER_SHIFTS_MONTH_ACT: $("#shift").val(),
+                NUMBER_MINOR_MONTH_ACT: $("#minor").val(),
+                NUMBER_TIME_MONTH_ACT: $("#lost").val(),
+                NUMBER_FATAL_MONTH_ACT: $("#fatal").val(),
+                SHIFTS_LOST_MONTH_ACT: $("#shiftlost").val(),
+            }
+            var datepicker = $("#month").data("kendoDatePicker");
+            var value = datepicker.value();
+            var req_date = kendo.toString(value, "yyyyMM");
+
+            $.ajax({
+                type: "POST",
+                dataType: "json",
+                contentType: "application/json",
+                url: url_,
+                data: JSON.stringify(stbl_m_driver),
+                success: function (response) {
+                    alert(response.remarks)
+                    $('#myModal').modal('toggle');
+                    $("#grid").data("kendoGrid").dataSource.read();
+                    $("#grid").data("kendoGrid").refresh();
+
+                }
+            });
+        });
+
+</script>
+
+
+

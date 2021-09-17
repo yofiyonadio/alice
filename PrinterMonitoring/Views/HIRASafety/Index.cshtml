@@ -1,0 +1,220 @@
+﻿@{
+    ViewBag.Title = "Safety";
+    ViewBag.dashboard = "Library Safety";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+    ViewBag.pathParent = Url.Content("~").Substring(0, Url.Content("~").Length - 1);
+}
+
+<!-- /.content-header -->
+<!-- Main content -->
+<input type="hidden" id="urlPath" value="@ViewBag.pathParent" />
+<input type="hidden" id="pid" />
+<input type="hidden" id="gp" value="@ViewBag.GP" />
+<html>
+
+<body>
+    <div class="modal-header">
+        <button type="button" onclick="btn_create()" id="btn_create" style="width:25%" class="btn btn-info">HIRA</button>
+        <button type="button" onclick="btn_ink()" id="btn_view" style="width:25%" class="btn btn-info">INK</button>
+        <button type="button" onclick="btn_jsa()" id="btn_view" style="width:25%" class="btn btn-info">JSA</button>
+    </div>
+   
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog" style="width:400px;">
+            <div class="modal-content">
+                <div id="regis_modal" class="modal-body">
+                    <form id="form_regis" class="form-horizontal">
+                        <h2>File Upload HIRA</h2>
+                        <div class="form-group">
+                            <label class="control-label col-sm-1" style="text-align:left;" for="id">ID</label>
+                            <input type="text" class="col-sm-3" style="width:50%" id="id">
+                        </div> 
+                        <div class="form-group">
+                            <label for="exampleInputName">Daftar Proses Operasional:</label><div class="col-sm-8">
+                                  <input type="text" class="form-control" style="width:160%" id="proses">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Aktivitas/Fasilitas/Proses/ProdukMaterial:</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" style="width:160%" id="aktivitas">
+                            </div>
+                            
+                        </div>
+
+                        <hr>
+                        <div class="form-group mt-3">
+                            <label class="mr-2">Upload PDF:</label>
+                            <input type="file" id="uploadhira2" name="filehira">
+                        </div>
+                        <div class="col-sm-8">
+                            <label id="lbluploadpickup"></label>
+                        </div>
+                        <hr>
+                        <button type="submit" id="btn_simpan" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-outline-warning" data-dismiss="modal">BATAL</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
+<script>
+    $(document).ready(function () {
+        var GroupDataSource = new kendo.data.DataSource({
+            transport: {
+                read: {
+                    url: $("#urlPath").val() + "/HIRASafety/ReadProses",
+                    contentType: "application/json",
+                    type: "POST",
+                    cache: false
+                }
+            },
+            schema: {
+                data: "Data",
+                total: "Total"
+            }
+        });
+        var GroupDataSource = $("#proses").kendoDropDownList({
+            dataTextField: "DESKRIPSI",
+            dataValueField: "ID",
+            dataSource: GroupDataSource,
+            optionLabel: "Pilih"
+        });
+
+    });
+    $("#proses").on("change", function () {
+        $("#tes").val($('#proses').val());
+        dd_hira();
+        $("#aktivitas").data("kendoDropDownList").value(-1);
+        
+    });
+
+    function dd_hira() {
+        var ds_district = new kendo.data.DataSource({
+            type: "json",
+            transport: {
+                read: {
+                    url: $("#urlPath").val() + "/HIRASafety/ReadHIRA?sid=" + $('#proses').val(),
+                    contentType: "application/json",
+                    type: "POST",
+                    cache: false
+                }
+            },
+            schema: {
+                data: "Data",
+                total: "Total"
+            }
+        });
+        $("#aktivitas").kendoDropDownList({
+            autoBind: true,
+            dataSource: ds_district,
+            dataTextField: "DESKRIPSI",
+            dataValueField: "DESKRIPSI",
+            optionLabel: "Pilih...",
+           
+        }).data("kendoDropDownList");
+    }
+    //var url_upload = "";
+    //$("#uploadhira").kendoUpload({
+    //    async: {
+    //        saveUrl: "save",
+    //        removeUrl: "remove",
+    //        autoUpload: false
+    //    },
+    //    validation: {
+    //        allowedExtensions: [".pdf"]
+    //    },
+    //    upload: function (e) {
+    //        var files = e.files;
+    //        $.each(files, function () {
+    //            var idP = $("#id").val();
+    //            $("#uploadhira").data("kendoUpload").options.async.saveUrl = $("#urlPath").val() + "/HIRASafety/AjaxUpload";
+    //        });
+    //    },
+    //    success: function (e) {
+    //        url_upload = e.response.iStrPath;
+    //        if (e.response.status == true) {
+    //            alert(e.response.remark);
+    //        } else {
+    //            alert(e.response.remark);
+    //        }
+    //    },
+    //    showFileList: false,
+    //    dropZone: ".dropZoneElement"
+    //});
+
+    $("#uploadhira2").kendoUpload({
+        async: {
+            saveUrl: "save",
+            removeUrl: "remove",
+            autoUpload: true
+        },
+        //validation: {
+        //    allowedExtensions: [".pdf"]
+        //},
+        upload: function (e) {
+            var files = e.files;
+            console.log(files);
+            $.each(files, function () {
+               
+                $("#uploadhira2").data("kendoUpload").options.async.saveUrl = $("#urlPath").val() + '/HIRASafety/AjaxUpload2';
+            });
+        },
+        success: function (e) {
+            //$("#uploadhira").val("");
+           
+            if (e.response.status == true) {
+                alert(e.response.remark);
+            } else {
+                alert(e.response.remark);
+            }
+        },
+        showFileList: false,
+        dropZone: ".dropZoneElement"
+    });
+    function btn_create() {
+        $("#id").prop('disabled', true).val("");
+        //$("#proses").data("kendoDropDownList").value(-1);
+        $('#proses').data("kendoDropDownList").text();
+        $("#aktivitas").val("");
+        $("#uploadhira").val("");
+
+        save_method = 'add';
+        $('#myModal').modal({
+            show: true,
+            keyboard: false,
+            backdrop: 'static'
+        });
+    }
+
+    $("#btn_simpan").click(function () {
+        //debugger;
+        var url = "";
+        //var lblupPickup = document.getElementById('lbluploadpickup').textContent;
+         url_ = $("#urlPath").val() + "/HIRASafety/Insert";
+        
+        var stbl_m_driver = {
+            ID: $("#id").val(),
+            //Ambil text deskripsi #proses
+            DAFTAR_PROSES: $("#proses").data("kendoDropDownList").text(),
+
+            AKTIFITAS: $("#aktivitas").data("kendoDropDownList").value(),
+            UPLOAD_FILE: $("#uploadhira").val()
+        }
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            contentType: "application/json",
+            url: url_,
+            data: JSON.stringify(stbl_m_driver),
+            success: function (response) {
+                alert(response.remarks)
+                $('#myModal').modal('toggle');
+            }
+        });
+    });
+
+</script>

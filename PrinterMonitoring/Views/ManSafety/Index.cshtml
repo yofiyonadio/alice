@@ -1,0 +1,162 @@
+﻿@{
+    ViewBag.Title = "Monitoring Budget";
+    ViewBag.dashboard = "Man Work Safety";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+    ViewBag.pathParent = Url.Content("~").Substring(0, Url.Content("~").Length - 1);
+}
+
+<!-- /.content-header -->
+<!-- Main content -->
+<input type="hidden" id="urlPath" value="@ViewBag.pathParent" />
+<input type="hidden" id="pid" />
+<input type="hidden" id="gp" value="@ViewBag.GP" />
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="grid"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+    $(document).ready(function () {
+       loadgrid();
+    });
+
+    function loadgrid() {
+        $("#grid").empty();
+        var grid = $("#grid").kendoGrid({
+            dataSource: {
+                type: "json",
+                transport: {
+                    read: {
+                        url: $("#urlPath").val() + "/ManSafety/Read",
+                        contentType: "application/json",
+                        type: "POST",
+                        cache: false,
+                    },
+                    parameterMap: function (data, operation) {
+
+                        return kendo.stringify(data)
+                    }
+                },
+                pageSize: 1000,
+                serverPaging: true,
+                serverFiltering: true,
+                serverSorting: true,
+                schema: {
+                    data: "Data",
+                    total: "Total",
+                    model: {
+                        id: "PID_MAN_HOURS",
+                        fields: {
+                            MONTHS: { type: "string", filterable: true, sortable: true, editable: true, validation: { required: true }},
+                            TOTAL_HOURS_MONTH_ACT: { type: "number", filterable: true, sortable: true, editable: true },
+                            MAN_WORK_PROG_YTD: { type: "number", filterable: true, sortable: true, editable: true, validation: { required: true } },
+                            MONTH_ACT_LOST_TIME: { type: "number", filterable: true, sortable: true, editable: true, validation: { min: 0, required: true } },
+                            INJURIES_PROG_YTD: { type: "number", filterable: true, sortable: true, editable: true, validation: { required: true } },
+                            NUMBER_SHIFT_MONTH_ACT: { type: "number", filterable: true, sortable: true, editable: true, validation: { required: true } },
+                            LOST_PROG_YTD : { type: "number", filterable: true, sortable: true, editable: true, validation: { required: true } },
+                            LTIFR_MONTH_ACT: { type: "number", filterable: true, sortable: true, editable: true, validation: { min: 0, required: true } },
+                            MAN_HOURS_PROG_YTD: { type: "number", filterable: true, sortable: true, editable: true, validation: { min: 0, required: true } },
+                            DIFR_MONTH_ACT: { type: "number", filterable: true, sortable: true, editable: true, validation: { min: 0, required: true } },
+                            HOURS_PROG_YTD: { type: "number", filterable: true, sortable: true, editable: true, validation: { min: 0, required: true } },
+                            SEVERITY_MILLION_MONTH_ACT : { type: "number", filterable: true, sortable: true, editable: true, validation: { required: true } },
+                            RATE_HOURS_PROG_YTD: { type: "number", filterable: true, sortable: true, editable: true, validation: { required: true } },
+                           }
+                    }
+                }
+            },
+            height: 500,
+            filterable: true,
+            sortable: true,
+            pageable: true,
+            resizable: true,
+            editable: {
+                mode: "popup"
+            },
+            toolbar: [
+             {
+                 name: "excel",
+                 imageClass: '<button type="button" button id="btn_export" class="btn btn-info"><span class="glyphicon glyphicon-export"></span> Export To Excel</button>'
+             }, ],
+
+            excel: {
+                fileName: "UploadSuccess.xlsx",
+                AllPages: true,
+                filterable: true
+            },
+
+            columns: [
+                { field: "MONTHS", title: "Months", width: 130 },
+                { title: "TOTAL HOURS",
+                    columns: [{ field: "TOTAL_HOURS_MONTH_ACT", title: "MONTH ACTUAL", width: 100 }]
+                   } ,
+                {
+                    title: "MAN WORKED",
+                    columns: [{ field: "MAN_WORK_PROG_YTD", title: "Progressive YTD", width: 100 }]
+                      
+                },
+                  {
+                      title: "NUMBER LOST TIME",
+                      columns: [{ field: "MONTH_ACT_LOST_TIME", title: "MONTH ACTUAL", width: 100 }]
+                  },
+                    {
+                        title: "OF INJURIES",
+                        columns: [{ field: "INJURIES_PROG_YTD", title: "Progressive YTD", width: 100 }]
+                    },
+                    {
+                        title: "NUMBER SHIFTS",
+                        columns: [{ field: "NUMBER_SHIFT_MONTH_ACT", title: "MONTH ACTUAL", width: 100 }]
+                    },
+                    {
+                        title: "OF LOST ",
+                        columns: [{ field: "LOST_PROG_YTD", title: "Progressive YTD", width: 100 }]
+                    },
+                    {
+                        title: "LTIFR MILLION",
+                        columns: [{ field: "LTIFR_MONTH_ACT", title: "MONTH ACTUAL", format: "{0:n2}", width: 100 }]
+                    },
+                    {
+                        title: "PER MAN HOURS",
+                        columns: [{ field: "MAN_HOURS_PROG_YTD", title: "Progressive YTD", format: "{0:n2}", width: 100 }]
+                    },
+                     {
+                         title: "DIFR 200000",
+                         columns: [{ field: "DIFR_MONTH_ACT", title: "MONTH ACTUAL", format: "{0:n2}", width: 100 }]
+                     },
+                    {
+                        title: "PER HOURS",
+                        columns: [{ field: "HOURS_PROG_YTD", title: "Progressive YTD", format: "{0:n2}", width: 100 }]
+                    },
+                     {
+                         title: "SEVERITY MILLION",
+                         columns: [{ field: "SEVERITY_MILLION_MONTH_ACT", title: "MONTH ACTUAL", format: "{0:n2}", width: 100 }]
+                     },
+                    {
+                        title: "PER HOURS",
+                        columns: [{ field: "RATE_HOURS_PROG_YTD", title: "Progressive YTD", format: "{0:n2}", width: 100 }]
+                    },
+               
+                {
+                     command: ["destroy"], title: "ACTION", width: 120
+                }
+            ],
+            dataBinding: function () {
+                window.rowNo = (this.dataSource.page() - 1) * this.dataSource.pageSize();
+            }
+        });
+    }
+   </script>
+
+
+

@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @{
+        ViewBag.Title = "Login";
+        ViewBag.pathParent = Url.Content("~").Substring(0, Url.Content("~").Length - 1);
+        Layout = null;
+    }
+    <title> Budget Monitoring | @ViewBag.Title</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="CodedThemes">
+    <meta name="keywords" content="Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
+    <meta name="author" content="CodedThemes">
+    <!-- Favicon icon -->
+    <link rel="icon" href="@ViewBag.pathParent/ContentLayout/images/favicon.ico" type="image/x-icon">
+
+    <link href="@ViewBag.pathParent/ContentLayout/css/google_fonts/custom_google_fonts.css" rel="stylesheet">
+    <!-- Required Fremwork -->
+    <link rel="stylesheet" type="text/css" href="@ViewBag.pathParent/ContentLayout/css/bootstrap/css/bootstrap.min.css">
+    <!-- themify-icons line icon -->
+    <link rel="stylesheet" type="text/css" href="@ViewBag.pathParent/ContentLayout/icon/themify-icons/themify-icons.css">
+    <!-- ico font -->
+    <link rel="stylesheet" type="text/css" href="@ViewBag.pathParent/ContentLayout/icon/icofont/css/icofont.css">
+    <!-- Style.css -->
+    <link rel="stylesheet" type="text/css" href="@ViewBag.pathParent/ContentLayout/css/style.css">
+
+    <!-- Required Jquery -->
+    <script type="text/javascript" src="@ViewBag.pathParent/ContentLayout/js/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="@ViewBag.pathParent/ContentLayout/js/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="@ViewBag.pathParent/ContentLayout/js/popper.js/popper.min.js"></script>
+    <script type="text/javascript" src="@ViewBag.pathParent/ContentLayout/js/bootstrap/js/bootstrap.min.js"></script>
+    <!-- jquery slimscroll js -->
+    <script type="text/javascript" src="@ViewBag.pathParent/ContentLayout/js/jquery-slimscroll/jquery.slimscroll.js"></script>
+    <!-- modernizr js -->
+    <script type="text/javascript" src="@ViewBag.pathParent/ContentLayout/js/modernizr/modernizr.js"></script>
+    <script type="text/javascript" src="@ViewBag.pathParent/ContentLayout/js/modernizr/css-scrollbars.js"></script>
+    <script type="text/javascript" src="@ViewBag.pathParent/ContentLayout/js/common-pages.js"></script>
+</head>
+
+<body class="fix-menu">
+    <!-- Pre-loader start -->
+    <div class="theme-loader">
+        <div class="ball-scale">
+            <div class='contain'>
+                <div class="ring"><div class="frame"></div></div>
+                <div class="ring"><div class="frame"></div></div>
+                <div class="ring"><div class="frame"></div></div>
+                <div class="ring"><div class="frame"></div></div>
+                <div class="ring"><div class="frame"></div></div>
+                <div class="ring"><div class="frame"></div></div>
+                <div class="ring"><div class="frame"></div></div>
+                <div class="ring"><div class="frame"></div></div>
+                <div class="ring"><div class="frame"></div></div>
+                <div class="ring"><div class="frame"></div></div>
+            </div>
+        </div>
+    </div>
+    <!-- Pre-loader end -->
+    @*<section class="login p-fixed d-flex text-center bg-primary common-img-bg">*@
+    @*<div class="container-login100" style="background-image: url('@ViewBag.pathParent/ContentLayout/Login/images/ksplogin_.png');">*@
+
+    <div class="image-container set-full-height">
+
+        @*<section alt="Nature" class="responsive" style="background-image: url('@ViewBag.pathParent/ContentLayout/images/ksplogin_.png');">*@
+        <!-- Container-fluid starts -->
+        <div class="container">
+            <div class="row">
+                @*<div class="col-sm-12" style="margin-top: 10px">*@
+                <div class="col-sm-12 col-sm-offset-3">
+                    <!-- Authentication card start -->
+                    <div class="login-card card-block auth-body mr-auto ml-auto" style="padding-top:15px!important; opacity:0.9; margin-top:100px">
+                        <form class="md-float-material" action="@ViewBag.pathParent/login/getUser" method="POST" name="fom_login" id="fom_login">
+                            <div class="auth-box">
+                                <h3 class="text-center txt-primary">Welcome</h3>
+                                @*<p class="text-center txt-primary" style="color:black;">Start your execellent experience</p>*@
+                                <hr />
+                                <div class="row m-b-20">
+                                    <div class="col-md-12">
+                                        @if (TempData["notice"] != null)
+                                        {
+                                            <div class="alert alert-danger">
+                                                <a class="close" data-dismiss="alert">×</a>
+                                                <strong>Perhatian! </strong> @Html.Raw(TempData["notice"])
+                                            </div>
+                                        }
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="pNRP" name="pnrp" id="pnrp" required>
+                                    <span class="md-line"></span>
+                                </div>
+
+                                <div class="input-group">
+                                    <input type="password" class="form-control" placeholder="Password" name="password" id="password" required>
+                                    <span class="md-line"></span>
+                                </div>
+                                <div class="input-group">
+                                        <select id="domain" name="domain" class="form-control">
+                                            <option value="1">Pamapersada</option>
+                                            <option value="2">Database</option>
+                                        </select>
+                                        <span class="md-line"></span>
+                                    </div>
+                                <div class="row m-t-30">
+                                    <div class="col-md-12">
+                                        <button type="submit" class="btn btn-primary btn-md btn-block waves-effect ">Login</button>
+                                    </div>
+                                </div>
+                                <hr />
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <p class="text-inverse text-left m-b-0"><b>PT. Pamapersada Nusantara</b> &copy; 2020</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- end of form -->
+                    </div>
+                    <!-- Authentication card end -->
+                </div>
+                <!-- end of col-sm-12 -->
+            </div>
+            <!-- end of row -->
+        </div>
+        <!-- end of container-fluid -->
+        @*</section>*@
+    </div>
+</body>

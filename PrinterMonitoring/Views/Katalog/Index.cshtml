@@ -1,0 +1,333 @@
+﻿@{
+    ViewBag.Title = "Monitoring Budget";
+    ViewBag.dashboard = "Input Katalog";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+    ViewBag.pathParent = Url.Content("~").Substring(0, Url.Content("~").Length - 1);
+}
+
+<!-- /.content-header -->
+<!-- Main content -->
+<input type="hidden" id="urlPath" value="@ViewBag.pathParent" />
+<input type="hidden" id="pid" />
+<input type="hidden" id="gp" value="@ViewBag.GP" />
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="grid"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog" style="width:400px;">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                <h4 class="modal-title">Add New Record</h4>
+            </div>
+            <div id="regis_modal" class="modal-body">
+                <form id="form_regis" class="form-horizontal" >
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" style="text-align:left;" for="kode_barang">Kode Barang :</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" style="width:160%" id="kodebarang">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" style="text-align:left;" for="deskripsi">Deskripsi :</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" style="width:160%" id="deskripsi" >
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" style="text-align:left;" for="keterangan">Keterangan :</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" style="width:160%" id="keterangan">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" style="text-align:left;" for="estUSD">Estimasi Harga USD :</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" style="width:160%" id="estusd" >
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" style="text-align:left;" for="estIDR">Estimasi Harga IDR :</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" style="width:160%" id="estidr">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" style="text-align:left;" for="estSetIDR">Estimasi Harga Set IDR:</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" style="width:160%" id="estsetidr">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" style="text-align:left;" for="estSetUSD">Estimasi Harga Set USD :</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" style="width:160%" id="estsetusd">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" style="text-align:left;" for="co">C/O :</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" style="width:160%" id="dropdownlist">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="btn_simpan" style="width:200%" class="btn btn-outline-success">SIMPAN</button>
+                <button type="button" style="width:200%;" class="btn btn-outline-warning" data-dismiss="modal">BATAL</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+
+    $(document).ready(function () {
+       loadgrid();
+    });
+
+    function loadgrid() {
+        $("#grid").empty();
+        var grid = $("#grid").kendoGrid({
+            dataSource: {
+                type: "json",
+                transport: {
+                    read: {
+                        url: $("#urlPath").val() + "/Katalog/Read",
+                        contentType: "application/json",
+                        type: "POST",
+                        cache: false,
+                    },
+
+                    create: {
+                        url: $("#urlPath").val() + "/Katalog/Insert",
+                        contentType: "application/json",
+                        type: "POST",
+                        complete: function (data) {
+                            alert(data.responseJSON.remarks);
+                        }
+                    },
+
+
+                    update: {
+                        url: $("#urlPath").val() + "/Katalog/Update",
+                        contentType: "application/json",
+                        type: "POST",
+                        cache: false,
+                        complete: function (data) {
+
+                            if (data.status) {
+                                alert(data.responseJSON.remarks);
+                                //alert(data.remarks)
+                                $("#grid").data("kendoGrid").dataSource.read()
+                            } else {
+                                alert(data.error);
+                                $("#grid").data("kendoGrid").dataSource.read()
+                            }
+                        }
+                    },
+
+                    destroy: {
+                        url: $("#urlPath").val() + "/Katalog/Delete",
+                        contentType: "application/json",
+                        type: "POST",
+                        cache: false,
+                        complete: function (data) {
+                            alert(data.responseJSON.remarks);
+                            if (data.responseJSON.status==true) {
+                                //alert(data.remarks)
+                                $("#grid").data("kendoGrid").dataSource.read()
+                            } else {
+                                alert(data.error);
+                                $("#grid").data("kendoGrid").dataSource.read()
+                            }
+                        }
+                    },
+
+                    parameterMap: function (data, operation) {
+
+                        return kendo.stringify(data)
+                    }
+                },
+                pageSize: 1000,
+                serverPaging: true,
+                serverFiltering: true,
+                serverSorting: true,
+                schema: {
+                    data: "Data",
+                    total: "Total",
+                    model: {
+                        id: "KodeBarang",
+                        fields: {
+                            KodeBarang: { type: "string", filterable: true, sortable: true, editable: true, validation: { required: true } },
+                            Deskripsi: { type: "string", filterable: true, sortable: true, editable: true, validation: { required: true }},
+                            Keterangan: { type: "string", filterable: true, sortable: true, editable: true },
+                            EstimasiHargaUSD: { type: "number", filterable: true, sortable: true, editable: true, validation: { required: true } },
+                            EstimasiHargaIDR: { type: "number", filterable: true, sortable: true, editable: true, validation: { min: 0, required: true } },
+                            EstimasiHargaSetUSD: { type: "number", filterable: true, sortable: true, editable: true, validation: { required: true } },
+                            EstimasiHargaSetIDR: { type: "number", filterable: true, sortable: true, editable: true, validation: { min: 0, required: true } },
+                            C_O: { type: "string", filterable: true, sortable: true, editable: true, validation: { required: true } }
+                        }
+                    }
+                }
+            },
+            height: 500,
+            filterable: true,
+            sortable: true,
+            pageable: true,
+            resizable: true,
+            editable: {
+                mode: "popup"
+            },
+            toolbar: [
+            {
+                template: '<button type="button" id="btn_add" class="k-button k-button-icontext" onclick="open_wnd_add()"><span class="glyphicon glyphicon-plus"></span> Add New Record</button>'
+            },
+             {
+                 name: "excel",
+                 imageClass: '<button type="button" button id="btn_export" class="btn btn-info"><span class="glyphicon glyphicon-export"></span> Export To Excel</button>'
+             }, ],
+
+            excel: {
+                fileName: "UploadSuccess.xlsx",
+                AllPages: true,
+                filterable: true
+            },
+            columns: [
+              
+               {
+                   command: [{ name: "update-data", text: "Edit", click: Edit, iconClass: "glyphicon glyphicon-edit spasi-kanan" }, "destroy"], title: "ACTION", width: 120
+               },
+                { field: "KodeBarang",editable:false, title: "Kode Barang", width: 110 },
+                { field: "Deskripsi", title: "Deskripsi", width: 130 },
+                { field: "Keterangan", title: "Keterangan", width: 100 },
+                { field: "EstimasiHargaUSD", title: "Estimasi Harga USD", format: "{0:c}", width: 100 },
+                { field: "EstimasiHargaIDR", title: "Estimasi Harga IDR", format: "{0:n}", width: 100 },
+                { field: "EstimasiHargaSetUSD", title: "Estimasi Harga Set USD", format: "{0:c}", width: 100 },
+                { field: "EstimasiHargaSetIDR", title: "Estimasi Harga set IDR", format: "{0:c}", width: 100 },
+                { field: "C_O", title: "Capex/Opex", width: 100}
+            ],
+            dataBinding: function () {
+                window.rowNo = (this.dataSource.page() - 1) * this.dataSource.pageSize();
+            }
+        });
+
+        $("#dropdownlist").kendoDropDownList({
+            dataSource: [
+             { text: "Opex", value: "Opex" },
+            { text: "Capex", value: "Capex" }
+            ],
+            dataTextField: "text",
+            dataValueField: "value",
+            popup: {
+                appendTo: $("#container")
+            }
+        });
+       
+    }
+
+    function open_wnd_add() {
+        $("#kodebarang").val("").prop('disabled', false );
+        $("#deskripsi").val("");
+        $("#keterangan").val("");
+        $("#estusd").val("");
+        $("#estidr").val("");
+        $("#estsetidr").val("");
+        $("#estsetusd").val("");
+        $("#dropdownlist").data("kendoDropDownList").value(-1);
+
+        save_method = 'add';
+        $('#myModal').modal({
+            show: true,
+            keyboard: false,
+            backdrop: 'static'
+        });
+    }
+    function Edit(e) {
+        e.preventDefault();
+        var dataItem = this.dataItem($(e.currentTarget).closest("tr"));
+        $("#kodebarang").prop('disabled', true);
+        $("#deskripsi").val("");
+        $("#keterangan").val("");
+        $("#estusd").val("");
+        $("#estidr").val("");
+        $("#estsetidr").val("");
+        $("#estsetusd").val("");
+        $("#dropdownlist").data("kendoDropDownList").value(-1);
+
+        $("#kodebarang").val(dataItem.KodeBarang);
+        $("#deskripsi").val(dataItem.Deskripsi);
+        $("#keterangan").val(dataItem.Keterangan);
+        $("#estusd").val(dataItem.EstimasiHargaUSD);
+        $("#estidr").val(dataItem.EstimasiHargaIDR);
+        $("#estsetidr").val(dataItem.EstimasiHargaSetIDR);
+        $("#estsetusd").val(dataItem.EstimasiHargaSetUSD);
+        $("#dropdownlist").data("kendoDropDownList").value(dataItem.C_O);
+       
+        
+        save_method = "update";
+        $('#myModal').modal({
+            show: true,
+            keyboard: false,
+            backdrop: 'static'
+        });
+    }
+
+    $("#btn_simpan").click(function () {
+        var url = "";
+        if (save_method == "update") {
+            url_ = $("#urlPath").val() + "/Katalog/Update";
+        } else {
+            url_ = $("#urlPath").val() + "/Katalog/Insert";
+        }
+        
+        console.log($("#dropdownlist").data("kendoDropDownList").value());
+        var stbl_m_driver = {
+            KodeBarang: $("#kodebarang").val(),
+            Deskripsi: $("#deskripsi").val(),
+            Keterangan: $("#keterangan").val(),
+            EstimasiHargaUSD: $("#estusd").val(),
+            EstimasiHargaIDR: $("#estidr").val(),
+            EstimasiHargaSetIDR: $("#estsetidr").val(),
+            EstimasiHargaSetUSD: $("#estsetusd").val(),
+            C_O: $("#dropdownlist").data("kendoDropDownList").value(),
+        }
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            contentType: "application/json",
+            url: url_,
+            data: JSON.stringify(stbl_m_driver),
+            success: function (response) {
+                // swag(response.status, response.remarks);
+                //$.alert({
+                //    title: 'Good job!',
+                //    content: response.remarks,
+                //});
+                alert(response.remarks)
+                
+                    $('#myModal').modal('toggle');
+                    $("#grid").data("kendoGrid").dataSource.read();
+                    $("#grid").data("kendoGrid").refresh();
+                
+            }
+        });
+    });
+</script>
+
+

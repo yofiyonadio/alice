@@ -1,0 +1,195 @@
+﻿@{
+    ViewBag.Title = "Monitoring Printer";
+    ViewBag.dashboard = "Ajukan Service Printer Rusak";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+    ViewBag.pathParent = Url.Content("~").Substring(0, Url.Content("~").Length - 1);
+}
+
+<!-- /.content-header -->
+<!-- Main content -->
+<input type="hidden" id="urlPath" value="@ViewBag.pathParent" />
+<input type="hidden" id="pid" />
+<input type="hidden" id="gp" value="@ViewBag.GP" />
+
+<section class="content">
+        <input readonly type="hidden" class="form-control" value="@Html.Raw(@ViewBag.GP)" style="width:50%" id="gp">
+    <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+            <div class="col-lg-2 col-5">
+                <!-- small box -->
+                <div class="small-box bg-info">
+                    <div class="inner">
+                        <h3 id="tersedia"></h3>
+                        <p>Tersedia</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-printer"></i>
+                    </div>
+                    <a href="#" class="small-box-footer" id="btn_tersedia" onclick="btn_tersedia()">Data Printer <i class="fa fa-arrow-circle-right"></i></a>
+
+                </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-2 col-6">
+                <!-- small box -->
+                <div class="small-box bg-success">
+                    <div class="inner">
+                        <h3 id="dipinjam"></h3>
+                        <p>Dipinjam</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-printer"></i>
+                    </div>
+                    @*<a href="#" class="small-box-footer" id="btn_pinjam" onclick="btn_pinjam()">Input Data Peminjaman <i class="fa fa-arrow-circle-right"></i></a>*@
+
+                </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-2 col-6">
+                <!-- small box -->
+                <div class="small-box bg-danger">
+                    <div class="inner">
+                        <h3 id="rusak"></h3>
+                        <p>Rusak</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-printer"></i>
+                    </div>
+                    @*<a href="#" class="small-box-footer" id="btn_rusak" onclick="btn_rusak()"> Ajukan Service<i class="fa fa-arrow-circle-right"></i></a>*@
+
+                </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-2 col-6">
+                <!-- small box -->
+                <div class="small-box bg-warning">
+                    <div class="inner">
+                        <h3 id="service"></h3>
+                        <p>Service</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-printer"></i>
+                    </div>
+                    <a href="#" class="small-box-footer" id="btn_service" onclick="btn_service()">Info Service <i class="fa fa-arrow-circle-right"></i></a>
+
+                </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-2 col-6">
+                <!-- small box -->
+                <div class="small-box bg-gradient-white">
+                    <div class="inner">
+                        <h3 id="scarpt"></h3>
+                        <p>Scarpt</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-printer"></i>
+                    </div>
+                    @*<a href="#" class="small-box-footer" id="btn_service" onclick="btn_service()">Info Service <i class="fa fa-arrow-circle-right"></i></a>*@
+
+                </div>
+            </div>
+            <!-- ./col -->
+        </div>
+        <!-- /.row -->
+        <!-- Main row -->
+        <div class="row">
+            <!-- Left col -->
+            <section class="col-lg-12 connectedSortable">
+                <!-- Custom tabs (Charts with tabs)-->
+                <div class="card">
+                    <div class="card-body">
+                    <button type="button" id="btn_add" class="k-button k-button-icontext" onclick="open_wnd_add()"><span class="glyphicon glyphicon-plus"></span> Create</button>
+
+                        <div id="grid"></div>
+                    </div><!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+                <!-- /.card -->
+            </section>
+
+        </div>
+        <!-- /.row (main row) -->
+    </div><!-- /.container-fluid -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog" style="width:400px;">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                    <h4 class="modal-title">Form Ajukan Service</h4>
+                </div>
+                <div id="Service_modal" class="modal-body">
+                    <form id="form_Service" class="form-horizontal">
+                    
+                            @*<label class="control-label col-sm-1" style="text-align:left;" for="id">ID</label>*@
+                            <input type="hidden" class="col-sm-3" style="width:50%" id="id">
+                       
+                        <div class="form-group">
+                            <label class="control-label col-sm-4" style="text-align:left;" for="kode">Kode Printer:</label>
+                            <div class="col-sm-8">
+                                <button type="button" onclick="doShowforData()" id="btn_proses" class="btn btn-info">Cari</button>
+                                <input type="text" class="form-control" style="width:160%" id="kode">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-4" style="text-align:left;" for="nama">Nama Printer:</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" style="width:160%" id="nama">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-4" style="text-align:left;" for="jenismesin">Jenis :</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" style="width:160%" id="jenis">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" style="text-align:left;" for="ket">Keterangan :</label>
+                                <div class="col-sm-8">
+                                    <textarea rows="4" cols="50" type="text" class="form-control" style="width:160%" id="ket"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-5" style="text-align:left;" for="ip">Tanggal Rusak:</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" style="width:160%" id="tgl">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-6" style="text-align:left;" for="est">Estimasi Perbaikan:</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" style="width:160%" id="est">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-5" style="text-align:left;" for="biaya">Estimasi biaya:</label>
+                            <div class="col-sm-8">
+                                <input type="number" class="form-control" style="width:160%" id="biaya">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-4" style="text-align:left;" for="status">Status:</label>
+                            <div class="col-sm-8">
+                                <input type="number" class="form-control" style="width:160%" id="status">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="btn_simpan" style="width:200%" class="btn btn-outline-success">SIMPAN</button>
+                    <button type="button" style="width:200%;" class="btn btn-outline-warning" data-dismiss="modal">BATAL</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="wnd_addPrinter">
+        <div id="gridPemilihan"></div>
+    </div>
+</section>
+<!-- /.content -->
+
+<script src="@ViewBag.pathParent/Js/ServicePrinter.js"></script>

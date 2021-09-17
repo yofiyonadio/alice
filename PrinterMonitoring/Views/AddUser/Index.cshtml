@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "Add user";
+    ViewBag.dashboard = "Security";
+    ViewBag.dashboardSmall = "Add User";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+    ViewBag.pathParent = Url.Content("~").Substring(0, Url.Content("~").Length - 1);
+}
+
+<input type="hidden" id="urlPath" name="urlPath" value="@ViewBag.pathParent" />
+
+<div class="row clearfix">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+            <div class="header">
+                <h2>
+                    Penambahan User Baru
+                </h2>
+                <ul class="header-dropdown m-r--5"></ul>
+            </div>
+            <div class="body">
+                <form>
+                    <label for="email_address">NRP</label>
+                    <div class="form-group">
+                        <div class="form-line" style="width:150px;float:left">
+                            <input type="text" style="width:150px;float:left" id="nrpId" class="form-control" placeholder="Enter your nrp">
+                        </div>
+                        <button onclick="showPopup()" type="button" class="btn bg-cyan waves-effect"><span class="glyphicon glyphicon-search"></span>Show Employee</button>
+                    </div>
+
+                    <label for="">GP</label>
+                    <div class="form-group" style="width:180px;">
+                        @Html.DropDownList("profileID", (IEnumerable<SelectListItem>)ViewBag.profile, "[Select]", new { @class = "form-control" })
+                    </div>
+
+                    <label for="" style="margin-top:10px">DISTRIK</label>
+                    <div class="form-group" style="width:180px;">
+                        @Html.DropDownList("distrikId", (IEnumerable<SelectListItem>)ViewBag.distrik, "[Select]", new { @class = "form-control" })
+                    </div>
+
+                    <label for="" style="margin-top:10px"></label>
+                    <div class="form-group" style="width:180px;">
+                        <input type='button' id="btnInsert" class='btn btn-primary' value='Insert' onclick="insert()" />
+                        <input type='button' class='btn' value='Back' onclick='back()' />
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="wnd_addUser">
+    <div id="grid"></div>
+</div>
+
+<script src="@ViewBag.pathParent/js/addUser.js"></script>

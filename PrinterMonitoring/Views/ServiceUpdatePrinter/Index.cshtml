@@ -1,0 +1,657 @@
+﻿@{
+    ViewBag.Title = "Monitoring Printer";
+    ViewBag.dashboard = "Service Update Printer";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+    ViewBag.pathParent = Url.Content("~").Substring(0, Url.Content("~").Length - 1);
+}
+
+<!-- /.content-header -->
+<!-- Main content -->
+<input type="hidden" id="urlPath" value="@ViewBag.pathParent" />
+<input type="hidden" id="pid" />
+<input type="hidden" id="gp" value="@ViewBag.GP" />
+
+<section class="content">
+    <input readonly type="hidden" class="form-control" value="@Html.Raw(@ViewBag.GP)" style="width:50%" id="gp">
+    <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+            <div class="col-lg-2 col-6">
+                <!-- small box -->
+                <div class="small-box bg-info">
+                    <div class="inner">
+                        <h3 id="tersedia"></h3>
+                        <p>Tersedia</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-printer"></i>
+                    </div>
+                    <a href="#" class="small-box-footer" id="btn_tersedia" onclick="btn_tersedia()">Data Printer <i class="fa fa-arrow-circle-right"></i></a>
+
+                </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-2 col-6">
+                <!-- small box -->
+                <div class="small-box bg-success">
+                    <div class="inner">
+                        <h3 id="dipinjam"></h3>
+                        <p>Dipinjam</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-printer"></i>
+                    </div>
+                    @*<a href="#" class="small-box-footer" id="btn_pinjam" onclick="btn_pinjam()">Input Data Peminjaman <i class="fa fa-arrow-circle-right"></i></a>*@
+
+                </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-2 col-6">
+                <!-- small box -->
+                <div class="small-box bg-danger">
+                    <div class="inner">
+                        <h3 id="rusak"></h3>
+                        <p>Rusak</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-printer"></i>
+                    </div>
+                    <a href="#" class="small-box-footer" id="btn_rusak" onclick="btn_rusak()"> Ajukan Service <i class="fa fa-arrow-circle-right"></i></a>
+
+                </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-2 col-6">
+                <!-- small box -->
+                <div class="small-box bg-warning">
+                    <div class="inner">
+                        <h3 id="service"></h3>
+                        <p>Service</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-printer"></i>
+                    </div>
+                    @*<a href="#" class="small-box-footer" id="btn_service" onclick="btn_service()">Info Service <i class="fa fa-arrow-circle-right"></i></a>*@
+
+                </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-2 col-6">
+                <!-- small box -->
+                <div class="small-box bg-gradient-white">
+                    <div class="inner">
+                        <h3 id="scarpt"></h3>
+                        <p>Scarpt</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-printer"></i>
+                    </div>
+                    @*<a href="#" class="small-box-footer" id="btn_service" onclick="btn_service()">Info Service <i class="fa fa-arrow-circle-right"></i></a>*@
+
+                </div>
+            </div>
+            <!-- ./col -->
+        </div>
+        <!-- /.row -->
+        <!-- Main row -->
+        <div class="row">
+            <!-- Left col -->
+            <section class="col-lg-12 connectedSortable">
+                <!-- Custom tabs (Charts with tabs)-->
+                <div class="card">
+                    <div class="card-body">
+                        <div id="grid"></div>
+                       @*<iframe style="width:800px;height:1200px;" id="iframeChrome" src=""></iframe>*@
+                    </div><!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+                <!-- /.card -->
+            </section>
+
+        </div>
+        <!-- /.row (main row) -->
+    </div><!-- /.container-fluid -->
+    <div class="modal fade" id="myModalServiceUpdate" role="dialog">
+        <div class="modal-dialog" style="width:400px;">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Update </h4>
+                </div>
+                <div id="service_modal" class="modal-body">
+                    <form id="form_service" class="form-horizontal">
+                            <input type="hidden" class="col-sm-3" style="width:50%" id="id">
+                        <input type="hidden" class="col-sm-3" style="width:50%" id="tgl">
+                        <div class="form-group">
+                            <label class="control-label col-sm-4" style="text-align:left;" for="kode">Kode Printer:</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" style="width:160%" id="kode">
+                            </div>
+                        </div>  
+                        <div class="form-group">
+                            <label class="control-label col-sm-4" style="text-align:left;" for="nama">Nama Printer:</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" style="width:160%" id="nama">
+                            </div>
+                        </div>
+                        @*<div class="form-group">
+                            <label class="control-label col-sm-4" style="text-align:left;" for="jenismesin">Jenis :</label>
+                            <div class="col-sm-8">*@
+                                <input type="hidden" class="form-control" style="width:160%" id="jenis">
+                            @*</div>*@
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" style="text-align:left;" for="ket">Keterangan :</label>
+                                <div class="col-sm-8">
+                                    <textarea rows="4" cols="50" type="text" class="form-control" style="width:160%" id="ket"></textarea>
+                                </div>
+                            </div>
+                        @*</div>*@
+                        <div class="form-group">
+                            <label class="control-label col-sm-6" style="text-align:left;" for="est">Estimasi Perbaikan:</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" style="width:160%" id="est">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-5" style="text-align:left;" for="biaya">Estimasi biaya:</label>
+                            <div class="col-sm-8">
+                                <input type="number" class="form-control" style="width:160%" id="biaya">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-5" style="text-align:left;" for="status">Status Service:</label>
+                            <div class="col-sm-8">
+                                <input type="number" class="form-control" style="width:160%" id="status">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-4" style="text-align:left;" for="pr">PR:</label>
+                            <div class="col-sm-8">
+                                <input type="number" class="form-control" style="width:160%" id="pr">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-4" style="text-align:left;" for="no">No Item:</label>
+                            <div class="col-sm-8">
+                                <input type="number" class="form-control" style="width:160%" id="no">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-12" style="text-align:left;" for="no">Upload Tanda Terima Pickup:</label>
+                            <div class="col-sm-12">
+                                <!--<input name="filess" id="filess" type="file" aria-label="filess" />-->
+                                <input type="file" class="yy-file" id="uploadpickup" accept="application/pdf">
+                                <label class="custom-file-label" for="uploadpickup">Pilih file...</label>
+                                <p id="uploadpickup-help" class="yy-file-help"></p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-12" style="text-align:left;" for="no">Upload Tanda Terima Telah Diperbaiki:</label>
+                            <div class="col-sm-12">
+                                <!--<input name="filess" id="filess" type="file" aria-label="filess" />-->
+                                <input type="file" class="yy-file" id="uploadselesai" accept="application/pdf">
+                                <label class="custom-file-label" for="uploadselesai">Pilih file...</label>
+                                <p id="uploadselesai-help" class="yy-file-help"></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="submits" style="width:200%" class="btn btn-outline-success">SIMPAN</button>
+                    <button type="button" style="width:200%;" class="btn btn-outline-warning" data-dismiss="modal">BATAL</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+<!-- /.content -->
+
+<script>
+    $(document).ready(function () {
+       LoadNotif();
+       loadgrid();
+       dd_status();
+    });
+
+    $(".yy-file").change(function () {
+        var fileName = $(this).val();
+        var thiss = $(this).attr("id");
+        if (fileName.length > 0) {
+            var fileNames = $(this)[0].files[0].name;
+            $(this).next(".custom-file-label").html(fileNames);
+            var valid = fileValidation(thiss);
+            if (valid === "ERROR_FILE_SIZE") {
+                $("#" + $(this).attr("id") + "-help").text("Ukuran file tidak boleh lebih dari 2 MB.")
+                $("#" + $(this).attr("id") + "-help").addClass("opacity");
+            } else if (valid === "ERROR_FILE_TYPE") {
+                $("#" + $(this).attr("id") + "-help").text("Format file harus (.pdf)")
+                $("#" + $(this).attr("id") + "-help").addClass("opacity");
+            } else if (valid === "FILE_VALID") {
+                $("#" + $(this).attr("id") + "-help").removeClass("opacity");
+            }
+        } else {
+            $("#" + $(this).attr("id") + "-help").removeClass("opacity");
+            $(this).next(".custom-file-label").html("Pilih file...")
+        }
+    })
+
+    function fileValidation(ids) {
+        var fileNameSplit = $("#" + ids)[0].files[0].name.split(".");
+        var fileType = $("#" + ids)[0].files[0].type;
+        var fileFormat = fileNameSplit.pop();
+        //console.log(fileNameSplit.length)
+        var fileSize = $("#" + ids)[0].files[0].size;
+        var limitSize = 2000 * 1000 // kb * bytes;
+        if (fileSize > limitSize) {
+            return "ERROR_FILE_SIZE"
+        } else if (fileType !== "application/pdf") {
+            return "ERROR_FILE_TYPE"
+        } else {
+            return "FILE_VALID"
+        }
+    }
+
+    function clearFile() {
+        $("#uploadpickup").val(null);
+        $("#uploadselesai").val(null);
+        $("#uploadpickup").next(".custom-file-label").html("Pilih file...");
+        $("#uploadselesai").next(".custom-file-label").html("Pilih file...")
+    }
+
+    $("#submits").click(function () {
+        var uploadpickup = "uploadpickup";
+        var uploadselesai = "uploadselesai"
+
+        var uploadpickupVal = $("#" + uploadpickup).val().length;
+        var uploadselesaiVal = $("#" + uploadselesai).val().length;
+
+        var validPickup = uploadpickupVal > 0 ? fileValidation(uploadpickup) : "FILE_VALID"
+        var validSelesai = uploadselesaiVal > 0 ? fileValidation(uploadselesai) : "FILE_VALID"
+        
+        if (validPickup === "ERROR_FILE_SIZE" || validSelesai === "ERROR_FILE_SIZE") {
+            alert("Ukuran file tidak boleh lebih dari 2 MB.")
+        } else if (validPickup === "ERROR_FILE_TYPE" || validSelesai === "ERROR_FILE_TYPE") {
+            alert("Format file harus (.pdf)")
+        } else if (validPickup === "FILE_VALID" && validSelesai === "FILE_VALID") {
+            updates()
+            clearFile()
+        }
+        
+    })
+
+
+    function updates() {
+        let formData = new FormData();
+        let formObj = {
+            ID_SERVICE: $("#id").val(),
+            NO_PRINTER: $("#kode").val(),
+            NAMA_PRINTER: $("#nama").val(),
+            JENIS_PRINTER: $("#jenis").val(),
+            KETERANGAN: $("#ket").val(),
+            EST_PERBAIKAN: $("#est").val(),
+            TGL_RUSAK: $("#tgl").val(),
+            BIAYA: $("#biaya").val(),
+            STATUS: $("#status").data("kendoDropDownList").value(),
+            PR: $("#pr").val(),
+            NO_ITEM_PR: $("#no").val()
+        }
+        formData.append("datas", JSON.stringify(formObj));
+        formData.append("uploadselesai", $("#uploadselesai")[0].files[0]);
+        formData.append("uploadpickup", $("#uploadpickup")[0].files[0]);
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            contentType: false,
+            processData: false,
+            url: $("#urlPath").val() + "/ServiceUpdatePrinter/Gets",
+            data: formData,
+            success: function (res) {
+                $('#myModalServiceUpdate').modal('toggle');
+                $("#grid").data("kendoGrid").dataSource.read();
+                $("#grid").data("kendoGrid").refresh();
+                alert(JSON.stringify(res))
+            },
+            error: function (error) {
+                alert(JSON.stringify(error))
+            }
+        });
+    }
+  
+    function loadgrid() {
+        $("#grid").empty();
+        var grid = $("#grid").kendoGrid({
+            dataSource: {
+                type: "json",
+                transport: {
+                    read: {
+                        url: $("#urlPath").val() + "/ServiceUpdatePrinter/Read",
+                        contentType: "application/json",
+                        type: "POST",
+                        cache: false,
+                    },
+                    update: {
+                        url: $("#urlPath").val() + "/ServiceUpdatePrinter/Update",
+                        contentType: "application/json",
+                        type: "POST",
+                        cache: false,
+                        complete: function (data) {
+
+                            if (data.status) {
+                                alert(data.responseJSON.remarks);
+                                //alert(data.remarks)
+                                $("#grid").data("kendoGrid").dataSource.read()
+                            } else {
+                                alert(data.error);
+                                $("#grid").data("kendoGrid").dataSource.read()
+                            }
+                        }
+                    },
+
+                    destroy: {
+                        url: $("#urlPath").val() + "/ServiceUpdatePrinter/Delete",
+                        contentType: "application/json",
+                        type: "POST",
+                        cache: false,
+                        complete: function (data) {
+                            alert(data.responseJSON.remarks);
+                            if (data.status) {
+                                //alert(data.remarks)
+                                $("#grid").data("kendoGrid").dataSource.read()
+                            } else {
+                                alert(data.error);
+                                $("#grid").data("kendoGrid").dataSource.read()
+                            }
+                        }
+                    },
+                    parameterMap: function (data, operation) {
+                        return kendo.stringify(data)
+                    }
+                },
+                pageSize: 1000,
+                serverPaging: true,
+                serverFiltering: true,
+                serverSorting: true,
+                schema: {
+                    data: "Data",
+                    total: "Total",
+                    model: {
+                        id: "ID_SERVICE",
+                        fields: {
+                            NO_PRINTER: { type: "string", filterable: true, sortable: true, editable: true },
+                            NAMA_PRINTER: { type: "string", filterable: true, sortable: true, editable: true },
+                            JENIS_PRINTER: { type: "string", filterable: true, sortable: true, editable: true },
+                            TGL_RUSAK: { type: "string", filterable: true, sortable: true, editable: true },
+                            KETERANGAN: { type: "string", filterable: true, sortable: true, editable: true },
+                            EST_PERBAIKAN: { type: "string", filterable: true, sortable: true, editable: true },
+                            BIAYA: { type: "number", filterable: true, sortable: true, editable: true,validation: { min: 0, required: true }},
+                            STATUS: { type: "string", filterable: true, sortable: true, editable: true },
+                            PR: { type: "string", filterable: true, sortable: true, editable: true },
+                            NO_ITEM_PR: { type: "string", filterable: true, sortable: true, editable: true },
+                            PO: { type: "string", filterable: true, sortable: true, editable: true },
+                            PO_ITEM: { type: "string", filterable: true, sortable: true, editable: true },
+                            TANDA_TERIMA_PICKUP: { type: "string", filterable: true, sortable: true, editable: true },
+                            TANDA_TERIMA_SELESAI: { type: "string", filterable: true, sortable: true, editable: true }
+                        }
+                    }
+                }
+            },
+            height: 500,
+            filterable: true,
+            sortable: true,
+            pageable: true,
+            resizable: true,
+            editable: {
+                mode: "popup"
+            },
+            toolbar: [
+             {
+                 name: "excel",
+                 imageClass: '<button type="button" button id="btn_export" class="btn btn-info"><span class="glyphicon glyphicon-export"></span> Export To Excel</button>'
+             }, ],
+            excel: {
+                fileName: "DataServiceUpdatePrinter.xlsx",
+                AllPages: true,
+                filterable: true
+            },
+            columns: [
+                {
+                    command: [{ name: "update-data", text: "Update", click: EditPrinter, iconClass: "glyphicon glyphicon-edit spasi-kanan" }, "destroy"], title: "ACTION", width: 180
+                },
+               { field: "NO_PRINTER", title: "Kode Printer", width: 160 },
+               { field: "NAMA_PRINTER", title: "Nama Printer", width: 160 },
+               { field: "JENIS_PRINTER", title: "Jenis Printer", width: 160 },
+               { field: "KETERANGAN", title: "Keterangan", width: 160 },
+               { field: "TGL_RUSAK", title: "Tanggal rusak", width: 170, format: "{0:MM-dd-yyyy}"},
+               { field: "EST_PERBAIKAN", title: "Estimasi perbaikan(hari)", width: 230 },
+               { field: "BIAYA", title: "Estimasi Biaya", format: "{0:n}", width: 160 },
+               { field: "STATUS", title: "Status", width: 130 },
+               { field: "PR", title: "PR", width: 100 },
+               { field: "NO_ITEM_PR", title: "No Item", width: 130 },
+               { field: "PO", title: "PO", width: 100 },
+               { field: "PO_ITEM", title: "No Item", width: 130 },
+               { field: "TANDA_TERIMA_PICKUP", title: "Tanda terima pickup", width: 210,
+               template: '<a href="#=TANDA_TERIMA_PICKUP#" target="_blank">#=TANDA_TERIMA_PICKUP#</a>'
+               },
+               {
+                   command: [{ name: "pdfviewpickup", text: "PDFView", click: pdfViewPickup, iconClass: "glyphicon glyphicon-edit spasi-kanan" }], title: "View Tanda Terima", width: 180
+               },
+               { field: "TANDA_TERIMA_SELESAI", title: "Tanda terima selesai", width: 210,
+               template:'<a href="#=TANDA_TERIMA_SELESAI#" target="_blank">#=TANDA_TERIMA_SELESAI#</a>'
+               },
+               {
+                   command: [{ name: "pdfviewselesai", text: "PDFView", click: pdfViewSelesai, iconClass: "glyphicon glyphicon-edit spasi-kanan" }], title: "View Tanda Terima", width: 180
+               },
+            ], dataBound: function (e) {
+                var grid = $("#grid").data("kendoGrid");
+                var gridData = grid.dataSource.view();
+                var iadd_header = $("#add_header").val(); 
+                var gp = $("#gp").val();
+                console.log(gp);
+                if (gp != 0 && gp != 13) {
+                    var columnAction = $("#grid").data("kendoGrid");
+                    columnAction.hideColumn(0);
+                }
+            },
+            dataBinding: function () {
+                window.rowNo = (this.dataSource.page() - 1) * this.dataSource.pageSize();
+            }
+        });
+    }
+
+    function tess(e) {
+       
+        //var dataItem = e.currentTarget;
+        console.log(e)
+        return "okee"
+    }
+
+    function pdfViewPickup(e) {
+
+        e.preventDefault();
+        var dataItem = this.dataItem($(e.currentTarget).closest("tr"));
+
+        var suffix = dataItem.TANDA_TERIMA_PICKUP;
+        var home = window.location.origin;
+        var urlPdf = home + suffix;
+
+        if (suffix.length > 0) {
+            window.open(urlPdf);
+        }
+    }
+    function pdfViewSelesai(e) {
+
+        e.preventDefault();
+        var dataItem = this.dataItem($(e.currentTarget).closest("tr"));
+
+        var suffix = dataItem.TANDA_TERIMA_SELESAI;
+        var home = window.location.origin;
+        var urlPdf = home + suffix;
+
+        if (suffix.length > 0) {
+            window.open(urlPdf);
+        }
+    }
+
+    function dd_status() {
+        var ds_district = new kendo.data.DataSource({
+            type: "json",
+            transport: {
+                read: {
+                    url: $("#urlPath").val() + "/ServiceUpdatePrinter/ReadStatus",
+                    contentType: "application/json",
+                    type: "POST",
+                    cache: false
+                }
+            },
+            schema: {
+                data: "Data",
+                total: "Total"
+            }
+        });
+        $("#status").kendoDropDownList({
+            autoBind: true,
+            dataSource: ds_district,
+            dataTextField: "Deskripsi",
+            dataValueField: "Deskripsi",
+            optionLabel: "Pilih...",
+            filter: "contains",
+            change: function (e) {
+                var dataItem = this.dataItem(e.sender._oldIndex);
+            }
+        }).data("kendoDropDownList");
+    }
+
+    function EditPrinter(e) {
+
+        e.preventDefault();
+        var dataItem = this.dataItem($(e.currentTarget).closest("tr"));
+        //console.log(dataItem);
+        $("#id").prop('disabled', true).val("");
+        $("#kode").prop('disabled', true).val("");
+        $("#nama").prop('disabled', true).val("");
+        $("#jenis").prop('disabled', true).val("");
+        $("#tgl").prop('disabled', true).val("");
+        $("#ket").val("");
+        $("#est").val("");
+        $("#biaya").val("");
+        $("#status").data("kendoDropDownList").value(-1);
+        $("#pr").val("");
+        $("#no").val("");
+       
+
+        url_upload_pickup = dataItem.TANDA_TERIMA_PICKUP;
+        url_upload_selesai = dataItem.TANDA_TERIMA_SELESAI;
+        $("#id").val(dataItem.ID_SERVICE);
+        $("#kode").val(dataItem.NO_PRINTER);
+        $("#nama").val(dataItem.NAMA_PRINTER);
+        $("#jenis").val(dataItem.JENIS_PRINTER);
+        $("#ket").val(dataItem.KETERANGAN);
+        $("#est").val(dataItem.EST_PERBAIKAN);
+        $("#tgl").val(dataItem.TGL_RUSAK);
+        $("#biaya").val(dataItem.BIAYA);
+        $("#status").data("kendoDropDownList").value(dataItem.STATUS);
+        $("#pr").val(dataItem.PR);
+        $("#no").val(dataItem.NO_ITEM_PR);
+   
+
+        save_method = "update";
+        $('#myModalServiceUpdate').modal({
+            show: true,
+            keyboard: false,
+            backdrop: 'static'
+        });
+    }
+
+    $("#btn_simpan").click(function () {
+
+        var url = "";
+        var lblupPickup = document.getElementById('lbluploadpickup').textContent;
+        var lblupterima = document.getElementById('lbluploadselesai').textContent;
+
+        url_ = $("#urlPath").val() + "/ServiceUpdatePrinter/Update?lblpickup=" + lblupPickup + "&lblterima=" + lblupterima;
+
+        var stbl_m_driver = {
+            ID_SERVICE: $("#id").val(),
+            NO_PRINTER: $("#kode").val(),
+            NAMA_PRINTER: $("#nama").val(),
+            JENIS_PRINTER: $("#jenis").val(),
+            KETERANGAN: $("#ket").val(),
+            EST_PERBAIKAN: $("#est").val(),
+            TGL_RUSAK: $("#tgl").val(),
+            BIAYA: $("#biaya").val(),
+            STATUS : $("#status").data("kendoDropDownList").value(),
+            PR: $("#pr").val(),
+            NO_ITEM_PR: $("#no").val(),
+            TANDA_TERIMA_PICKUP: url_upload_pickup,
+            TANDA_TERIMA_SELESAI: url_upload_selesai
+        }
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            contentType: "application/json",
+            url: url_,
+            data: JSON.stringify(stbl_m_driver),
+            success: function (response) {
+                alert(response.remarks)
+                url_upload_pickup = "";
+                url_upload_selesai = "";
+                $('#myModalServiceUpdate').modal('toggle');
+                $("#grid").data("kendoGrid").dataSource.read();
+                $("#grid").data("kendoGrid").refresh();
+            }
+        });
+    });
+
+
+    function LoadNotif() {
+        $.ajax({
+            type: "GET",
+            url: $('#urlPath').val() + "/PrinterMonitoring/getNotifCount",
+            success: function (response) {
+                console.log(response);
+                if (response.ID_PRINTER == true) {
+                    document.getElementById("tersedia").innerHTML = response.tersedia;
+                    document.getElementById("dipinjam").innerHTML = response.dipinjam;
+                    document.getElementById("service").innerHTML = response.service;
+                    document.getElementById("rusak").innerHTML = response.rusak;
+                    document.getElementById("scarpt").innerHTML = response.scarpt;
+                } else {
+                    document.getElementById("tersedia").innerHTML = response.tersedia;
+                    document.getElementById("dipinjam").innerHTML = response.dipinjam;
+                    document.getElementById("service").innerHTML = response.service;
+                    document.getElementById("rusak").innerHTML = response.rusak;
+                    document.getElementById("scarpt").innerHTML = response.scarpt;
+                }
+            }
+        });
+    }
+    function btn_tersedia() {
+        window.location.href = $("#urlPath").val() + "/PrinterMonitoring";
+    }
+    function btn_rusak() {
+        window.location.href = $("#urlPath").val() + "/ServicePrinter";
+    }
+    //function btn_pinjam() {
+    //    //debugger;
+    //    window.location.href = $("#urlPath").val() + "/PeminjamanPrinter";
+    //}
+</script>
+<style>
+    .yy-file {
+        margin-bottom: 7px;
+    }
+
+    .yy-file-help {
+        color: #ff1b1b;
+        font-size: 15px;
+        font-style: italic;
+        opacity: 0;
+    }
+
+    .opacity {
+        opacity: 1;
+    }
+</style>
+

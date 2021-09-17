@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DB_ALICE" Class="DtClassAppsDataContextDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=JIEPSQDV401;Initial Catalog=DB_ALICE;User ID=forumis_user" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="DB_ALICEConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="Apps.Menu_Aplikasi" Member="Menu_Aplikasis">
+    <Type Name="Menu_Aplikasi">
+      <Column Name="Primer" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Menu" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Menu_link" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Urutan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Deskripsi" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="style_class" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Apps.Menu_GP" Member="Menu_GPs">
+    <Type Name="Menu_GP">
+      <Column Name="Primer" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GP_ID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Permission" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="A" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="D" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="E" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="R" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Apps.TBL_KARY_LS" Member="TBL_KARY_Ls">
+    <Type Name="TBL_KARY_L">
+      <Column Name="PID_LS" Type="System.String" DbType="VarChar(250) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NRP" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NAME" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="DSTRCT_CODE" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="POS_TITLE" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="DEPT_CODE" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="Address_LotusNotes" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="CREATED_BY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CREATED_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LAST_MODIFIED_BY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="LAST_MODIFIED_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Apps.TBL_Profile" Member="TBL_Profiles">
+    <Type Name="TBL_Profile">
+      <Column Name="GP_ID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Deskripsi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="isAllSIte" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Apps.TBL_USER" Member="TBL_USERs">
+    <Type Name="TBL_USER">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NRP" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GP" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DISTRIK" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Autorize" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_R_DASHBOARD_URL" Member="TBL_R_DASHBOARD_URLs">
+    <Type Name="TBL_R_DASHBOARD_URL">
+      <Column Name="pid_dashboard" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PROFILE_DASHBOARD" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DSTRCT_CODE" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="LINK_DASHBOARD" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="NAMA_DASHBOARD" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="UPDATE_BY" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Apps.Menu" Member="Menus">
+    <Type Name="Menu">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Menu" Member="Menu1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Menu_link" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Urutan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GP_ID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Deskripsi" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="Permission" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="A" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="D" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="E" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="R" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="style_class" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="Apps.vw_DEPT" Member="vw_DEPTs">
+    <Type Name="vw_DEPT">
+      <Column Name="DSTRCT_CODE" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="DEPT_CODE" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="DEPT_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Apps.VW_DWH_DISTRIK" Member="VW_DWH_DISTRIKs">
+    <Type Name="VW_DWH_DISTRIK">
+      <Column Name="DSTRCT_CODE" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DSTRCT_NAME" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="Apps.vw_employee" Member="vw_employees">
+    <Type Name="vw_employee">
+      <Column Name="EMPLOYEE_ID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FIRST_NAME" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="SURNAME" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="NAME" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="POSITION_ID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="POS_TITLE" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="CHANGE_REASON" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="CHANGE_REASON_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DSTRCT_CODE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="WORK_LOC" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="WORK_LOC_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EMP_STATUS" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="EMP_STATUS_DESC" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="GENDER_CODE" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="GENDER_DESC" Type="System.String" DbType="VarChar(7)" CanBeNull="true" />
+      <Column Name="EMP_TYPE" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="EMP_TYPE_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="STAFF_CATEG" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="STAFF_CATEG_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BIRTH_DATE" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="HIRE_DATE" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="SERVICE_DATE" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="TERMINATION_DATE" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="STATUS_HIRE" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="STATUS_HIRE_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="POINT_OF_HIRE" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="POINT_OF_HIRE_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ACCOUNT_DOMAIN" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="NRP" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AGE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BLOOD_TYPE" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="RELIGION_DESC" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="RES_ADDRESS_1" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="RES_ADDRESS_2" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="RES_ADDRESS_3" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="RES_ZIPCODE" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="SUPERIOR_ID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="POSITION_START_DATE" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="GOLONGAN" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="GOL_COMPTCY_LEVEL" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="GOL_START_DATE" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="HOME_PHONE_NO" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="HOME_MOBILE_NO" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="RANKS" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="RANK_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RANK_START_DATE" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="DEPT_CODE" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="DEPT_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DEPT_CODE_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DIV_CODE" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="DIV_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DIV_CODE_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Address_LotusNotes" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Email_Internet" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ACTIVE_STATUS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GENDER" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="NAME_INITCAP" Type="System.String" DbType="VarChar(43)" CanBeNull="true" />
+      <Column Name="RELIGION" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="MODIFIED_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RANKS_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RANKS_START_DATE" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="SECONDARY_POSITION_ID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="LAST_EDUCATION" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="BIRTH_PLACE" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="BIRTH_PLACE_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GROUP_GOLONGAN" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="STATUS_EMP" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vw_menuCrossGPID" Member="vw_menuCrossGPIDs">
+    <Type Name="vw_menuCrossGPID">
+      <Column Name="Primer" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Menu" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Menu_link" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Urutan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Deskripsi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GP_ID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IsCheck" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="A" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="D" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="E" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="R" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Apps.vw_gpId" Member="vw_gpIds">
+    <Type Name="vw_gpId">
+      <Column Name="GP" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="NRP" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="POSITION_ID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="DEPT_CODE" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="Deskripsi" Type="System.String" DbType="VarChar(151)" CanBeNull="true" />
+      <Column Name="Deskripsi_ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DISTRIK" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NAMA" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="DIV_CODE" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="Apps.cusp_getMenuPermissions" Method="cusp_getMenuPermissions">
+    <Parameter Name="GP_ID" Parameter="gP_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Link" Parameter="link" Type="System.String" DbType="VarChar(100)" />
+    <ElementType Name="cusp_getMenuPermissionsResult">
+      <Column Name="Permission" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="A" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="D" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="E" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="R" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="Apps.cusp_SetMenuGP" Method="cusp_SetMenuGP">
+    <Parameter Name="sPrimer" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sGP_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sIsCheck" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sIsAdd" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="sIsDelete" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="sIsEdit" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="sIsRead" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

@@ -1,0 +1,206 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    ViewBag.dashboard = "Home";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+    ViewBag.pathParent = Url.Content("~").Substring(0, Url.Content("~").Length - 1);
+}
+
+<input type="hidden" id="urlPath" value="@ViewBag.pathParent" />
+<section class="content">
+    <div class="container-fluid">
+
+        <!-- Main row -->
+        <div class="row">
+            <!-- Left col -->
+            <section class="col-lg-12 connectedSortable">
+                <!-- Custom tabs (Charts with tabs)-->
+                <div class="card">
+                    <div class="card-body">
+                        <div id="grid"></div>
+                    </div><!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+                <!-- /.card -->
+            </section>
+
+        </div>
+        <!-- /.row (main row) -->
+    </div><!-- /.container-fluid -->
+</section>
+<section class="content">
+    <div class="container-fluid">
+
+        <!-- Main row -->
+        <div class="row">
+            <!-- Left col -->
+            <section class="col-lg-12 connectedSortable">
+                <!-- Custom tabs (Charts with tabs)-->
+                <div class="card">
+                    <div class="card-body">
+                        <div id="grid1"></div>
+                    </div><!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+                <!-- /.card -->
+            </section>
+
+        </div>
+        <!-- /.row (main row) -->
+    </div><!-- /.container-fluid -->
+</section>
+
+<!-- /.content -->
+
+<script>
+
+    $(document).ready(function () {
+
+       loadgrid();
+       loadgrid1();
+    });
+
+    function loadgrid() {
+        $("#grid").empty();
+        var grid = $("#grid").kendoGrid({
+            dataSource: {
+                type: "json",
+                transport: {
+                    read: {
+                        url: $("#urlPath").val() + "/Katalog/Read",
+                        contentType: "application/json",
+                        type: "POST",
+                        cache: false,
+                    },
+                    parameterMap: function (data, operation) {
+
+                        return kendo.stringify(data)
+                    }
+                },
+                pageSize: 1000,
+                serverPaging: true,
+                serverFiltering: true,
+                serverSorting: true,
+                schema: {
+                    data: "Data",
+                    total: "Total",
+                    model: {
+                        id: "KodeBarang",
+                        fields: {
+                            KodeBarang: { type: "string", filterable: true, sortable: true, editable: true, validation: { required: true } },
+                            Deskripsi: { type: "string", filterable: true, sortable: true, editable: true, validation: { required: true } },
+                            Keterangan: { type: "string", filterable: true, sortable: true, editable: true },
+                            EstimasiHargaUSD: { type: "number", filterable: true, sortable: true, editable: true, validation: { required: true } },
+                            EstimasiHargaIDR: { type: "number", filterable: true, sortable: true, editable: true, validation: { min: 0, required: true } },
+                            EstimasiHargaSetUSD: { type: "number", filterable: true, sortable: true, editable: true, validation: { required: true } },
+                            EstimasiHargaSetIDR: { type: "number", filterable: true, sortable: true, editable: true, validation: { min: 0, required: true } },
+                            C_O: { type: "string", filterable: true, sortable: true, editable: true, validation: { required: true } }
+                        }
+                    }
+                }
+            },
+            height: 500,
+            filterable: true,
+            sortable: true,
+            pageable: true,
+            resizable: true,
+            editable: {
+                mode: "popup"
+            },
+            toolbar: [
+             {
+                 name: "excel",
+                 imageClass: '<button type="button" button id="btn_export" class="btn btn-info"><span class="glyphicon glyphicon-export"></span> Export To Excel</button>'
+             }, ],
+
+            excel: {
+                fileName: "UploadSuccess.xlsx",
+                AllPages: true,
+                filterable: true
+            },
+            columns: [
+                { field: "KodeBarang", editable: false, title: "Kode Barang", width: 110 },
+                { field: "Deskripsi", title: "Deskripsi", width: 130 },
+                { field: "Keterangan", title: "Keterangan", width: 100 },
+                { field: "EstimasiHargaUSD", title: "Estimasi Harga USD", format: "{0:c}", width: 100 },
+                { field: "EstimasiHargaIDR", title: "Estimasi Harga IDR", format: "{0:n}", width: 100 },
+                { field: "EstimasiHargaSetUSD", title: "Estimasi Harga Set USD", format: "{0:c}", width: 100 },
+                { field: "EstimasiHargaSetIDR", title: "Estimasi Harga set IDR", format: "{0:c}", width: 100 },
+                { field: "C_O", title: "Capex/Opex", width: 100 }
+            ],
+            dataBinding: function () {
+                window.rowNo = (this.dataSource.page() - 1) * this.dataSource.pageSize();
+            }
+        });
+
+    }
+
+    function loadgrid1() {
+        $("#grid1").empty();
+        var grid = $("#grid1").kendoGrid({
+            dataSource: {
+                type: "json",
+                transport: {
+                    read: {
+                        url: $("#urlPath").val() + "/Pengajuan/Read",
+                        contentType: "application/json",
+                        type: "POST",
+                        cache: false,
+                    },
+                    parameterMap: function (data, operation) {
+
+                        return kendo.stringify(data)
+                    }
+                },
+                pageSize: 1000,
+                serverPaging: true,
+                serverFiltering: true,
+                serverSorting: true,
+                schema: {
+                    data: "Data",
+                    total: "Total",
+                    model: {
+                        id: "PIC",
+                        fields: {
+                            PIC: { type: "string", filterable: true, sortable: true, editable: true },
+                            Nama: { type: "string", filterable: true, sortable: true, editable: true },
+                            DivisiID: { type: "string", filterable: true, sortable: true, editable: true },
+                            DepartmentID: { type: "string", filterable: true, sortable: true, editable: true },
+                            Kategori: { type: "string", filterable: true, sortable: true, editable: true },
+                            Item: { type: "string", filterable: true, sortable: true, editable: true},
+                            QTY: { type: "int", filterable: true, sortable: true, editable: true }
+                        }
+                    }
+                }
+            }, height: 500,
+            filterable: true,
+            sortable: true,
+            pageable: true,
+            resizable: true,
+            toolbar: [
+             {
+                 name: "excel",
+                 imageClass: '<button type="button" button id="btn_export" class="btn btn-info"><span class="glyphicon glyphicon-export"></span> Export To Excel</button>'
+             }, ],
+
+            excel: {
+                fileName: "UploadSuccess.xlsx",
+                AllPages: true,
+                filterable: true
+            },
+            columns: [
+                { field: "PIC", editable: false, title: "PIC", width: 110 },
+                { field: "Nama", title: "Nama", width: 130 },
+                { field: "DivisiID", title: "Divisi", width: 100 },
+                { field: "DepartmentID", title: "Department", width: 100 },
+                { field: "Kategori", title: "Kategori", width: 100 },
+                { field: "Item", title: "Item", width: 100 },
+                { field: "QTY", title: "QTY", width: 100 }
+
+            ],
+            dataBinding: function () {
+                window.rowNo = (this.dataSource.page() - 1) * this.dataSource.pageSize();
+            }
+        });
+    }
+
+</script>
