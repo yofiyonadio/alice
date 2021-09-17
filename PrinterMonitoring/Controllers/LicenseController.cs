@@ -406,14 +406,20 @@ namespace PrinterMonitoring.Controllers
 
                     Dictionary<string, string> body = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, string>>(datas);
 
+                    // Parsing Format Date
+                    DateTime temp;
+                    if (DateTime.TryParse(body["start"], out temp)) body["start"] = DateTime.Parse(body["start"]).ToString("yyyy-MM-dd");
+                    if (DateTime.TryParse(body["end"], out temp)) body["end"] = DateTime.Parse(body["end"]).ToString("yyyy-MM-dd");
+
                     var e = db2.TBL_LICENSE_REGISTERs.Where(c => c.license_number == body["license_number"]).FirstOrDefault();
 
 
                     var tblToJson = Newtonsoft.Json.JsonConvert.SerializeObject(e);
                     TBL_LICENSE_RENEWAL bodys = Newtonsoft.Json.JsonConvert.DeserializeObject<TBL_LICENSE_RENEWAL>(tblToJson);
                     bodys.timestamps = now;
+                    
 
-                    db2.TBL_LICENSE_RENEWALs.InsertOnSubmit(bodys);
+                db2.TBL_LICENSE_RENEWALs.InsertOnSubmit(bodys);
 
                     e.software_id = body["software_id"];
                     e.license_number = body["license_number"];
@@ -446,7 +452,7 @@ namespace PrinterMonitoring.Controllers
         {
             try
             {
-                var tbl = db2.TblLicenseDetails;
+                var tbl = db2.VW_TblLicenseDetails;
                 var data = tbl.OrderBy(c => c.id).ToDataSourceResult(take, skip, sort, filter);
                 return Json(data);
 

@@ -112,10 +112,11 @@ $('.form-control').change(function () {
 
 function formInvalid(array) {
     yy_show('.yy-form-invalid-alert')
-    logger(array)
     array.map(val => {
         let type = $(val).attr('type')
         if(!($(val).data("kendoDropDownList") === undefined)) {
+            $(val).parent().addClass('yy-form-invalid')
+        } else if (!($(val).data("kendoDatePicker") === undefined)) {
             $(val).parent().addClass('yy-form-invalid')
         } else if (type === 'file') {
             $(`[for=${(val).split('#')[1]}]`).addClass('yy-form-invalid')
@@ -134,6 +135,9 @@ function formValid(array) {
             $(`[for=${(val).split('#')[1]}]`).removeClass('yy-form-invalid')
         }
         if (!($(val).data("kendoDropDownList") === undefined)) {
+            $(val).parent().removeClass('yy-form-invalid')
+        }
+        if (!($(val).data("kendoDatePicker") === undefined)) {
             $(val).parent().removeClass('yy-form-invalid')
         }
     })
@@ -427,6 +431,8 @@ function setFormObject(obj, ignore, prefixx) {
         } else if (kendoDatePicker !== undefined) {
             if (values) {
                 $(prefix + item).data("kendoDatePicker").value(new Date(values))
+            } else {
+                $(prefix + item).data("kendoDatePicker").value(null)
             }
         } else if (type === 'file') {
             if (values) {
@@ -626,7 +632,7 @@ function generateColumns(obj, checkBox) {
                 sortable: item.sort !== undefined ? item.sort : false,
                 filterable: item.filter !== undefined ? item.filter : false,
                 hidden: item.hide,
-                template: item.template !== undefined || item.type === "Date" ? item.template : "<span>#=(" + item.field + " == null) ? '' : " + item.field + " #</span>",
+                template: item.template !== undefined || item.type === "Date" ? item.template : "<a>#=(" + item.field + " == null) ? '' : " + item.field + " #</a>",
                 headerTemplate: item.headerTemplate !== undefined ? item.headerTemplate : null,
                 attributes: {
                     "class": item.field

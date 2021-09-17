@@ -98,7 +98,7 @@
                             <div class="form-group">
                                 <label class="control-label col-sm-5" style="text-align:left;" for="vr-name">Vendor Name:</label>
                                 <div class="col-sm-4">
-                                    <input type="text" class="form-control" style="width:100%" id="yyform_vendor_name" autocomplete="off" readonly="readonly">
+                                    <input type="text" class="form-control yy-form-required" style="width:100%" id="yyform_vendor_name" autocomplete="off" readonly="readonly">
                                 </div>
                             </div>
 
@@ -147,14 +147,14 @@
                             <div class="form-group">
                                 <label class="control-label col-sm-4" style="text-align:left;">Start:</label>
                                 <div class="col-sm-4">
-                                    <input class="form-control yy-kendo-datepicker  date-start" style="width:100%; cursor:pointer" id="yyform_start" autocomplete="off" readonly="readonly">
+                                    <input class="form-control yy-kendo-datepicker date-start yy-form-required" style="width:100%; cursor:pointer" id="yyform_start" autocomplete="off" readonly="readonly">
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label col-sm-4" style="text-align:left;">End:</label>
                                 <div class="col-sm-4">
-                                    <input class="form-control yy-kendo-datepicker date-end" style="width:100%; cursor:pointer" id="yyform_end" autocomplete="off" readonly="readonly">
+                                    <input class="form-control yy-kendo-datepicker date-end yy-form-required" style="width:100%; cursor:pointer" id="yyform_end" autocomplete="off" readonly="readonly">
                                 </div>
                             </div>
 
@@ -176,7 +176,7 @@
 
                             <div class="form-group">
                                 <div class="col-sm-4">
-                                    <button type="button" style="width:200px;margin-top:10px;" class="btn btn-success" onclick="saveLicense('ADD')">Submit</button>
+                                    <button id="save" type="button" style="width:200px;margin-top:10px;" class="btn btn-success" onclick="saveLicense('ADD')">Submit</button>
                                     <div class="yy-nonvisible yy-form-invalid-alert">Lengkapi semua form !</div>
                                 </div>
                             </div>
@@ -314,7 +314,7 @@
                 <div class="modal-footer">
                     <div class="yy-modal-footer">    
                         <button type="button" style="width:50%;" class="btn btn-danger" data-dismiss="modal">CANCEL</button>
-                        <button id="save" type="button" style="width:50%" class="btn btn-success" onclick="saveLicense('ADD')">SAVE</button>    
+                        <button id="modal_save" type="button" style="width:50%" class="btn btn-success" onclick="saveLicense('ADD')">SAVE</button>    
                     </div>
                 </div>
             </div>
@@ -756,7 +756,6 @@
                    if (res.data !== null) {
                        setTimeout(function () {
                            hideLoadingForm("#yyform_license_number")
-                           //alertjson(res.data)
                            setFormObject(res.data)
                            enableForm(allForm)
                            disableForm(["vendor_name", "currency", "price"])
@@ -776,8 +775,8 @@
         $("#yyform_license_number").kendoDropDownList({
             filter: "contains",
             optionLabel: "Pilih License Number...",
-            dataTextField: "license_number",
-            dataValueField: "license_number",
+            dataTextField: "value",
+            dataValueField: "key",
             dataSource: [],
             filtering: getRenewalNumber,
             change: function (e) {
@@ -806,7 +805,13 @@
         showLoadingForm(ids)
         fetchs("POST", "/License/RenewalLicenseList", datas)
            .then(res => {
-               $(ids).data("kendoDropDownList").setDataSource(res.data);
+               let newData = res.data.map(ress => {
+                   return {
+                       key: ress.license_number,
+                       value: ress.license_number
+                   }
+               })
+               $(ids).data("kendoDropDownList").setDataSource(newData);
                    hideLoadingForm(ids)
            })
            .catch(err => {
@@ -1175,10 +1180,12 @@
             let file = $("#yyform_file")[0].files[0]
             handlerOfSubmit(listForm, "/License/AddLicense", file)
             .then(() => masterLicense())
+        } else if (type === "RENEWAL") {
+            let file = $("#yyform_file")[0].files[0]
+            handlerOfSubmit(listForm, "/License/RenewalLicenseUpdate", file)
+            .then(() => masterLicense())
         } else if (type === "EDIT") {
             licenseEdit(e)
-        } else if (type === "RENEWAL") {
-            licenseRenewal()
         } else {
             alert("function not found.")
         }
@@ -1335,7 +1342,8 @@
             { field: "Nrp", title: "Nrp" },
             { field: "DivCode", title: "DivCode" },
             { field: "TicketNumber", title: "TicketNumber" },
-            { field: "StatusUser", title: "StatusUser" }
+            { field: "StatusUser", title: "StatusUser" },
+            { field: "LicenseStatus", title: "LicenseStatus" }
             ],
             primaryKey: "id",
             checkBox: "id",
@@ -1460,6 +1468,7 @@
     .k-grid td{
     white-space: nowrap;
     text-overflow: ellipsis;
+    font-size: 15px;
     }
 
     #btn_lcs_dis_mapping {

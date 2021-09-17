@@ -105,6 +105,16 @@ namespace PrinterMonitoring.Models
             }
         }
 
+        public System.Data.Linq.Table<VW_TblLicenseDetail> VW_TblLicenseDetails
+        {
+            get
+            {
+                return this.GetTable<VW_TblLicenseDetail>();
+            }
+        }
+
+        
+
 
     }
 
@@ -401,12 +411,272 @@ namespace PrinterMonitoring.Models
                 }
             }
         }
+    }
+
+    [global::System.Data.Linq.Mapping.TableAttribute(Name = "dbo.VW_TblLicenseDetail")]
+    public partial class VW_TblLicenseDetail
+    {
+        private int _id;
+        private string _LicenseNumber;
+        private string _LicenseNumberDetail;
+        private string _SerialNumber;
+        private string _RegistrationNumber;
+        private string _Description;
+        private string _DistrictID;
+        private string _UserID;
+        private string _LastAccessedDate;
+        private string _Username;
+        private string _Nrp;
+        private string _DivCode;
+        private string _TicketNumber;
+        private string _StatusUser;
+        private string _LicenseStatus;
+
+        public VW_TblLicenseDetail()
+        {
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_LicenseStatus", DbType = "VarChar(50)")]
+        public string LicenseStatus
+        {
+            get
+            {
+                return this._LicenseStatus;
+            }
+            set
+            {
+                if ((this._LicenseStatus != value))
+                {
+                    this._LicenseStatus = value;
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_StatusUser", DbType = "VarChar(50)")]
+        public string StatusUser
+        {
+            get
+            {
+                return this._StatusUser;
+            }
+            set
+            {
+                if ((this._StatusUser != value))
+                {
+                    this._StatusUser = value;
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_TicketNumber", DbType = "VarChar(50)")]
+        public string TicketNumber
+        {
+            get
+            {
+                return this._TicketNumber;
+            }
+            set
+            {
+                if ((this._TicketNumber != value))
+                {
+                    this._TicketNumber = value;
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_DivCode", DbType = "VarChar(50)")]
+        public string DivCode
+        {
+            get
+            {
+                return this._DivCode;
+            }
+            set
+            {
+                if ((this._DivCode != value))
+                {
+                    this._DivCode = value;
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Nrp", DbType = "VarChar(50)")]
+        public string Nrp
+        {
+            get
+            {
+                return this._Nrp;
+            }
+            set
+            {
+                if ((this._Nrp != value))
+                {
+                    this._Nrp = value;
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Username", DbType = "VarChar(50)")]
+        public string Username
+        {
+            get
+            {
+                return this._Username;
+            }
+            set
+            {
+                if ((this._Username != value))
+                {
+                    this._Username = value;
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_LastAccessedDate", DbType = "DateTime")]
+        public string LastAccessedDate
+        {
+            get
+            {
+                return this._LastAccessedDate;
+            }
+            set
+            {
+                if ((this._LastAccessedDate != value))
+                {
+                    this._LastAccessedDate = value;
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_UserID", DbType = "VarChar(50)")]
+        public string UserID
+        {
+            get
+            {
+                return this._UserID;
+            }
+            set
+            {
+                if ((this._UserID != value))
+                {
+                    this._UserID = value;
+                }
+            }
+        }
 
 
 
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_DistrictID", DbType = "VarChar(50)")]
+        public string DistrictID
+        {
+            get
+            {
+                return this._DistrictID;
+            }
+            set
+            {
+                if ((this._DistrictID != value))
+                {
+                    this._DistrictID = value;
+                }
+            }
+        }
 
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Description", DbType = "VarChar(255)")]
+        public string Description
+        {
+            get
+            {
+                return this._Description;
+            }
+            set
+            {
+                if ((this._Description != value))
+                {
+                    this._Description = value;
+                }
+            }
+        }
 
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_RegistrationNumber", DbType = "Int")]
+        public string RegistrationNumber
+        {
+            get
+            {
+                return this._RegistrationNumber;
+            }
+            set
+            {
+                if ((this._RegistrationNumber != value))
+                {
+                    this._RegistrationNumber = value;
+                }
+            }
+        }
 
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_SerialNumber", DbType = "VarChar(50)")]
+        public string SerialNumber
+        {
+            get
+            {
+                return this._SerialNumber;
+            }
+            set
+            {
+                if ((this._SerialNumber != value))
+                {
+                    this._SerialNumber = value;
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_LicenseNumberDetail", DbType = "VarChar(50)")]
+        public string LicenseNumberDetail
+        {
+            get
+            {
+                return this._LicenseNumberDetail;
+            }
+            set
+            {
+                if ((this._LicenseNumberDetail != value))
+                {
+                    this._LicenseNumberDetail = value;
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_LicenseNumber", DbType = "VarChar(50)")]
+        public string LicenseNumber
+        {
+            get
+            {
+                return this._LicenseNumber;
+            }
+            set
+            {
+                if ((this._LicenseNumber != value))
+                {
+                    this._LicenseNumber = value;
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_id", AutoSync = AutoSync.OnInsert, DbType = "Int NOT NULL IDENTITY", IsPrimaryKey = true, IsDbGenerated = true)]
+        public int id
+        {
+            get
+            {
+                return this._id;
+            }
+            set
+            {
+                if ((this._id != value))
+                {
+                    this._id = value;
+                }
+            }
+        }
     }
 
     [global::System.Data.Linq.Mapping.TableAttribute(Name = "dbo.TBL_T_ASSET_PERFORMANCE_MASTER")]
