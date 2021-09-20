@@ -34,6 +34,12 @@ namespace PrinterMonitoring.Controllers
             return body;
         }
 
+        private string ClassToJson<T>(T datas)
+        {
+            string body = Newtonsoft.Json.JsonConvert.SerializeObject(datas);
+            return body;
+        }
+
         private List<dynamic> JsonToList(string datas)
         {
             List<dynamic> body = Newtonsoft.Json.JsonConvert.DeserializeObject<List<dynamic>>(datas);
@@ -46,7 +52,10 @@ namespace PrinterMonitoring.Controllers
             return body;
         }
 
-
+        private void Logger<T>(T datas)
+        {
+            System.Diagnostics.Debug.WriteLine(datas);
+        }
 
         [HttpPost]
         public JsonResult Read(int take, int skip, IEnumerable<Kendo.DynamicLinq.Sort> sort, Kendo.DynamicLinq.Filter filter)
@@ -55,14 +64,14 @@ namespace PrinterMonitoring.Controllers
             {
                 var users = Session["NRP"]; // Get User
                 
-                var tbl = db2.TBL_LICENSE_REGISTERs;
+                var tbl = db2.TBL_LICENSE_REGISTERs.Where(c => c.deleted_at == null);
                 var data = tbl.OrderByDescending(c => c.timestamps).ToDataSourceResult(take, skip, sort, filter);
-                //System.Diagnostics.Debug.WriteLine(data);
                 return Json(data);
 
             }
             catch (Exception e)
             {
+                Logger("error");
                 return this.Json(new { error = e.ToString() });
             }
 
@@ -140,8 +149,27 @@ namespace PrinterMonitoring.Controllers
             }
             try
             {
-                var tbl = db2.VW_PR_PO_ELLIPSE_REVIEWs.Where(c => c.PO.Contains(datas)).Skip(0).Take(50).OrderBy(c => c.PO).ToList();
+                var tbl = db2.VW_PR_PO_ELLIPSE_REVIEWs.GroupBy(c => c.PO).Select(x => x.FirstOrDefault()).Where(c => c.PO.Contains(datas)).OrderBy(c => c.PO).Skip(0).Take(20).ToList();
                 return Json(tbl);
+            }
+            catch (Exception e)
+            {
+                return this.Json(new { error = e.ToString() });
+            }
+        }
+
+        [HttpPost]
+        public JsonResult GetPOItem(string datas)
+        {
+            if (datas == null || datas == "undefined")
+            {
+                datas = "";
+            }
+            try
+            {
+                System.Diagnostics.Debug.WriteLine(datas);
+                var tbl = db2.VW_PR_PO_ELLIPSE_REVIEWs.Where(c => c.PO == datas).OrderBy(c => c.PO_ITEM).ToList();
+                return Json(new { result = "SUCCESS", data = tbl });
 
             }
             catch (Exception e)
@@ -248,12 +276,10 @@ namespace PrinterMonitoring.Controllers
             {
                 string now = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
-                //db2.TBL_LICENSE_REGISTERs.InsertOnSubmit(bodys);
                 var del = db2.TBL_LICENSE_REGISTERs.Where(s => s.id == Int32.Parse(datas)).FirstOrDefault();
-                db2.TBL_LICENSE_REGISTERs.DeleteOnSubmit(del);
+                del.deleted_at = now;
                 db2.SubmitChanges();
-
-                //System.Diagnostics.Debug.WriteLine("Method2 successful.");
+                
                 return Json(new { result = "SUCCESS" });
             }
             catch (Exception e)
@@ -272,11 +298,6 @@ namespace PrinterMonitoring.Controllers
                 string now = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
                 Dictionary<string, string> body = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, string>>(datas);
-
-                // Parsing Format Date
-                //DateTime temp;
-                //if (DateTime.TryParse(body["start"], out temp)) body["start"] = DateTime.Parse(body["start"]).ToString("yyyy-MM-dd");
-                //if (DateTime.TryParse(body["end"], out temp)) body["end"] = DateTime.Parse(body["end"]).ToString("yyyy-MM-dd");
 
                 var e = db2.TBL_LICENSE_REGISTERs.Where(s => s.id == Int32.Parse(body["id"])).FirstOrDefault();
 
@@ -484,6 +505,25 @@ namespace PrinterMonitoring.Controllers
         }
 
         [HttpPost]
+        public JsonResult GetUser(string datas)
+        {
+            if (datas == null || datas == "undefined")
+            {
+                datas = "";
+            }
+            try
+            {
+                var tbl = db2.VW_EMPLOYEE_PAMAs.Where(c => c.NRP.Contains(datas) || c.SURNAME.Contains(datas)).ToList();
+                return Json(new { result = "SUCCESS", data = tbl }, JsonRequestBehavior.AllowGet);
+
+            }
+            catch (Exception e)
+            {
+                return this.Json(new { error = e.ToString() });
+            }
+        }
+
+        [HttpPost]
         public JsonResult MappingLicenseDistribution(string datas)
         {
             try
@@ -498,7 +538,26 @@ namespace PrinterMonitoring.Controllers
                 var tbl = new List<TblLicenseDetail>(db2.TblLicenseDetails.Where(c => keys.Contains(c.id)).ToList());
 
                 tbl.ForEach(c => {
-                    c.DistrictID = data["district"];
+                    
+                    try
+                    {
+                        c.DistrictID = data["district"];
+                    }
+                    catch
+                    {
+                        c.DistrictID = c.DistrictID;
+                    }
+                    
+                    try
+                    {
+                        c.Nrp = data["Nrp"];
+                        c.Username = db2.VW_EMPLOYEE_PAMAs.Where(x => x.NRP == data["Nrp"] as string).Select(x => x.SURNAME).FirstOrDefault();
+                    }
+                    catch
+                    {
+                        c.Nrp = c.Nrp;
+                    }
+
                     if (data["desc"] != "")
                     {
                         c.Description = data["desc"];

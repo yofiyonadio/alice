@@ -44,8 +44,6 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="#" onclick="distributionMaster()">List Distribution</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Mapping</a>
                     </div>
                 </li>
                 <li class="nav-item active">
@@ -74,21 +72,21 @@
                         <form id="form_new_license" class="form-horizontal">
 
                             <div class="form-group">
-                                <label class="control-label col-sm-4" style="text-align:left;" for="po-number"> PO Number:</label>
+                                <label class="control-label col-sm-12" style="text-align:left;" for="po-number"> PO Number:</label>
                                 <div class="col-sm-4 yy-loading-form-box">
                                     <input type="text" class="form-control yy-form-required" style="width:100%" id="yyform_po_number" autocomplete="off">
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label col-sm-4" style="text-align:left;" for="item-number"> Item Number:</label>
+                                <label class="control-label col-sm-12" style="text-align:left;" for="item-number"> Item Number:</label>
                                 <div class="col-sm-4 yy-loading-form-box">
                                     <input type="text" class="form-control yy-form-required" style="width:100%" id="yyform_item_number" autocomplete="off">
                                 </div>
                             </div>
                             
                             <div class="form-group">
-                                <label class="control-label col-sm-4" style="text-align:left;" for="qty">Quantity:</label>
+                                <label class="control-label col-sm-12" style="text-align:left;" for="qty">Quantity:</label>
                                 <div class="col-sm-4">
 
                                     <input type="number" class="form-control yy-form-required" style="width:100%" id="yyform_qty" autocomplete="off">
@@ -103,14 +101,14 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label col-sm-4" style="text-align:left;" for="currency">Currency:</label>
+                                <label class="control-label col-sm-12" style="text-align:left;" for="currency">Currency:</label>
                                 <div class="col-sm-4">
                                     <input type="text" class="form-control yy-form-required" style="width:100%" id="yyform_currency" autocomplete="off" readonly="readonly">
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label col-sm-4" style="text-align:left;" for="price">Price:</label>
+                                <label class="control-label col-sm-12" style="text-align:left;" for="price">Price:</label>
                                 <div class="col-sm-4">
                                     <input type="number" class="form-control yy-form-required" style="width:100%" id="yyform_price" autocomplete="off" readonly="readonly">
                                 </div>
@@ -124,49 +122,49 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label col-sm-4" style="text-align:left;" for="lcs-number">License Number:</label>
+                                <label class="control-label col-sm-12" style="text-align:left;" for="lcs-number">License Number:</label>
                                 <div class="col-sm-4 yy-loading-form-box">
                                     <input type="text" class="form-control yy-form-required" style="width:100%" id="yyform_license_number" autocomplete="off" readonly="readonly">
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label col-sm-4" style="text-align:left;" for="lcs-type">License Type:</label>
+                                <label class="control-label col-sm-12" style="text-align:left;" for="lcs-type">License Type:</label>
                                 <div class="col-sm-4">
                                     <input type="text" class="form-control yy-form-required" style="width:100%" id="yyform_license_type" autocomplete="off">
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label col-sm-4" style="text-align:left;" for="lcs-ctr">License Category:</label>
+                                <label class="control-label col-sm-12" style="text-align:left;" for="lcs-ctr">License Category:</label>
                                 <div class="col-sm-4">
                                     <input type="text" class="form-control yy-form-required" style="width:100%" id="yyform_license_category" autocomplete="off">
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label col-sm-4" style="text-align:left;">Start:</label>
+                                <label class="control-label col-sm-12" style="text-align:left;">Start:</label>
                                 <div class="col-sm-4">
                                     <input class="form-control yy-kendo-datepicker date-start yy-form-required" style="width:100%; cursor:pointer" id="yyform_start" autocomplete="off" readonly="readonly">
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label col-sm-4" style="text-align:left;">End:</label>
+                                <label class="control-label col-sm-12" style="text-align:left;">End:</label>
                                 <div class="col-sm-4">
                                     <input class="form-control yy-kendo-datepicker date-end yy-form-required" style="width:100%; cursor:pointer" id="yyform_end" autocomplete="off" readonly="readonly">
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label col-sm-4" style="text-align:left;" for="desc">Description:</label>
+                                <label class="control-label col-sm-12" style="text-align:left;" for="desc">Description:</label>
                                 <div class="col-sm-4">
                                     <textarea type="text" class="form-control" style="width:100%" id="yyform_desc"></textarea>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label col-sm-4" style="text-align:left;" for="desc">Upload Document:</label>
+                                <label class="control-label col-sm-12" style="text-align:left;" for="desc">Upload Document:</label>
                                 <div class="col-sm-4">
                                     <input type="file" class="form-control yy-file" style="width:100%" id="yyform_file" accept="application/pdf">
                                     <label class="custom-file-label" for="yyform_file">Pilih file...</label>
@@ -183,10 +181,6 @@
 
                         </form>
                     </div>
-
-
-
-
 
 
                     </div><!-- /.card-body -->
@@ -209,112 +203,212 @@
                     <form class="form-horizontal">
 
                         <div class="form-group">
-                            <label class="control-label col-sm-4" style="text-align:left;"> PO Number:</label>
+                            <label class="control-label col-sm-12" style="text-align:left;"> PO Number:</label>
                             <div class="col-sm-12 yy-loading-form-box">
-                                <input type="text" class="form-control" style="width:100%" id="yyform_modal_po_number" autocomplete="off">
+                                <input type="text" class="form-control yy-form-required" style="width:100%" id="yyform_modal_po_number" autocomplete="off">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label col-sm-4" style="text-align:left;"> Item Number:</label>
+                            <label class="control-label col-sm-12" style="text-align:left;"> Item Number:</label>
                             <div class="col-sm-12 yy-loading-form-box">
 
-                                <input type="text" class="form-control" style="width:100%" id="yyform_modal_item_number" autocomplete="off">
+                                <input type="text" class="form-control yy-form-required" style="width:100%" id="yyform_modal_item_number" autocomplete="off">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label col-sm-4" style="text-align:left;">Quantity:</label>
+                            <label class="control-label col-sm-12" style="text-align:left;">Quantity:</label>
                             <div class="col-sm-12">
 
-                                <input type="number" class="form-control" style="width:100%" id="yyform_modal_qty" autocomplete="off">
+                                <input type="number" class="form-control yy-form-required" style="width:100%" id="yyform_modal_qty" autocomplete="off">
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label class="control-label col-sm-5" style="text-align:left;">Vendor Name:</label>
                             <div class="col-sm-12">
-                                <input type="text" class="form-control" style="width:100%" id="yyform_modal_vendor_name" autocomplete="off" readonly="readonly">
+                                <input type="text" class="form-control yy-form-required" style="width:100%" id="yyform_modal_vendor_name" autocomplete="off" readonly="readonly">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label col-sm-4" style="text-align:left;">Currency:</label>
+                            <label class="control-label col-sm-12" style="text-align:left;">Currency:</label>
                             <div class="col-sm-12">
-                                <input type="text" class="form-control" style="width:100%" id="yyform_modal_currency" autocomplete="off" readonly="readonly">
+                                <input type="text" class="form-control yy-form-required" style="width:100%" id="yyform_modal_currency" autocomplete="off" readonly="readonly">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label col-sm-4" style="text-align:left;">Price:</label>
+                            <label class="control-label col-sm-12" style="text-align:left;">Price:</label>
                             <div class="col-sm-12">
-                                <input type="number" class="form-control" style="width:100%" id="yyform_modal_price" autocomplete="off" readonly="readonly">
+                                <input type="number" class="form-control yy-form-required" style="width:100%" id="yyform_modal_price" autocomplete="off" readonly="readonly">
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label class="control-label col-sm-5" style="text-align:left;">Software Name:</label>
                             <div class="col-sm-12 yy-loading-form-box">
-                                <input type="text" class="form-control" style="width: inherit;" id="yyform_modal_software_id">
+                                <input type="text" class="form-control yy-form-required" style="width: inherit;" id="yyform_modal_software_id">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label col-sm-4" style="text-align:left;">License Number:</label>
+                            <label class="control-label col-sm-12" style="text-align:left;">License Number:</label>
                             <div class="col-sm-12 yy-loading-form-box">
-                                <input type="text" class="form-control" style="width:100%" id="yyform_modal_license_number" autocomplete="off" readonly="readonly">
+                                <input type="text" class="form-control yy-form-required" style="width:100%" id="yyform_modal_license_number" autocomplete="off" readonly="readonly">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label col-sm-4" style="text-align:left;">License Type:</label>
+                            <label class="control-label col-sm-12" style="text-align:left;">License Type:</label>
                             <div class="col-sm-12">
-                                <input type="text" class="form-control" style="width:100%" id="yyform_modal_license_type" autocomplete="off">
+                                <input type="text" class="form-control yy-form-required" style="width:100%" id="yyform_modal_license_type" autocomplete="off">
                             </div>
                         </div>
 
 
                         <div class="form-group">
-                            <label class="control-label col-sm-4" style="text-align:left;">License Category:</label>
+                            <label class="control-label col-sm-12" style="text-align:left;">License Category:</label>
                             <div class="col-sm-12">
-                                <input type="text" class="form-control" style="width:100%" id="yyform_modal_license_category" autocomplete="off">
+                                <input type="text" class="form-control yy-form-required" style="width:100%" id="yyform_modal_license_category" autocomplete="off">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-sm-4" style="text-align:left;">Start:</label>
+                            <label class="control-label col-sm-12" style="text-align:left;">Start:</label>
                             <div class="col-sm-12">
-                                <input class="form-control yy-kendo-datepicker date-start" style="width:100%; cursor:pointer" id="yyform_modal_start" autocomplete="off" readonly="readonly">
+                                <input class="form-control yy-kendo-datepicker date-start yy-form-required" style="width:100%; cursor:pointer" id="yyform_modal_start" autocomplete="off" readonly="readonly">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-sm-4" style="text-align:left;">End:</label>
+                            <label class="control-label col-sm-12" style="text-align:left;">End:</label>
                             <div class="col-sm-12">
-                                <input class="form-control yy-kendo-datepicker date-end" style="width:100%; cursor:pointer" id="yyform_modal_end" autocomplete="off" readonly="readonly">
+                                <input class="form-control yy-kendo-datepicker date-end yy-form-required" style="width:100%; cursor:pointer" id="yyform_modal_end" autocomplete="off" readonly="readonly">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label col-sm-4" style="text-align:left;">Description:</label>
+                            <label class="control-label col-sm-12" style="text-align:left;">Description:</label>
                             <div class="col-sm-12">
                                 <textarea type="text" class="form-control" style="width:100%" id="yyform_modal_desc"></textarea>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label col-sm-4" style="text-align:left;">Upload Document:</label>
+                            <label class="control-label col-sm-12" style="text-align:left;">Upload Document:</label>
                             <div class="col-sm-12">
                                 <input type="file" class="form-control yy-file" style="width:100%" id="yyform_modal_file" accept="application/pdf">
                                 <label class="custom-file-label" for="yyform_modal_file">Pilih file...</label>
                                 <p class="yy-file-help"></p>
                             </div>
                         </div>
+                        <div class="yy-nonvisible yy-form-invalid-alert">Lengkapi semua form !</div>
 
                     </form>
                 </div>                
                 <div class="modal-footer">
                     <div class="yy-modal-footer">    
                         <button type="button" style="width:50%;" class="btn btn-danger" data-dismiss="modal">CANCEL</button>
-                        <button id="modal_save" type="button" style="width:50%" class="btn btn-success" onclick="saveLicense('ADD')">SAVE</button>    
+                        <button id="modal_save" type="button" style="width:50%" class="btn btn-success">SAVE</button>    
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--------------------------------------- Modal ------------------------------------------->
+
+    <!------------------------ Modal ------------------------------->
+    <div class="modal fade" id="modalEditLicenseDist" role="dialog">
+        <div class="modal-dialog" style="width:600px !important;">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Edit License Distribution</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-12" style="text-align:left;">License Number:</label>
+                            <div class="col-sm-12 yy-loading-form-box">
+                                <input type="text" class="form-control yy-form-required" style="width:100%" id="yyform_modal_lcsdist_LicenseNumber" autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-12" style="text-align:left;">License Number Detail:</label>
+                            <div class="col-sm-12 yy-loading-form-box">
+
+                                <input type="text" class="form-control yy-form-required" style="width:100%" id="yyform_modal_lcsdist_LicenseNumberDetail" autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-12" style="text-align:left;">Serial Number:</label>
+                            <div class="col-sm-12">
+
+                                <input type="number" class="form-control yy-form-required" style="width:100%" id="yyform_modal_lcsdist_SerialNumber" autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-5" style="text-align:left;">Registration Number:</label>
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control yy-form-required" style="width:100%" id="yyform_modal_lcsdist_RegistrationNumber" autocomplete="off" readonly="readonly">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-12" style="text-align:left;">District ID:</label>
+                            <div class="col-sm-12">
+                                <input type="number" class="form-control yy-form-required" style="width:100%" id="yyform_modal_lcsdist_DistrictID" autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-12" style="text-align:left;">NRP:</label>
+                            <div class="col-sm-12 yy-loading-form-box">
+                                <input type="text" class="form-control yy-form-required" style="width:100%" id="yyform_modal_lcsdist_Nrp" autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-5" style="text-align:left;">Username:</label>
+                            <div class="col-sm-12 yy-loading-form-box">
+                                <input type="text" class="form-control yy-form-required" style="width: inherit;" id="yyform_modal_lcsdist_Username" autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-12" style="text-align:left;">Div Code:</label>
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" style="width:100%" id="yyform_modal_lcsdist_DivCode" autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-12" style="text-align:left;">Ticket Number:</label>
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" style="width:100%" id="yyform_modal_lcsdist_TicketNumber" autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-12" style="text-align:left;">Desc:</label>
+                            <div class="col-sm-12">
+                                <textarea type="text" class="form-control yy-form-required" style="width:100%" id="yyform_modal_lcsdist_Description" autocomplete="off"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="yy-nonvisible yy-form-invalid-alert">Lengkapi semua form !</div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="yy-modal-footer">
+                        <button type="button" style="width:50%;" class="btn btn-danger" data-dismiss="modal">CANCEL</button>
+                        <button type="button" style="width:50%" class="btn btn-success">SAVE</button>
                     </div>
                 </div>
             </div>
@@ -352,7 +446,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Mapping License Distribution</h5>
+                    <h5 class="modal-title">Mapping License District</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -374,6 +468,41 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Batal</button>
                     <button type="button" class="btn btn-primary" onclick="saveMappingDistribution(this)">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--------------------------------------- Modal ------------------------------------------->
+
+    <!--------------------------------------- Modal ------------------------------------------->
+
+    <div class="modal fade" id="lcs_user_mapping" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Mapping License User</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="control-label col-sm-5" style="text-align:left;">User:</label>
+                        <div class="col-sm-12 yy-loading-form-box">
+                            <input type="text" class="form-control yy-form-required" style="width: inherit;" id="yyform_modal_distuser_user">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-5" style="text-align:left;">Desc:</label>
+                        <div class="col-sm-12 yy-loading-form-box">
+                            <input type="text" class="form-control" style="width: inherit;" id="yyform_modal_distuser_desc" autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Batal</button>
+                    <button type="button" class="btn btn-primary" onclick="saveMappingUser()">Save</button>
                 </div>
             </div>
         </div>
@@ -460,7 +589,9 @@
 <!-----<script src="../../Js/Global.js"></script>-->
 <script>
    const listForm = ['po_number', 'item_number', 'po_number', 'qty', 'vendor_name', 'currency', 'price', 'software_id', 'license_number', 'license_type', 'license_category', 'start', 'end', 'desc', 'file']
-    let allForm
+   let allForm
+   let timeLoading = 250
+   let keyboard
     allForm = listForm.map(form => '#yyform_' + form)
     $(document).ready(function () {
         initialLoadingForm()
@@ -473,7 +604,17 @@
     });
 
     let hargaSatuan = 0;
-    let isAddLicense = true // true = Add License, false = Renewal License 
+    let isAddLicense = true // true = Add License, false = Renewal License
+
+    $(document).keydown(function (e) {
+        if (e.keyCode == 16) {
+            keyboard = 'shift'
+        }
+    });
+
+    $(document).keyup(function (e) {
+            keyboard = null
+    });
 
     $(".yy-file").change(function () {
         var fileName = $(this).val();
@@ -554,6 +695,8 @@
             var val = $(ids).data("kendoDatePicker").value()
             let endId = ids.split('start').join('end')
             ids.includes('start') ? kendoDatePickerCreate(endId, val, undefined) : kendoDatePickerCreate(ids, undefined, val)
+            formValid([ids])
+            
         });
     }
 
@@ -600,17 +743,14 @@
             dataValueField: "key",
             dataTextField: "value",
             dataSource: [],
-            filtering: getAllPO
+            filtering: getAllPOFilters,
+            change: poChanger
         }));
         ["#yyform_item_number", "#yyform_modal_item_number"].forEach(el => $(el).kendoDropDownList({
             optionLabel: "Pilih Item Number...",
             dataTextField: "value",
             dataValueField: "key",
-            dataSource: [
-                { key: "001", value: "001" },
-                { key: "002", value: "002" },
-                { key: "003", value: "003" }
-            ],
+            dataSource: [],
             change: poItemChanger
         }));
     }
@@ -626,12 +766,16 @@
             filtering: (e) => dropdownFilterHandler(e, '/License/GetDistrict', 'district', 'district'),
             open: (e) => dropdownFilterHandler(e, '/License/GetDistrict', 'district', 'district')
         }));
+        ["#yyform_modal_distuser_user"].forEach(el => $(el).kendoDropDownList({
+            filter: "contains",
+            optionLabel: "Pilih User...",
+            dataValueField: "key",
+            dataTextField: "value",
+            dataSource: [],
+            filtering: (e) => dropdownFilterHandler(e, '/License/GetUser', 'NRP', 'SURNAME', true),
+            open: (e) => dropdownFilterHandler(e, '/License/GetUser', 'NRP', 'SURNAME', true)
+        }));
     }
-
-
-    
-
-    
   
 
     $(document).on('click', '.k-dropdown', el => {
@@ -650,17 +794,29 @@
         }
     })
 
-    function poItemChanger (e) {
-        var vals = this.value();
-        let formArr = ["yyform_qty", "yyform_price", "yyform_currency", "yyform_vendor_name"];
+
+    function poChanger(e) {
+        let join = $(e.sender.element).attr('id').includes('modal') ? 'modal_' : ''
+        dropdownFilterHandler('#yyform_'+join+'item_number', '/License/GetPOItem', 'PO_ITEM', 'PO_ITEM', false, false, e.sender._old)
+        poItemChanger(e)
+    }
+
+
+    
+
+    function poItemChanger(e) {
+        let join = $(e.sender.element).attr('id').includes('modal') ? 'modal_' : ''
+        let idd = '#yyform_' + join + 'item_number'
+        var vals = $(idd).val();
+        let formArr = ["qty", "price", "currency", "vendor_name"].map(el => 'yyform_' + join + el);
         let formRess = ["QTY", "HARGA_PO", "CURR", "SUPPLIER_PO"];
         if (vals.length > 0) {
-            let ids = "#" + $("#yyform_item_number").attr("id") + "-loading-form"
-            textChange("#yyform_item_number")
+            let ids = "#" + $(idd).attr("id") + "-loading-form"
+            textChange(idd)
             .then(res => {
                 let datas = {
-                    po: $("#yyform_po_number").val(),
-                    item: $("#yyform_item_number").val()
+                    po: $('#yyform_' + join + 'po_number').val(),
+                    item: $('#yyform_' + join + 'item_number').val()
                 }
                 getPO(datas, formArr, formRess, ids)
                 formValid(formArr)
@@ -718,7 +874,8 @@
                 setTimeout(function () {
                     hideLoadingForm(idLoading)
                     $(idLoading).val(res.data);
-                }, 550)
+                    formValid(['license_number'])
+                }, timeLoading)
             } else {
                 hideLoadingForm(idLoading)
                 alert(JSON.stringify(res));
@@ -759,7 +916,7 @@
                            setFormObject(res.data)
                            enableForm(allForm)
                            disableForm(["vendor_name", "currency", "price"])
-                       }, 550);
+                       }, timeLoading);
                    } else {
                        hideLoadingForm("#yyform_license_number")
                        alertjson(res)
@@ -840,7 +997,7 @@
                         deleteTemp = {}
                         setTimeout(function () {
                         }, 100)
-                    }, 550)
+                    }, timeLoading)
             })
             .catch(err => {
                 alert(err);
@@ -936,20 +1093,17 @@
                     let jsons = res.data;
                     if (jsons.length > 0) {
                         let datas = jsons[0];
-                        //"CURR":"IDR ","HARGA_PO":null,"QTY":"4.00"}
-                        //console.log(datas)
                         let i = 0;
                         for (let item of formArr) {
                             $("#" + item).val(datas[formRess[i]])
                             i++;
                         }
                         hargaSatuan = datas.HARGA_PO / datas.QTY
-                        ////console.log(hargaSatuan)
                     } else {
                         refreshFormObject(formArr)
                     }
                     hideLoadingForm(ids)
-                }, 550)
+                }, timeLoading)
                 
             })
             .catch(err => {
@@ -959,7 +1113,7 @@
     }
 
 
-    function getAllPOFilters() {
+    function getAllPOFilters(e) {
         let ids = "#" + $(e.sender.element).attr('id')
         getAllPO(ids, e.filter.value)
     }
@@ -1016,20 +1170,16 @@
         resetForm()
         let formCol = listForm
         refreshFormObject(formCol);
-        //$("#yyform_software_id").data("kendoDropDownList").enable(true);
         $("#save").attr("onclick", `saveLicense('ADD')`);
         enableForm(allForm)
         disableForm(["vendor_name", "currency", "price", "license_number"])
-       // $('#modalAddLicense').modal('show');
     }
 
     function buttonRenewalLicense() {
         isAddLicense = false;
         renewal()
-        //$('#modalAddLicense').modal('show');
         let formCol = listForm
         refreshFormObject(formCol);
-        //$("#yyform_software_id").data("kendoDropDownList").enable(false);
         disableForm(allForm)
         enableForm(["license_number"])
         $("#save").attr("onclick", `saveLicense('RENEWAL')`);
@@ -1043,13 +1193,20 @@
         resetForm();
         refreshFormObject(formCol);
         setFormObjects(this, e)
-        $("#save").attr("onclick", `saveLicense('EDIT', ${items})`);
-        //$('#yyform_license_category').attr("readonly", "readonly");
-        //$("#yyform_software_id").data("kendoDropDownList").enable(false);
         enableForm(formCol)
-        disableForm(["modal_vendor_name", "modal_currency", "modal_price", "modal_license_number", "modal_software_id"])
+        disableForm(["modal_vendor_name", "modal_currency", "modal_price", "modal_license_number"])
+        $("#modal_save").attr("onclick", `saveLicense('EDIT', ${items})`);
         $('#modalAddLicense').modal('show');
         setHargaSatuan()
+    }
+
+    function editLicenseDist(e) {
+        e.preventDefault();
+        let items = JSON.parse(JSON.stringify(this.dataItem($(e.currentTarget).closest("tr"))));
+        let formField = Object.keys(items).map(el => '#yyform_modal_lcsdist_' + el)
+        refreshFormObject(formField);
+        setFormObject(items, undefined, 'yyform_modal_lcsdist')
+        modalShow('#modalEditLicenseDist')
     }
 
     function licenseAdd() {
@@ -1059,9 +1216,7 @@
         let validation = Object.values(formObj).filter(value => value != null && value.length > 0);
         let file = $("#yyform_file")[0].files[0]
         if (validation.length > 0) {
-            //alert(formData)
             $('.yy-loading').addClass("shows")
-
             fetchs("POST", "/License/AddLicense", formObj, file)
             .then(res => {
                 setTimeout(function () {
@@ -1073,7 +1228,7 @@
                         alert("License Berhasil Ditambahkan!");
                         $('#modalAddLicense').modal('hide');
                     }, 100);
-                }, 550);
+                }, timeLoading);
 
             })
             .catch(err => {
@@ -1082,16 +1237,24 @@
             })
 
         } else {
-
             //alert(JSON.stringify("data kosong"))
         }
     }
 
-    function licenseEdit(old) {
-        let newVal = getFormObject(Object.keys(old));
-        newVal = JSON.parse(JSON.stringify(newVal)) // Clean Object
-        newVal["id"] = old["id"];
-        $('.yy-loading').addClass("shows")
+    function licenseEdit(forms, items) {
+        forms = forms.map(el => 'modal_' + el)
+        let newVal = getFormObject(forms)
+        newVal = JSON.parse(JSON.stringify(newVal).split('modal_').join(''))
+        newVal.id = items.id
+        handlerOfSubmit(forms, '/License/EditLicense', null, newVal)
+        .then(res => {
+            modalHide('#modalAddLicense')
+            gridHandler('_set_master_license')
+        })
+        .catch(err => {
+            alert(err)
+        })
+        /*
         fetchs("POST", "/License/EditLicense", newVal)
             .then(res => {
                 setTimeout(function () {
@@ -1100,12 +1263,13 @@
                     setTimeout(function () {
                         $('#modalAddLicense').modal('hide');
                     }, 100);
-                }, 550);
+                }, timeLoading);
             })
             .catch(err => {
                 $('.yy-loading').removeClass("shows");
                 alert(err);
             })
+            */
     }
 
     function licenseRenewal() {
@@ -1123,7 +1287,7 @@
                         alert("Renewal License Berhasil!");
                         $('#modalAddLicense').modal('hide');
                     }, 100);
-                }, 550);
+                }, timeLoading);
 
             })
             .catch(err => {
@@ -1155,6 +1319,29 @@
         })
     }
 
+    function saveMappingUser() {
+        let keys = Object.values(checkObj).map(res => res[0])
+        let descCheck = $('#yyform_modal_distuser_desc').val().split(' ').join('')
+        let datas = {
+            Nrp: $('#yyform_modal_distuser_user').val(),
+            desc: descCheck.length > 0 ? $('#yyform_modal_distuser_desc').val() : descCheck,
+        }
+
+        let bodys = {
+            keys: JSON.stringify(keys),
+            datas: JSON.stringify(datas)
+        }
+
+        handlerOfSubmit(['#yyform_modal_distuser_user', '#yyform_modal_distuser_desc'], "/License/MappingLicenseDistribution", undefined, bodys)
+        .then(() => {
+            modalHide('#lcs_user_mapping')
+            gridHandler('_set_distribution_list')
+        })
+
+    }
+
+    
+
     //----------------------------------- Modal Shower ------------------------------------------
 
 
@@ -1162,14 +1349,19 @@
         $('#lcs_dist_mapping').modal('show');
     }
 
+    function showUserMappingModal() {
+        $('#lcs_user_mapping').modal('show');
+    }
+
     //----------------------------------- Callback ------------------------------------------
 
 
     function checkboxCallBack(el, from, data, length) {
+        $('#checkbox_count').text(length + ' Item')
         if (length > 0) {
-            $('#btn_lcs_dis_mapping').css('display', 'inline-block')
+            $('.toolbar_dist').css('display', 'inline-block')
         } else {
-            $('#btn_lcs_dis_mapping').css('display', 'none')
+            $('.toolbar_dist').css('display', 'none')
         }
     }
 
@@ -1185,7 +1377,7 @@
             handlerOfSubmit(listForm, "/License/RenewalLicenseUpdate", file)
             .then(() => masterLicense())
         } else if (type === "EDIT") {
-            licenseEdit(e)
+            licenseEdit(listForm, e)
         } else {
             alert("function not found.")
         }
@@ -1197,7 +1389,7 @@
             formValid(arr)
             formCheck(undefined, arr).then(res => {
                 yy_show('.yy-loading')
-                fetchs("POST", url, datas, file === undefined ? undefined : file)
+                fetchs("POST", url, datas, file ? undefined : file)
                     .then(res => {
                         setTimeout(function () {
                             yy_hide('.yy-loading')
@@ -1207,7 +1399,7 @@
                                 formValid(arr)
                                 resolve()
                             }, 100);
-                        }, 550);
+                        }, timeLoading);
                     })
                     .catch(err => {
                         yy_hide('.yy-loading')
@@ -1221,11 +1413,11 @@
         })
     }
 
-    function dropdownFilterHandler(e, url, key, value, withJoin, withCostum) {
+    function dropdownFilterHandler(e, url, key, value, withJoin, withCostum, datass) {
         let ids = e.sender === undefined ? e : "#" + $(e.sender.element).attr('id')
-        let datas = e === undefined ? "" : e.filter === undefined ? "" : e.filter.value
+        let datas = datass ? datass : e === undefined ? "" : e.filter === undefined ? "" : e.filter.value
         showLoadingForm(ids + "-loading-form")
-        fetchs("POST", url, e === undefined ? "" : e.filter === undefined ? "" : e.filter.value)
+        fetchs("POST", url, datas)
         .then(res => {
             let ress = res.data.map(data => {
                 return { key: data[key], value: withJoin ? data[key] + "  |  " + data[value] : data[value] }
@@ -1328,7 +1520,7 @@
             url: "/License/GridlLicenseDetail",
             fieldObj: [
             { field: "xno", title: "No", template: "#= adds() #", width: 50 },
-            { command: [{ name: "edit-data", text: "Edit", click: edit }, { name: "delete-data", text: "Delete", click: showModalDelete }], title: "ACTION", width: 180 },
+            { command: [{ name: "edit-data", text: "Edit", click: editLicenseDist }, { name: "delete-data", text: "Delete", click: showModalDelete }], title: "ACTION", width: 180 },
             { field: "id", title: "id", hide: true },
             { field: "LicenseNumber", title: "LicenseNumber", filter: true, sort: true },
             { field: "LicenseNumberDetail", title: "LicenseNumberDetail", width: 150, filter: true, sort: true },
@@ -1351,10 +1543,20 @@
             prefixToolbars: [
                 {
                     name: "back",
-                    template: '<button type="button" id="btn_lcs_dis_mapping" class="btn btn-success yy-grid-toolbar" onclick="showDistMappingModal()">Mapping</button>'
+                    template: '<a id="checkbox_count" class="yy-grid-toolbar toolbar_dist">0 Item</a>'
+                },
+                {
+                    name: "back",
+                    template: '<button type="button" id="btn_lcs_dis_mapping" class="btn btn-success yy-grid-toolbar toolbar_dist" onclick="showDistMappingModal()">Mapping District</button>'
+                },
+                {
+                    name: "back",
+                    template: '<button type="button" id="btn_lcs_user_mapping" class="btn btn-success yy-grid-toolbar toolbar_dist" onclick="showUserMappingModal()">Mapping User</button>'
                 }
+
             ],
             suffixToolbars: [],
+            btnRefresh: arguments.callee.name,
         }
     }
 
@@ -1391,8 +1593,26 @@
             },
             prefixToolbars: [],
             suffixToolbars: [],
+            btnRefresh: arguments.callee.name
         }
     }
+
+    function buttonRefreshGrid(e) {
+        loadgrid(e());
+    }
+
+
+
+
+
+
+
+
+
+
+    
+
+
 
     
 
@@ -1446,6 +1666,18 @@
         background-color: #fff0a3;
     }
 
+    .costumColorGreen {
+        background-color: #a3ffd4;
+    }
+
+    .costumColorBlue {
+        background-color: #a3e6ff;
+    }
+
+    .costumColorRed {
+        background-color: #ffa3a3;
+    }
+
     .yy-file {
         margin-bottom: 7px;
     }
@@ -1471,10 +1703,9 @@
     font-size: 15px;
     }
 
-    #btn_lcs_dis_mapping {
+    .toolbar_dist {
         display: none;
     }
-    
     
 </style>
 

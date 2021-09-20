@@ -113,12 +113,112 @@ namespace PrinterMonitoring.Models
             }
         }
 
-        
+        public System.Data.Linq.Table<VW_EMPLOYEE_PAMA> VW_EMPLOYEE_PAMAs
+        {
+            get
+            {
+                return this.GetTable<VW_EMPLOYEE_PAMA>();
+            }
+        }
+
+
 
 
     }
 
     //------------------------------------------ Table Class
+
+    //						
+
+    [global::System.Data.Linq.Mapping.TableAttribute(Name = "dbo.VW_EMPLOYEE_PAMA")]
+    public partial class VW_EMPLOYEE_PAMA
+    {
+        private int _id;
+        private string _NRP;
+        private string _FIRST_NAME;
+        private string _SURNAME;
+        private string _NAME;
+        private string _GENDER_CODE;
+        private string _AGE;
+        private string _HOME_PHONE_NO;
+
+        public VW_EMPLOYEE_PAMA()
+        {
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_HOME_PHONE_NO", DbType = "VarChar(50)")]
+        public string HOME_PHONE_NO
+        {
+            get
+            {
+                return this._HOME_PHONE_NO;
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_AGE", DbType = "VarChar(50)")]
+        public string AGE
+        {
+            get
+            {
+                return this._AGE;
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_GENDER_CODE", DbType = "VarChar(50)")]
+        public string GENDER_CODE
+        {
+            get
+            {
+                return this._GENDER_CODE;
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_NAME", DbType = "VarChar(50)")]
+        public string NAME
+        {
+            get
+            {
+                return this._NAME;
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_SURNAME", DbType = "VarChar(50)")]
+        public string SURNAME
+        {
+            get
+            {
+                return this._SURNAME;
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_FIRST_NAME", DbType = "VarChar(50)")]
+        public string FIRST_NAME
+        {
+            get
+            {
+                return this._FIRST_NAME;
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_NRP", DbType = "VarChar(50)")]
+        public string NRP
+        {
+            get
+            {
+                return this._NRP;
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_id", AutoSync = AutoSync.OnInsert, DbType = "Int NOT NULL IDENTITY", IsPrimaryKey = true, IsDbGenerated = true)]
+        public int id
+        {
+            get
+            {
+                return this._id;
+            }
+        }
+
+    }
 
     [global::System.Data.Linq.Mapping.TableAttribute(Name = "dbo.TBL_LIST_DISTRICT")]
     public partial class TBL_LIST_DISTRICT
@@ -1154,7 +1254,7 @@ namespace PrinterMonitoring.Models
         private string _PO;
         private string _CURR;
         private string _HARGA_PO;
-        private string _QTY;
+        private int _QTY;
         private string _PO_ITEM;
         private string _SUPPLIER_PO;
 
@@ -1246,7 +1346,7 @@ namespace PrinterMonitoring.Models
 
 
         [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_QTY", DbType = "Decimal(11,2)")]
-        public string QTY
+        public int QTY
         {
             get
             {
@@ -1285,10 +1385,27 @@ namespace PrinterMonitoring.Models
         private string _file;
         private string _created_by;
         private string _updated_by;
+        private string _deleted_at;
         private int _id;
 
         public TBL_LICENSE_REGISTER()
         {
+        }
+        
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_deleted_at", DbType = "DateTime")]
+        public string deleted_at
+        {
+            get
+            {
+                return this._deleted_at;
+            }
+            set
+            {
+                if ((this._deleted_at != value))
+                {
+                    this._deleted_at = value;
+                }
+            }
         }
 
         [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_last_update", DbType = "DateTime")]

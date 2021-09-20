@@ -22,11 +22,15 @@ function modalHide(el) {
 
 
 $(document).on('click', 'tr', el => {
-    if ($(el.currentTarget).hasClass('costumColor')) {
-        $(el.currentTarget).removeClass('costumColor')
+    if (!$(el.target).hasClass('yy-checkbox')) {
+        if ($(el.currentTarget).hasClass('costumColor')) {
+            $(el.currentTarget).removeClass('costumColor')
+        } else {
+            $('tr').removeClass('costumColor')
+            $(el.currentTarget).addClass('costumColor')
+        }
     } else {
         $('tr').removeClass('costumColor')
-        $(el.currentTarget).addClass('costumColor')
     }
 })
 
@@ -577,18 +581,20 @@ function checkBoxHeader(thiss, colTarget) {
     let allCheck = document.getElementsByClassName('yy-checkbox')
     let index = 0;
     for (let item of allCheck) {
+        let t_rows = $(item).parent().parent()[0]
         if (thiss.checked) {
             let el = getElCol(document.getElementsByTagName('tbody')[0].children[index].children, colTarget).children[0].textContent
             item.checked = thiss.checked;
             checkObj[index] = [el]
+            $(t_rows).addClass('costumColorBlue')
         } else {
             item.checked = thiss.checked;
             delete checkObj[index];
+            $(t_rows).removeClass('costumColorBlue')
         }
         index++
     }
     checkboxCallBack(thiss, 'header', checkObj, Object.values(checkObj).length)
-    //console.log(JSON.stringify(checkObj))
 }
 
 function checkBoxHandler(thiss, colTarget) {
@@ -596,9 +602,44 @@ function checkBoxHandler(thiss, colTarget) {
     let el = getElCol(document.getElementsByTagName('tbody')[0].children[index].children, colTarget).children[0].textContent
     let checkheader = document.getElementById('yy-checkbox-header')
     checkheader.checked = false
-    thiss.checked ? checkObj[index] = [el] : delete checkObj[index];
+    let t_row = $(thiss).parent().parent()[0]
+    if (thiss.checked) {
+        checkObj[index] = [el]
+        $(t_row).addClass('costumColorBlue')
+    } else {
+        delete checkObj[index];
+        $(t_row).removeClass('costumColorBlue')
+    }
+    if (keyboard === 'shift') {
+        let allCheck = document.getElementsByClassName('yy-checkbox')
+        let cbRange = false;
+        let index = 0;
+        for (let item of allCheck) {
+            let t_rows = $(item).parent().parent()[0]
+            let cbIndex = parseInt(item.id.split('yy-checkbox-').join(''))
+            let thisCbIndex = parseInt(thiss.id.split('yy-checkbox-').join(''))
+            if (item.checked) {
+                cbRange = true
+            }
+            if (cbIndex >= thisCbIndex) {
+                cbRange = false
+            }
+            if (cbRange) {
+                let el = getElCol(document.getElementsByTagName('tbody')[0].children[index].children, colTarget).children[0].textContent
+                item.checked = thiss.checked;
+
+                if (thiss.checked) {
+                    checkObj[index] = [el]
+                    $(t_rows).addClass('costumColorBlue')
+                } else {
+                    delete checkObj[index];
+                    $(t_rows).removeClass('costumColorBlue')
+                }
+            }
+            index++
+        }
+    }
     checkboxCallBack(thiss, 'body', checkObj, Object.values(checkObj).length)
-    //console.log(JSON.stringify(checkObj))
 }
 
 function createCheckbox(colTarget) {
@@ -611,11 +652,6 @@ function createCheckbox(colTarget) {
         width: 50
     }
 }
-
-function buttonRefreshGrid(e) {
-    loadgrid(e());
-}
-
 
 
 function generateColumns(obj, checkBox) {
@@ -658,6 +694,9 @@ function generateFields(obj) {
     //console.log(JSON.stringify(fields));
     return fields;
 }
+
+
+
 
 function loadgrid(e) {
     yy_i = 1;
@@ -709,8 +748,8 @@ function loadgrid(e) {
             },
             ...e.prefixToolbars,
             {
-             name: "excel",
-             imageClass: '<button type="button" button id="btn_export" class="btn btn-info"><span class="glyphicon glyphicon-export"></span> Export To Excel</button>'
+                name: "excel",
+                imageClass: '<button type="button" button id="btn_export" class="btn btn-info"><span class="glyphicon glyphicon-export"></span> Export To Excel</button>'
             },
             {
                 name: "back",
@@ -789,7 +828,8 @@ function loadgridExpand(el, e, datas) {
             yyloadingHide()
         },
         noRecords: {
-            template: "<div style='height:60px;display:flex;flex-direction:column;justify-content:center;padding-left:20px'><div>Belum ada History.</div></div>"
+            template: "<div style='height:60px;display:flex;flex-direction:column;justify-content:center;padding-left:20px'><a>Belum ada History.</a></div>"
         },
     });
 }
+
