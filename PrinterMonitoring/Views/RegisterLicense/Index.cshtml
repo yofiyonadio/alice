@@ -374,16 +374,23 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label col-sm-5" style="text-align:left;">Username:</label>
+                            <label class="control-label col-sm-5" style="text-align:left;">Name:</label>
                             <div class="col-sm-12 yy-loading-form-box">
-                                <input type="text" class="form-control yy-form-required" style="width: inherit;" id="yyform_modal_lcsdist_Username" autocomplete="off">
+                                <input type="text" class="form-control yy-form-required" style="width: inherit;" id="yyform_modal_lcsdist_Username" autocomplete="off" readonly="readonly">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label col-sm-12" style="text-align:left;">Div Code:</label>
+                            <label class="control-label col-sm-12" style="text-align:left;">Division:</label>
                             <div class="col-sm-12">
-                                <input type="text" class="form-control" style="width:100%" id="yyform_modal_lcsdist_DivCode" autocomplete="off">
+                                <input type="text" class="form-control" style="width:100%" id="yyform_modal_lcsdist_DivCode" autocomplete="off" readonly="readonly">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-12" style="text-align:left;">Computer Name:</label>
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" style="width:100%" id="yyform_modal_lcsdist_CumputerName" autocomplete="off" readonly="readonly">
                             </div>
                         </div>
 
@@ -522,16 +529,32 @@
                     </button>
                 </div>
                 <div class="modal-body">
+
                     <div class="form-group">
                         <label class="control-label col-sm-5" style="text-align:left;">Software Name:</label>
                         <div class="col-sm-12 yy-loading-form-box">
-                            <input type="text" class="form-control" style="width: inherit;" id="yyform_modal_add_software_name">
+                            <input type="text" class="form-control" style="width: inherit;" id="yyform_modal_add_software_Name">
                         </div>
                     </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-5" style="text-align:left;">Group ID:</label>
+                        <div class="col-sm-12 yy-loading-form-box">
+                            <input type="text" class="form-control" style="width: inherit;" id="yyform_modal_add_software_GroupID">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-5" style="text-align:left;">Desc:</label>
+                        <div class="col-sm-12 yy-loading-form-box">
+                            <textarea type="text" class="form-control" style="width: inherit;" id="yyform_modal_add_software_Description"></textarea>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Batal</button>
-                    <button type="button" class="btn btn-primary">Save</button>
+                    <button type="button" class="btn btn-primary" onclick="saveAddSoftware()">Save</button>
                 </div>
             </div>
         </div>
@@ -701,6 +724,7 @@
     }
 
     function autoComplete() {
+
         ["#yyform_software_id", "#yyform_modal_software_id"].forEach(el => $(el).kendoDropDownList({
             filter: "contains",
             optionLabel: "Pilih Software Name...",
@@ -710,6 +734,7 @@
             filtering: (e) => (dropdownFilterHandler(e, "/License/Gets", 'Device_Name', 'wDisplayName', true, 'Tambah Software')),
             change: softwareNameChanger
         }));
+
         ["#yyform_license_type", "#yyform_modal_license_type"].forEach(el => $(el).kendoDropDownList({
             optionLabel: "Pilih License Type...",
             dataTextField: "value",
@@ -728,15 +753,17 @@
                 { key: "UC", value: "UserID & In Code" }
             ]
         }));
+
         ["#yyform_license_category", "#yyform_modal_license_category"].forEach(el => $(el).kendoDropDownList({
             optionLabel: "Pilih License Category...",
             dataTextField: "value",
             dataValueField: "key",
             dataSource: [
                 { key: "Perpetual", value: "Perpetual" },
-                { key: "Perpetual", value: "Subsciption" }
+                { key: "Subsciption", value: "Subsciption" }
             ]
         }));
+
         ["#yyform_po_number", "#yyform_modal_po_number"].forEach(el => $(el).kendoDropDownList({
             filter: "contains",
             optionLabel: "Pilih Nomor PO...",
@@ -746,6 +773,7 @@
             filtering: getAllPOFilters,
             change: poChanger
         }));
+
         ["#yyform_item_number", "#yyform_modal_item_number"].forEach(el => $(el).kendoDropDownList({
             optionLabel: "Pilih Item Number...",
             dataTextField: "value",
@@ -753,11 +781,23 @@
             dataSource: [],
             change: poItemChanger
         }));
+
+        ["#yyform_modal_add_software_GroupID"].forEach(el => $(el).kendoDropDownList({
+            optionLabel: "Pilih Group ID...",
+            dataTextField: "value",
+            dataValueField: "key",
+            dataSource:[
+                { key: "APP", value: "APP" },
+                { key: "CAL", value: "CAL" },
+                { key: "SVP", value: "SVP" }
+            ]
+        }));
     }
 
 
     function autoCompleteDistribution() {
-        ["#yyform_modal_dist_district"].forEach(el => $(el).kendoDropDownList({
+
+        ["#yyform_modal_dist_district", "#yyform_modal_lcsdist_DistrictID"].forEach(el => $(el).kendoDropDownList({
             filter: "contains",
             optionLabel: "Pilih District...",
             dataValueField: "key",
@@ -766,6 +806,7 @@
             filtering: (e) => dropdownFilterHandler(e, '/License/GetDistrict', 'district', 'district'),
             open: (e) => dropdownFilterHandler(e, '/License/GetDistrict', 'district', 'district')
         }));
+        //yyform_modal_lcsdist_Nrp yyform_modal_lcsdist_Username
         ["#yyform_modal_distuser_user"].forEach(el => $(el).kendoDropDownList({
             filter: "contains",
             optionLabel: "Pilih User...",
@@ -773,8 +814,37 @@
             dataTextField: "value",
             dataSource: [],
             filtering: (e) => dropdownFilterHandler(e, '/License/GetUser', 'NRP', 'SURNAME', true),
-            open: (e) => dropdownFilterHandler(e, '/License/GetUser', 'NRP', 'SURNAME', true)
+            open: (e) => dropdownFilterHandler(e, '/License/GetUser', 'NRP', 'SURNAME', true),
         }));
+
+        ["#yyform_modal_lcsdist_Nrp"].forEach(el => $(el).kendoDropDownList({
+            filter: "contains",
+            optionLabel: "Pilih User...",
+            dataValueField: "key",
+            dataTextField: "value",
+            dataSource: [],
+            filtering: (e) => dropdownFilterHandler(e, '/License/GetUser', 'NRP', 'NRP'),
+            open: (e) => dropdownFilterHandler(e, '/License/GetUser', 'NRP', 'NRP'),
+            change: userNrpChanger
+        }));
+
+    }
+
+    function userNrpChanger(e) {
+        let ids = '#' + $(e.sender.element).attr('id')
+        var data = $(ids).val();
+        showLoadingForm(ids)
+        fetchs("POST", "/License/GetUser", data)
+           .then(res => {
+               hideLoadingForm(ids)
+               $('#yyform_modal_lcsdist_Username').val(res.data[0].SURNAME)
+               $('#yyform_modal_lcsdist_DivCode').val(res.data[0].DIV_CODE)
+           })
+           .catch(err => {
+               hideLoadingForm(ids)
+               alert(err)
+           })
+           
     }
   
 
@@ -853,6 +923,9 @@
             refreshFormObject(formArr)
         }
     });
+
+
+    
 
 
     function softwareNameChanger(e) {
@@ -1340,6 +1413,20 @@
 
     }
 
+    function saveAddSoftware() {
+        let descCheck = $('#yyform_modal_add_software_Description').val().split(' ').join('')
+        let datas = {
+            Name: $('#yyform_modal_add_software_Name').val(),
+            GroupID: $('#yyform_modal_add_software_GroupID').val(),
+            Description: descCheck.length > 0 ? $('#yyform_modal_add_software_Description').val() : descCheck,
+        }
+
+        handlerOfSubmit(['#yyform_modal_add_software_Name', '#yyform_modal_add_software_GroupID', 'yyform_modal_add_software_Description'], "/License/MappingLicenseDistribution", undefined, datas)
+        .then(() => {
+            modalHide('#lcs_add_software')
+        })
+    }
+
     
 
     //----------------------------------- Modal Shower ------------------------------------------
@@ -1524,6 +1611,7 @@
             { field: "id", title: "id", hide: true },
             { field: "LicenseNumber", title: "LicenseNumber", filter: true, sort: true },
             { field: "LicenseNumberDetail", title: "LicenseNumberDetail", width: 150, filter: true, sort: true },
+            { field: "SoftwareName", title: "SoftwareName", filter: true, sort: true },
             { field: "SerialNumber", title: "SerialNumber" },
             { field: "RegistrationNumber", title: "RegistrationNumber" },
             { field: "DistrictID", title: "DistrictID" },
@@ -1570,6 +1658,7 @@
             { field: "id", title: "id", hide: true },
             { field: "timestamps", title: "timestamps", type: "Date", format: "{0:dd/MM/yyyy}", sort: true },//"{0:dd/MM/yyyy HH:mm:ss}"
             { field: "software_id", title: "software_id", filter: true, sort: true },
+            { field: "software_name", title: "software_name", filter: true, sort: true },
             { field: "license_number", title: "license_number", filter: true, sort: true },
             { field: "license_type", title: "license_type", filter: true, sort: true },
             { field: "po_number", title: "po_number", sort: true },

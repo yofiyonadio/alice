@@ -244,6 +244,8 @@ namespace PrinterMonitoring.Controllers
                 // Parse Dictionary to Json
                 string bodyDecode = Newtonsoft.Json.JsonConvert.SerializeObject(body);
                 TBL_LICENSE_REGISTER bodys = Newtonsoft.Json.JsonConvert.DeserializeObject<TBL_LICENSE_REGISTER>(bodyDecode);
+                var softwareName = db1.VW_SOFTWARE_USER_INSTALLEDs.Where(c => c.Device_Name == bodys.software_id).Select(c => c.wDisplayName).FirstOrDefault();
+                bodys.software_name = softwareName;
 
 
                 db2.TBL_LICENSE_REGISTERs.InsertOnSubmit(bodys);
@@ -254,6 +256,7 @@ namespace PrinterMonitoring.Controllers
                     bodysLcsDetail.LicenseNumber = bodys.license_number;
                     bodysLcsDetail.LicenseNumberDetail = bodys.license_number + "-" + (i + 1).ToString("0000");
                     bodysLcsDetail.RegistrationNumber = "1";
+                    bodysLcsDetail.SoftwareName = softwareName;
                     db2.TblLicenseDetails.InsertOnSubmit(bodysLcsDetail);
                 }
 
@@ -475,6 +478,7 @@ namespace PrinterMonitoring.Controllers
             {
                 var tbl = db2.VW_TblLicenseDetails;
                 var data = tbl.OrderBy(c => c.id).ToDataSourceResult(take, skip, sort, filter);
+
                 return Json(data);
 
             }

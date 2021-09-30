@@ -121,14 +121,219 @@ namespace PrinterMonitoring.Models
             }
         }
 
-
+        public System.Data.Linq.Table<TemplateProduct> TemplateProducts
+        {
+            get
+            {
+                return this.GetTable<TemplateProduct>();
+            }
+        }
+        
 
 
     }
 
     //------------------------------------------ Table Class
 
-    //						
+    
+
+
+    [global::System.Data.Linq.Mapping.TableAttribute(Name = "dbo.TemplateProduct")]
+    public partial class TemplateProduct
+    {
+        private int _id;
+        private string _ProductID;
+        private string _Name;
+        private string _GroupID;
+        private string _IsUsed;
+        private string _Description;
+        private string _UserID;
+        private string _LastAccessedDate;
+        private string _GroupProduct;
+        private string _Major;
+        private string _Minor;
+
+        public TemplateProduct()
+        {
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Minor", DbType = "VarChar(50)")]
+        public string Minor
+        {
+            get
+            {
+                return this._Minor;
+            }
+            set
+            {
+                if ((this._Minor != value))
+                {
+                    this._Minor = value;
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Major", DbType = "VarChar(50)")]
+        public string Major
+        {
+            get
+            {
+                return this._Major;
+            }
+            set
+            {
+                if ((this._Major != value))
+                {
+                    this._Major = value;
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_GroupProduct", DbType = "VarChar(50)")]
+        public string GroupProduct
+        {
+            get
+            {
+                return this._GroupProduct;
+            }
+            set
+            {
+                if ((this._GroupProduct != value))
+                {
+                    this._GroupProduct = value;
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_LastAccessedDate", DbType = "DateTime")]
+        public string LastAccessedDate
+        {
+            get
+            {
+                return this._LastAccessedDate;
+            }
+            set
+            {
+                if ((this._LastAccessedDate != value))
+                {
+                    this._LastAccessedDate = value;
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_UserID", DbType = "VarChar(50)")]
+        public string UserID
+        {
+            get
+            {
+                return this._UserID;
+            }
+            set
+            {
+                if ((this._UserID != value))
+                {
+                    this._UserID = value;
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Description", DbType = "VarChar(50)")]
+        public string Description
+        {
+            get
+            {
+                return this._Description;
+            }
+            set
+            {
+                if ((this._Description != value))
+                {
+                    this._Description = value;
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_IsUsed", DbType = "Int")]
+        public string IsUsed
+        {
+            get
+            {
+                return this._IsUsed;
+            }
+            set
+            {
+                if ((this._IsUsed != value))
+                {
+                    this._IsUsed = value;
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_GroupID", DbType = "VarChar(50)")]
+        public string GroupID
+        {
+            get
+            {
+                return this._GroupID;
+            }
+            set
+            {
+                if ((this._GroupID != value))
+                {
+                    this._GroupID = value;
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Name", DbType = "VarChar(50)")]
+        public string Name
+        {
+            get
+            {
+                return this._Name;
+            }
+            set
+            {
+                if ((this._Name != value))
+                {
+                    this._Name = value;
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_ProductID", DbType = "VarChar(50)")]
+        public string ProductID
+        {
+            get
+            {
+                return this._ProductID;
+            }
+            set
+            {
+                if ((this._ProductID != value))
+                {
+                    this._ProductID = value;
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_id", AutoSync = AutoSync.OnInsert, DbType = "Int NOT NULL IDENTITY", IsPrimaryKey = true, IsDbGenerated = true)]
+        public int id
+        {
+            get
+            {
+                return this._id;
+            }
+            set
+            {
+                if ((this._id != value))
+                {
+                    this._id = value;
+                }
+            }
+        }
+
+    }
 
     [global::System.Data.Linq.Mapping.TableAttribute(Name = "dbo.VW_EMPLOYEE_PAMA")]
     public partial class VW_EMPLOYEE_PAMA
@@ -141,9 +346,29 @@ namespace PrinterMonitoring.Models
         private string _GENDER_CODE;
         private string _AGE;
         private string _HOME_PHONE_NO;
+        private string _DIV_CODE;
+        private string _COMPUTER_NAME;
 
         public VW_EMPLOYEE_PAMA()
         {
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_DIV_CODE", DbType = "VarChar(50)")]
+        public string COMPUTER_NAME
+        {
+            get
+            {
+                return this._COMPUTER_NAME;
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_DIV_CODE", DbType = "VarChar(50)")]
+        public string DIV_CODE
+        {
+            get
+            {
+                return this._DIV_CODE;
+            }
         }
 
         [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_HOME_PHONE_NO", DbType = "VarChar(50)")]
@@ -270,6 +495,7 @@ namespace PrinterMonitoring.Models
         private int _id;
         private string _LicenseNumber;
         private string _LicenseNumberDetail;
+        private string _SoftwareName;
         private string _SerialNumber;
         private string _RegistrationNumber;
         private string _Description;
@@ -281,9 +507,45 @@ namespace PrinterMonitoring.Models
         private string _DivCode;
         private string _TicketNumber;
         private string _StatusUser;
+        private string _ComputerName;
 
         public TblLicenseDetail()
         {
+        }
+
+        
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_ComputerName", DbType = "VarChar(50)")]
+        public string ComputerName
+        {
+            get
+            {
+                return this._ComputerName;
+            }
+            set
+            {
+                if ((this._ComputerName != value))
+                {
+                    this._ComputerName = value;
+                }
+            }
+        }
+
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_SoftwareName", DbType = "VarChar(50)")]
+        public string SoftwareName
+        {
+            get
+            {
+                return this._SoftwareName;
+            }
+            set
+            {
+                if ((this._SoftwareName != value))
+                {
+                    this._SoftwareName = value;
+                }
+            }
         }
 
         [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_StatusUser", DbType = "VarChar(50)")]
@@ -519,6 +781,7 @@ namespace PrinterMonitoring.Models
         private int _id;
         private string _LicenseNumber;
         private string _LicenseNumberDetail;
+        private string _SoftwareName;
         private string _SerialNumber;
         private string _RegistrationNumber;
         private string _Description;
@@ -531,9 +794,43 @@ namespace PrinterMonitoring.Models
         private string _TicketNumber;
         private string _StatusUser;
         private string _LicenseStatus;
+        private string _ComputerName;
 
         public VW_TblLicenseDetail()
         {
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_ComputerName", DbType = "VarChar(50)")]
+        public string ComputerName
+        {
+            get
+            {
+                return this._ComputerName;
+            }
+            set
+            {
+                if ((this._ComputerName != value))
+                {
+                    this._ComputerName = value;
+                }
+            }
+        }
+
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_SoftwareName", DbType = "VarChar(50)")]
+        public string SoftwareName
+        {
+            get
+            {
+                return this._SoftwareName;
+            }
+            set
+            {
+                if ((this._SoftwareName != value))
+                {
+                    this._SoftwareName = value;
+                }
+            }
         }
 
         [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_LicenseStatus", DbType = "VarChar(50)")]
@@ -1368,6 +1665,7 @@ namespace PrinterMonitoring.Models
     {
 
         private string _software_id;
+        private string _software_name;
         private string _license_number;
         private string _license_type;
         private string _po_number;
@@ -1663,6 +1961,22 @@ namespace PrinterMonitoring.Models
                 if ((this._license_type != value))
                 {
                     this._license_type = value;
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_software_name", DbType = "VarChar(50)")]
+        public string software_name
+        {
+            get
+            {
+                return this._software_name;
+            }
+            set
+            {
+                if ((this._software_name != value))
+                {
+                    this._software_name = value;
                 }
             }
         }
